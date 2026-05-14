@@ -104,7 +104,7 @@ function wrapper(body: string): string {
         ${body}
       </div>
       <div class="footer">
-        <p>Competitive Edge Business Solutions &nbsp;·&nbsp; cuttingedgebs.com</p>
+        <p>Competitive Edge Business Solutions</p>
       </div>
     </div>
   </div>
