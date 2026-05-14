@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeroParticles from '@/components/home/HeroParticles'
+import FallingParticles from '@/components/home/FallingParticles'
 import {
   ChevronDown, DollarSign, Puzzle, Clock, Search, Code2, TrendingDown,
   Wrench, Utensils, TreePine, Building2, Car, Heart, Scale, Zap,
@@ -180,8 +181,9 @@ export default function Home() {
       </section>
 
       {/* ── Problem Section ── */}
-      <section className="bg-brand-light py-24 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative overflow-hidden bg-brand-light py-24 px-6">
+        <FallingParticles />
+        <div className="relative z-10 max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
             <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-widest mb-4">
