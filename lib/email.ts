@@ -5,7 +5,8 @@ function getResend() {
   return new Resend(process.env.RESEND_API_KEY)
 }
 
-const FROM = 'hello@cuttingedgebs.com'
+const FROM = 'onboarding@resend.dev'
+const NOTIFY = 'edgerrinwashington@gmail.com'
 const COMPANY = 'Competitive Edge Business Solutions'
 
 function wrapper(body: string): string {
@@ -192,7 +193,7 @@ export async function sendLeadNotification(params: {
 
   await getResend().emails.send({
     from: `${COMPANY} <${FROM}>`,
-    to: FROM,
+    to: NOTIFY,
     subject: `New lead: ${params.businessName}`,
     html: wrapper(body),
   })
