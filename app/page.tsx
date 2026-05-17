@@ -144,8 +144,8 @@ export default function Home() {
       {/* ── Stats Bar ── */}
       <section className="bg-brand-purple py-12 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center text-center">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-stretch">
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
               <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
                 $1,000–$2,000
               </p>
@@ -154,16 +154,16 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="sm:border-x sm:border-white/20 sm:px-6">
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
               <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
-                3 platforms
+                multiple platforms
               </p>
               <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
-                replaced with one custom system
+                replaced with integrated custom systems
               </p>
             </div>
 
-            <div>
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
               <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
                 100% custom
               </p>
