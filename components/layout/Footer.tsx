@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Right: link columns */}
-          <div className="flex gap-16 flex-wrap">
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-16">
             {/* Services column */}
             <div>
               <p className="font-body text-gray-400 text-[11px] uppercase tracking-widest mb-4">

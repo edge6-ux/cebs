@@ -64,7 +64,7 @@ export default function Home() {
         <HeroParticles />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-6 pt-24 pb-16 max-w-5xl mx-auto">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 md:px-6 pt-32 md:pt-40 pb-16 max-w-5xl mx-auto">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 border border-[rgba(139,47,201,0.4)] bg-[rgba(139,47,201,0.08)] rounded-full px-4 py-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-purple animate-pulse" />
@@ -75,10 +75,10 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className="font-heading mb-6">
-            <span className="block text-xl md:text-2xl font-medium text-white/50 tracking-normal mb-3">
+            <span className="block text-lg md:text-2xl font-medium text-white/50 tracking-normal mb-3">
               Give your business a
             </span>
-            <span className="block font-bold text-white text-5xl md:text-6xl lg:text-8xl leading-[1.0] tracking-[-0.03em]">
+            <span className="block font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.03em]">
               competitive{' '}
               <span className="text-brand-purple relative inline-block">
                 edge
@@ -94,22 +94,22 @@ export default function Home() {
           </h1>
 
           {/* Subheadline */}
-          <p className="font-body text-white/60 text-lg md:text-xl leading-[1.6] mb-10 max-w-2xl mx-auto">
+          <p className="font-body text-white/60 text-base md:text-xl leading-[1.6] mb-10 max-w-2xl mx-auto">
             Custom technology and strategy for businesses that want a competitive edge.
             No fluff. Just results.
           </p>
 
           {/* CTA row */}
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
             <Link
               href="/contact"
-              className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] hover:-translate-y-px transition-all duration-200"
+              className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] hover:-translate-y-px transition-all duration-200 text-center"
             >
               Book a Free Consultation
             </Link>
             <Link
               href="/work"
-              className="font-heading text-base text-white bg-transparent border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200"
+              className="font-heading text-base text-white bg-transparent border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200 text-center"
             >
               See Our Work
             </Link>
@@ -142,11 +142,11 @@ export default function Home() {
       </section>
 
       {/* ── Stats Bar ── */}
-      <section className="bg-brand-purple py-12 px-6">
+      <section className="bg-brand-purple py-12 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-8 items-center">
-            <div className="text-center">
-              <p className="font-heading font-bold text-white text-[42px] leading-none">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center text-center">
+            <div>
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
                 $1,000–$2,000
               </p>
               <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
@@ -154,10 +154,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="hidden md:block w-px h-[60px] bg-white/20 self-center" />
-
-            <div className="text-center">
-              <p className="font-heading font-bold text-white text-[42px] leading-none">
+            <div className="sm:border-x sm:border-white/20 sm:px-6">
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
                 3 platforms
               </p>
               <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
@@ -165,10 +163,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="hidden md:block w-px h-[60px] bg-white/20 self-center" />
-
-            <div className="text-center">
-              <p className="font-heading font-bold text-white text-[42px] leading-none">
+            <div>
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
                 100% custom
               </p>
               <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
@@ -180,17 +176,17 @@ export default function Home() {
       </section>
 
       {/* ── Problem Section ── */}
-      <section className="bg-brand-light py-24 px-6">
+      <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-widest mb-4">
               The Problem
             </p>
-            <h2 className="font-heading font-bold text-brand-dark text-4xl md:text-5xl tracking-[-0.02em] mb-6">
+            <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6">
               Most small businesses are overpaying for tools that don&apos;t work together.
             </h2>
-            <p className="font-body text-brand-muted text-lg max-w-2xl mx-auto leading-[1.7]">
+            <p className="font-body text-brand-muted text-base md:text-lg max-w-2xl mx-auto leading-[1.7]">
               The average small business runs 6 to 8 separate software subscriptions. They
               don&apos;t integrate. Nobody fully understands them. And the business pays for all
               of it every single month.
@@ -199,7 +195,7 @@ export default function Home() {
 
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm">
+            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
               <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
                 <DollarSign size={22} className="text-brand-purple" />
               </div>
@@ -212,7 +208,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm">
+            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
               <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
                 <Puzzle size={22} className="text-brand-purple" />
               </div>
@@ -225,7 +221,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-8 shadow-sm">
+            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
               <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
                 <Clock size={22} className="text-brand-purple" />
               </div>
@@ -240,9 +236,9 @@ export default function Home() {
           </div>
 
           {/* Transition statement */}
-          <div className="mt-20 flex justify-center">
-            <div className="bg-brand-dark rounded-2xl px-10 py-8 max-w-3xl w-full text-center">
-              <p className="font-heading font-bold text-white text-2xl leading-[1.4]">
+          <div className="mt-16 md:mt-20 flex justify-center">
+            <div className="bg-brand-dark rounded-2xl px-6 md:px-10 py-6 md:py-8 max-w-3xl w-full text-center">
+              <p className="font-heading font-bold text-white text-xl md:text-2xl leading-[1.4]">
                 That&apos;s what we fix.
               </p>
               <p className="font-body text-white/60 text-base mt-3 leading-relaxed">
@@ -256,37 +252,37 @@ export default function Home() {
       </section>
 
       {/* ── What We Do ── */}
-      <section className="bg-brand-dark py-24 px-6">
+      <section className="bg-brand-dark py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16">
             <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
               What We Do
             </p>
-            <h2 className="font-heading font-bold text-white text-4xl md:text-5xl tracking-[-0.02em] mb-6 max-w-3xl">
+            <h2 className="font-heading font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6 max-w-3xl">
               Three ways we work with businesses.
             </h2>
-            <p className="font-body text-white/50 text-lg max-w-2xl leading-[1.7]">
+            <p className="font-body text-white/50 text-base md:text-lg max-w-2xl leading-[1.7]">
               Every engagement starts with an honest assessment of where the business is.
               From there we go as deep as needed.
             </p>
           </div>
 
           {/* Service tier cards */}
-          <div className="mt-16 space-y-6">
+          <div className="mt-10 md:mt-16 space-y-6">
             {/* 01 */}
             <Link
               href="/services"
-              className="flex flex-col md:flex-row gap-8 items-start bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-8 hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-200 cursor-pointer"
+              className="flex flex-col md:flex-row gap-6 md:gap-8 items-start bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 md:p-8 hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-200 cursor-pointer"
             >
               <div className="shrink-0">
-                <span className="font-heading font-bold text-white/10 text-[80px] leading-none">01</span>
+                <span className="font-heading font-bold text-white/10 text-[56px] md:text-[80px] leading-none">01</span>
               </div>
               <div className="flex-1">
                 <div className="inline-flex items-center border border-brand-purple bg-[rgba(139,47,201,0.1)] rounded-full px-3 py-1 mb-4">
                   <span className="font-body text-brand-purple text-xs font-semibold">Audit &amp; Strategy</span>
                 </div>
-                <h3 className="font-heading font-bold text-white text-[26px] tracking-[-0.01em] mb-3">
+                <h3 className="font-heading font-bold text-white text-[22px] md:text-[26px] tracking-[-0.01em] mb-3">
                   We start with a free consultation.
                 </h3>
                 <p className="font-body text-white/50 text-base leading-[1.7] mb-5">
@@ -302,16 +298,16 @@ export default function Home() {
             {/* 02 */}
             <Link
               href="/services"
-              className="flex flex-col md:flex-row gap-8 items-start bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-8 hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-200 cursor-pointer"
+              className="flex flex-col md:flex-row gap-6 md:gap-8 items-start bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 md:p-8 hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-200 cursor-pointer"
             >
               <div className="shrink-0">
-                <span className="font-heading font-bold text-white/10 text-[80px] leading-none">02</span>
+                <span className="font-heading font-bold text-white/10 text-[56px] md:text-[80px] leading-none">02</span>
               </div>
               <div className="flex-1">
                 <div className="inline-flex items-center border border-brand-magenta bg-[rgba(224,64,251,0.1)] rounded-full px-3 py-1 mb-4">
                   <span className="font-body text-brand-magenta text-xs font-semibold">Optimize &amp; Consolidate</span>
                 </div>
-                <h3 className="font-heading font-bold text-white text-[26px] tracking-[-0.01em] mb-3">
+                <h3 className="font-heading font-bold text-white text-[22px] md:text-[26px] tracking-[-0.01em] mb-3">
                   We cut the waste and connect the gaps.
                 </h3>
                 <p className="font-body text-white/50 text-base leading-[1.7] mb-5">
@@ -328,16 +324,16 @@ export default function Home() {
             {/* 03 */}
             <Link
               href="/services"
-              className="flex flex-col md:flex-row gap-8 items-start bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-8 hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-200 cursor-pointer"
+              className="flex flex-col md:flex-row gap-6 md:gap-8 items-start bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 md:p-8 hover:bg-[rgba(255,255,255,0.05)] hover:border-[rgba(255,255,255,0.15)] transition-all duration-200 cursor-pointer"
             >
               <div className="shrink-0">
-                <span className="font-heading font-bold text-white/10 text-[80px] leading-none">03</span>
+                <span className="font-heading font-bold text-white/10 text-[56px] md:text-[80px] leading-none">03</span>
               </div>
               <div className="flex-1">
                 <div className="inline-flex items-center border border-brand-purple bg-[rgba(139,47,201,0.1)] rounded-full px-3 py-1 mb-4">
                   <span className="font-body text-brand-purple text-xs font-semibold">Build</span>
                 </div>
-                <h3 className="font-heading font-bold text-white text-[26px] tracking-[-0.01em] mb-3">
+                <h3 className="font-heading font-bold text-white text-[22px] md:text-[26px] tracking-[-0.01em] mb-3">
                   We build what doesn&apos;t exist yet.
                 </h3>
                 <p className="font-body text-white/50 text-base leading-[1.7] mb-5">
@@ -354,24 +350,24 @@ export default function Home() {
       </section>
 
       {/* ── Who We Work With ── */}
-      <section className="bg-brand-light py-24 px-6">
+      <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
               Who We Work With
             </p>
-            <h2 className="font-heading font-bold text-brand-dark text-4xl md:text-5xl tracking-[-0.02em] mb-6 max-w-2xl mx-auto">
+            <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6 max-w-2xl mx-auto">
               Built for businesses that are serious about winning.
             </h2>
-            <p className="font-body text-brand-muted text-lg max-w-xl mx-auto leading-[1.7]">
+            <p className="font-body text-brand-muted text-base md:text-lg max-w-xl mx-auto leading-[1.7]">
               We work with blue-collar industries, local operators, and owner-run companies
               that have real ambition and need real solutions.
             </p>
           </div>
 
           {/* Industry grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-16">
             {[
               { Icon: Wrench,    label: 'Trades & Contractors' },
               { Icon: Utensils,  label: 'Restaurants & Hospitality' },
@@ -384,12 +380,12 @@ export default function Home() {
             ].map(({ Icon, label }) => (
               <div
                 key={label}
-                className="bg-white border border-[#E5E7EB] rounded-2xl p-6 text-center hover:border-brand-purple hover:shadow-md transition-all duration-200"
+                className="bg-white border border-[#E5E7EB] rounded-2xl p-4 md:p-6 text-center hover:border-brand-purple hover:shadow-md transition-all duration-200"
               >
-                <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center mx-auto mb-4">
-                  <Icon size={22} className="text-brand-purple" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Icon size={20} className="text-brand-purple" />
                 </div>
-                <p className="font-heading font-bold text-brand-dark text-[15px]">{label}</p>
+                <p className="font-heading font-bold text-brand-dark text-[13px] md:text-[15px]">{label}</p>
               </div>
             ))}
           </div>
@@ -397,7 +393,7 @@ export default function Home() {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="relative overflow-hidden bg-brand-dark py-24 px-6 text-center">
+      <section className="relative overflow-hidden bg-brand-dark py-16 md:py-24 px-4 md:px-6 text-center">
         <div
           aria-hidden="true"
           className="absolute pointer-events-none"
@@ -415,22 +411,22 @@ export default function Home() {
           <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-6">
             Get Started
           </p>
-          <h2 className="font-heading font-bold text-white text-4xl md:text-5xl tracking-[-0.02em] mb-6">
+          <h2 className="font-heading font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6">
             Find out what your business is leaving on the table.
           </h2>
-          <p className="font-body text-white/60 text-lg max-w-xl mx-auto leading-[1.7] mb-10">
+          <p className="font-body text-white/60 text-base md:text-lg max-w-xl mx-auto leading-[1.7] mb-10">
             The audit is free. The conversation is honest. The results are real.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] transition-colors duration-200"
+              className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] transition-colors duration-200 text-center"
             >
               Get Your Free Audit
             </Link>
             <Link
               href="/work"
-              className="font-heading text-base text-white border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200"
+              className="font-heading text-base text-white border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200 text-center"
             >
               See Our Work
             </Link>

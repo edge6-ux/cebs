@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 
-// ── Reusable sub-components ────────────────────────────────────────────────
-
 function CheckItem({ text }: { text: string }) {
   return (
     <li className="flex gap-3 items-start">
@@ -21,13 +19,11 @@ function CheckItemLight({ text }: { text: string }) {
   )
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────
-
 export default function ServicesPage() {
   return (
     <div>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-brand-dark pt-40 pb-24 px-6 text-center">
+      <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
         {/* Radial glow */}
         <div
           className="absolute pointer-events-none"
@@ -55,10 +51,10 @@ export default function ServicesPage() {
           <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
             Our Services
           </p>
-          <h1 className="font-heading font-bold text-white text-[40px] md:text-[56px] leading-[1.05] tracking-[-0.02em] mb-6">
+          <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
             Every engagement starts with the truth.
           </h1>
-          <p className="font-body text-white/60 text-xl max-w-2xl mx-auto leading-[1.7]">
+          <p className="font-body text-white/60 text-base md:text-xl max-w-2xl mx-auto leading-[1.7]">
             We don&apos;t sell packages. We assess what the business actually needs and work
             from there. Sometimes that starts with a consultation. Sometimes it&apos;s a full
             custom build. Usually it&apos;s both.
@@ -67,12 +63,12 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 01 Audit & Strategy ── */}
-      <section className="bg-brand-light py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: text */}
           <div>
             <p className="font-body text-brand-purple font-bold text-[13px] mb-2">01</p>
-            <h2 className="font-heading font-bold text-brand-dark text-[40px] tracking-[-0.02em] mb-6">
+            <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-[40px] tracking-[-0.02em] mb-6">
               Audit &amp; Strategy
             </h2>
             <p className="font-body text-brand-muted text-[17px] leading-[1.8] mb-8">
@@ -94,14 +90,14 @@ export default function ServicesPage() {
             </ul>
             <Link
               href="/contact"
-              className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors"
+              className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors w-full sm:w-auto text-center"
             >
               Book Your Free Consultation
             </Link>
           </div>
 
           {/* Right: detail card */}
-          <div className="bg-brand-dark rounded-2xl p-8">
+          <div className="bg-brand-dark rounded-2xl p-6 md:p-8">
             <p className="font-body text-white/30 text-[11px] uppercase tracking-[0.08em] mb-6">
               What We Look At
             </p>
@@ -147,16 +143,16 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 02 Optimize & Consolidate ── */}
-      <section className="bg-white py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Left: results card (reversed on desktop) */}
-          <div className="bg-[rgba(139,47,201,0.06)] border border-[rgba(139,47,201,0.15)] rounded-2xl p-8">
+      <section className="bg-white py-16 md:py-24 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Results card — desktop: left col; mobile: below text */}
+          <div className="order-2 lg:order-1 bg-[rgba(139,47,201,0.06)] border border-[rgba(139,47,201,0.15)] rounded-2xl p-6 md:p-8">
             <p className="font-body text-brand-purple text-[11px] uppercase tracking-[0.08em] mb-8">
               Typical Results
             </p>
             <div className="space-y-8">
               <div>
-                <p className="font-heading font-bold text-brand-purple text-[42px] leading-none">
+                <p className="font-heading font-bold text-brand-purple text-3xl md:text-[42px] leading-none">
                   30–50%
                 </p>
                 <p className="font-body text-brand-muted text-sm mt-2 leading-[1.5]">
@@ -164,7 +160,7 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div>
-                <p className="font-heading font-bold text-brand-purple text-[42px] leading-none">
+                <p className="font-heading font-bold text-brand-purple text-3xl md:text-[42px] leading-none">
                   2–3 systems
                 </p>
                 <p className="font-body text-brand-muted text-sm mt-2 leading-[1.5]">
@@ -172,7 +168,7 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div>
-                <p className="font-heading font-bold text-brand-purple text-[42px] leading-none">
+                <p className="font-heading font-bold text-brand-purple text-3xl md:text-[42px] leading-none">
                   Hours back
                 </p>
                 <p className="font-body text-brand-muted text-sm mt-2 leading-[1.5]">
@@ -182,10 +178,10 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Right: text */}
-          <div>
+          {/* Text — desktop: right col; mobile: first */}
+          <div className="order-1 lg:order-2">
             <p className="font-body text-brand-purple font-bold text-[13px] mb-2">02</p>
-            <h2 className="font-heading font-bold text-brand-dark text-[40px] tracking-[-0.02em] mb-6">
+            <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-[40px] tracking-[-0.02em] mb-6">
               Optimize &amp; Consolidate
             </h2>
             <p className="font-body text-brand-muted text-[17px] leading-[1.8] mb-8">
@@ -207,7 +203,7 @@ export default function ServicesPage() {
             </ul>
             <Link
               href="/contact"
-              className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors"
+              className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors w-full sm:w-auto text-center"
             >
               Book a Free Consultation
             </Link>
@@ -216,12 +212,12 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 03 Build ── */}
-      <section className="bg-brand-dark py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="bg-brand-dark py-16 md:py-24 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: text */}
           <div>
             <p className="font-body text-white/30 font-bold text-[13px] mb-2">03</p>
-            <h2 className="font-heading font-bold text-white text-[40px] tracking-[-0.02em] mb-6">
+            <h2 className="font-heading font-bold text-white text-3xl md:text-[40px] tracking-[-0.02em] mb-6">
               Build
             </h2>
             <p className="font-body text-white/50 text-[17px] leading-[1.8] mb-8">
@@ -244,14 +240,14 @@ export default function ServicesPage() {
             </ul>
             <Link
               href="/contact"
-              className="inline-block font-heading font-bold text-[15px] text-white border border-brand-purple bg-transparent px-7 py-3.5 rounded-xl hover:bg-brand-purple transition-all duration-200"
+              className="inline-block font-heading font-bold text-[15px] text-white border border-brand-purple bg-transparent px-7 py-3.5 rounded-xl hover:bg-brand-purple transition-all duration-200 w-full sm:w-auto text-center"
             >
               Tell Us What You Need
             </Link>
           </div>
 
           {/* Right: case study card */}
-          <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-8">
+          <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 md:p-8">
             <p className="font-body text-white/30 text-[11px] uppercase tracking-[0.08em] mb-6">
               Recent Build
             </p>
@@ -261,7 +257,7 @@ export default function ServicesPage() {
             <ul className="space-y-4">
               {[
                 'AI-powered tree assessment app with dual customer and operator outputs',
-                'Full admin dashboard replacing Thryv, JobFlow, and Bluehost',
+                'Full admin dashboard replacing Thryv, FobFlo, and Bluehost',
                 'Customer portal with job tracking, quotes, and direct messaging',
                 'Saved $2,000–$3,000/month in software costs',
               ].map((item) => (
@@ -282,17 +278,17 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Bottom CTA ── */}
-      <section className="bg-brand-purple py-20 px-6 text-center">
-        <h2 className="font-heading font-bold text-white text-[40px] tracking-[-0.02em] mb-4">
+      <section className="bg-brand-purple py-16 md:py-20 px-4 md:px-6 text-center">
+        <h2 className="font-heading font-bold text-white text-3xl md:text-[40px] tracking-[-0.02em] mb-4">
           Not sure which tier fits your business?
         </h2>
-        <p className="font-body text-white/80 text-lg max-w-xl mx-auto leading-[1.7] mb-8">
+        <p className="font-body text-white/80 text-base md:text-lg max-w-xl mx-auto leading-[1.7] mb-8">
           Start with a free consultation. We&apos;ll review where your business stands
           and show you exactly where we can make the biggest impact.
         </p>
         <Link
           href="/contact"
-          className="inline-block font-heading font-bold text-base text-brand-purple bg-white px-8 py-4 rounded-xl hover:bg-white/90 transition-colors"
+          className="inline-block font-heading font-bold text-base text-brand-purple bg-white px-8 py-4 rounded-xl hover:bg-white/90 transition-colors w-full sm:w-auto text-center"
         >
           Book Your Free Consultation
         </Link>

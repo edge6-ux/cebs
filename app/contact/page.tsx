@@ -67,7 +67,7 @@ export default function ContactPage() {
       setSuccess(true)
     } catch {
       setError(
-        'Something went wrong. Please try again or email us directly at edgerrinwashington@gmail.com'
+        'Something went wrong. Please try again or email us directly at hello@cuttingedgebs.com'
       )
     } finally {
       setLoading(false)
@@ -77,7 +77,7 @@ export default function ContactPage() {
   return (
     <div>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-brand-dark pt-40 pb-24 px-6 text-center">
+      <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
         <div
           className="absolute pointer-events-none"
           style={{
@@ -102,10 +102,10 @@ export default function ContactPage() {
           <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
             Get in Touch
           </p>
-          <h1 className="font-heading font-bold text-white text-[40px] md:text-[56px] leading-[1.05] tracking-[-0.02em] mb-6">
+          <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
             Let&apos;s talk about your business.
           </h1>
-          <p className="font-body text-white/60 text-xl max-w-xl mx-auto leading-[1.7]">
+          <p className="font-body text-white/60 text-base md:text-xl max-w-xl mx-auto leading-[1.7]">
             Start with a free consultation. No commitment, no pitch — just an honest look at
             where your business is and where it could be.
           </p>
@@ -113,11 +113,11 @@ export default function ContactPage() {
       </section>
 
       {/* ── Form Section ── */}
-      <section className="bg-brand-light py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+      <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
           {/* ── Left: Form card ── */}
-          <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm">
+          <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 shadow-sm">
             {success ? (
               /* Success state */
               <div className="py-8">
@@ -364,7 +364,7 @@ export default function ContactPage() {
           </div>
 
           {/* ── Right: Info panel ── */}
-          <div className="space-y-10">
+          <div className="space-y-10 mt-8 lg:mt-0">
 
             {/* Why start with an audit */}
             <div>
@@ -446,7 +446,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-brand-purple" />
                 <span className="font-body text-[#4A4A4A] text-sm">
-                  edgerrinwashington@gmail.com
+                  hello@cuttingedgebs.com
                 </span>
               </div>
             </div>

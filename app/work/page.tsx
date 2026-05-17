@@ -69,7 +69,7 @@ export default function WorkPage() {
   return (
     <div>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-brand-dark pt-40 pb-24 px-6 text-center">
+      <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
         <div
           className="absolute pointer-events-none"
           style={{
@@ -94,10 +94,10 @@ export default function WorkPage() {
           <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
             Our Work
           </p>
-          <h1 className="font-heading font-bold text-white text-[40px] md:text-[56px] leading-[1.05] tracking-[-0.02em] mb-6">
+          <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
             The proof is in the work.
           </h1>
-          <p className="font-body text-white/60 text-xl max-w-2xl mx-auto leading-[1.7]">
+          <p className="font-body text-white/60 text-base md:text-xl max-w-2xl mx-auto leading-[1.7]">
             We don&apos;t make promises we can&apos;t back up. Here&apos;s what we&apos;ve
             actually built and what it replaced.
           </p>
@@ -105,25 +105,25 @@ export default function WorkPage() {
       </section>
 
       {/* ── Case Study: Gordon Pro ── */}
-      <section className="bg-brand-light py-24 px-6">
+      <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
 
           {/* Header */}
-          <div className="flex justify-between items-start flex-wrap gap-6 mb-16">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12 md:mb-16">
             <div>
               <p className="font-body text-brand-purple text-xs font-semibold uppercase tracking-widest mb-3">
                 Case Study — 01
               </p>
-              <h2 className="font-heading font-bold text-brand-dark text-[44px] tracking-[-0.02em] mb-4 leading-[1.05]">
+              <h2 className="font-heading font-bold text-brand-dark text-[36px] md:text-[44px] tracking-[-0.02em] mb-4 leading-[1.05]">
                 Gordon Pro<br />Tree Service
               </h2>
-              <div className="flex flex-wrap gap-6 font-body text-brand-muted text-sm">
+              <div className="flex flex-wrap gap-4 md:gap-6 font-body text-brand-muted text-sm">
                 <span>Industry: Tree Service</span>
                 <span>Location: North Georgia</span>
                 <span>Service: Build</span>
               </div>
             </div>
-            <div className="bg-[rgba(139,47,201,0.08)] border border-[rgba(139,47,201,0.2)] rounded-2xl px-6 py-4 text-center">
+            <div className="bg-[rgba(139,47,201,0.08)] border border-[rgba(139,47,201,0.2)] rounded-2xl px-6 py-4 text-center w-full md:w-auto">
               <p className="font-heading font-bold text-brand-purple text-[36px] leading-none">
                 $2–3K
               </p>
@@ -134,7 +134,7 @@ export default function WorkPage() {
           </div>
 
           {/* The Challenge */}
-          <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-16">
+          <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 shadow-sm mb-12 md:mb-16">
             <p className="font-body text-brand-purple text-[11px] font-semibold uppercase tracking-widest mb-4">
               The Challenge
             </p>
@@ -153,7 +153,7 @@ export default function WorkPage() {
           </div>
 
           {/* What Was Replaced */}
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16">
             <h3 className="font-heading font-bold text-brand-dark text-[22px] mb-6">
               What Was Replaced
             </h3>
@@ -173,7 +173,7 @@ export default function WorkPage() {
           </div>
 
           {/* What Was Built */}
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16">
             <h3 className="font-heading font-bold text-brand-dark text-[22px] mb-6">
               What Was Built
             </h3>
@@ -181,7 +181,7 @@ export default function WorkPage() {
               {builtItems.map(({ Icon, title, body }) => (
                 <div
                   key={title}
-                  className="bg-white rounded-2xl border border-[#E5E7EB] p-5 shadow-sm flex gap-4 items-start"
+                  className="bg-white rounded-2xl border border-[#E5E7EB] p-4 md:p-5 shadow-sm flex gap-4 items-start"
                 >
                   <div className="w-10 h-10 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center shrink-0">
                     <Icon size={18} className="text-brand-purple" />
@@ -196,25 +196,25 @@ export default function WorkPage() {
           </div>
 
           {/* The Result */}
-          <div className="bg-brand-dark rounded-2xl p-10">
+          <div className="bg-brand-dark rounded-2xl p-6 md:p-10">
             <p className="font-body text-white/30 text-[11px] uppercase tracking-widest mb-6">
               The Result
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <p className="font-heading font-bold text-white text-[42px] leading-none">$2–3K</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
+              <div className="border-b border-white/[0.08] pb-6 md:border-0 md:pb-0">
+                <p className="font-heading font-bold text-white text-3xl md:text-[42px] leading-none">$2–3K</p>
                 <p className="font-body text-white/50 text-sm mt-2 leading-relaxed">
                   saved in monthly software costs
                 </p>
               </div>
-              <div>
-                <p className="font-heading font-bold text-white text-[42px] leading-none">3 platforms</p>
+              <div className="border-b border-white/[0.08] pb-6 md:border-0 md:pb-0">
+                <p className="font-heading font-bold text-white text-3xl md:text-[42px] leading-none">3 platforms</p>
                 <p className="font-body text-white/50 text-sm mt-2 leading-relaxed">
                   replaced by one custom system
                 </p>
               </div>
               <div>
-                <p className="font-heading font-bold text-white text-[42px] leading-none">100% custom</p>
+                <p className="font-heading font-bold text-white text-3xl md:text-[42px] leading-none">100% custom</p>
                 <p className="font-body text-white/50 text-sm mt-2 leading-relaxed">
                   built for how Gordon Pro actually operates
                 </p>
@@ -234,8 +234,8 @@ export default function WorkPage() {
       </section>
 
       {/* ── More Coming Soon ── */}
-      <section className="bg-white py-20 px-6 text-center">
-        <h2 className="font-heading font-bold text-brand-dark text-[36px] tracking-[-0.02em] mb-4">
+      <section className="bg-white py-16 md:py-20 px-4 md:px-6 text-center">
+        <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-[36px] tracking-[-0.02em] mb-4">
           More case studies coming soon.
         </h2>
         <p className="font-body text-brand-muted text-[17px] max-w-lg mx-auto leading-[1.7] mb-8">
@@ -244,7 +244,7 @@ export default function WorkPage() {
         </p>
         <Link
           href="/contact"
-          className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors"
+          className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors w-full sm:w-auto text-center"
         >
           Book a Free Consultation
         </Link>
