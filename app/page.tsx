@@ -422,7 +422,7 @@ export default function Home() {
               href="/contact"
               className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] transition-colors duration-200 text-center"
             >
-              Get Your Free Audit
+              Get Your Free Consultation
             </Link>
             <Link
               href="/work"
