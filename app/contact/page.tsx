@@ -140,10 +140,10 @@ export default function ContactPage() {
                     See Our Work
                   </Link>
                   <Link
-                    href="/about"
+                    href="/services"
                     className="font-body text-[#4A4A4A] text-sm border border-[#E5E7EB] px-5 py-2.5 rounded-xl hover:border-gray-300 transition-colors"
                   >
-                    About Us
+                    Our Services
                   </Link>
                 </div>
               </div>

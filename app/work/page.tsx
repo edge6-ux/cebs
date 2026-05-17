@@ -11,8 +11,8 @@ const replacedPlatforms = [
     body: 'CRM, scheduling, and customer communication. Replaced by the custom admin dashboard and automated email system.',
   },
   {
-    name: 'JobFlow',
-    cost: '$200+/month',
+    name: 'FobFlo',
+    cost: '$2,500+/month',
     body: 'Job management platform. Replaced by a custom pipeline with role-based access for admin, sales, crew leaders, and crew.',
   },
   {
@@ -140,7 +140,7 @@ export default function WorkPage() {
             </p>
             <p className="font-body text-[#4A4A4A] text-base leading-[1.8]">
               Gordon Pro Tree Service was running their business across multiple disconnected
-              platforms — Thryv for CRM and customer communication, JobFlow for job management,
+              platforms — Thryv for CRM and customer communication, FobFlo for job management,
               and Bluehost for web hosting. Combined these tools were costing $2,000 to $3,000
               per month and required constant manual work to keep synchronized.
             </p>

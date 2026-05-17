@@ -395,6 +395,48 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Final CTA ── */}
+      <section className="relative overflow-hidden bg-brand-dark py-24 px-6 text-center">
+        <div
+          aria-hidden="true"
+          className="absolute pointer-events-none"
+          style={{
+            bottom: '-20%',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: '700px',
+            height: '700px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(139,47,201,0.15) 0%, rgba(139,47,201,0) 70%)',
+          }}
+        />
+        <div className="relative z-10 max-w-3xl mx-auto">
+          <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-6">
+            Get Started
+          </p>
+          <h2 className="font-heading font-bold text-white text-4xl md:text-5xl tracking-[-0.02em] mb-6">
+            Find out what your business is leaving on the table.
+          </h2>
+          <p className="font-body text-white/60 text-lg max-w-xl mx-auto leading-[1.7] mb-10">
+            The audit is free. The conversation is honest. The results are real.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] transition-colors duration-200"
+            >
+              Get Your Free Audit
+            </Link>
+            <Link
+              href="/work"
+              className="font-heading text-base text-white border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200"
+            >
+              See Our Work
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
