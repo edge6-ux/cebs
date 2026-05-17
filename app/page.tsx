@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeroParticles from '@/components/home/HeroParticles'
+import FluidBackground from '@/components/home/FluidBackground'
 import {
   ChevronDown, DollarSign, Puzzle, Clock, Search, Code2, TrendingDown,
   Wrench, Utensils, TreePine, Building2, Car, Heart, Scale, Zap,
@@ -10,55 +11,11 @@ export default function Home() {
     <div>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-brand-dark min-h-screen">
-        {/* Glow — top center, purple */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '-20%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '900px',
-            height: '900px',
-            borderRadius: '50%',
-            background:
-              'radial-gradient(circle, rgba(139,47,201,0.18) 0%, rgba(139,47,201,0) 70%)',
-          }}
-        />
-        {/* Glow — bottom left, purple softer */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            bottom: '-10%',
-            left: '-10%',
-            width: '600px',
-            height: '600px',
-            borderRadius: '50%',
-            background:
-              'radial-gradient(circle, rgba(139,47,201,0.10) 0%, rgba(139,47,201,0) 70%)',
-          }}
-        />
-        {/* Glow — top right, magenta accent */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '-5%',
-            right: '-5%',
-            width: '500px',
-            height: '500px',
-            borderRadius: '50%',
-            background:
-              'radial-gradient(circle, rgba(224,64,251,0.07) 0%, rgba(224,64,251,0) 70%)',
-          }}
-        />
-        {/* Grid overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        {/* Fluid animated background */}
+        <FluidBackground />
+
+        {/* Dark vignette so text stays readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/60 pointer-events-none" />
 
         {/* Particles */}
         <HeroParticles />
