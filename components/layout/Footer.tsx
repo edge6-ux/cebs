@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-3">
             <Link href="/">
               <Image
-                src="/cebslogo3.png"
+                src="/cebs-logo.png"
                 alt="Competitive Edge Business Solutions"
                 width={100}
                 height={100}
