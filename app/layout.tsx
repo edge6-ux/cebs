@@ -19,6 +19,25 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Competitive Edge Business Solutions',
   description: 'Custom technology and strategy for businesses that want a competitive edge.',
+  openGraph: {
+    title: 'Competitive Edge Business Solutions',
+    description: 'Custom technology and strategy for businesses that want a competitive edge.',
+    images: [
+      {
+        url: '/cebsthumbnail.png',
+        width: 1200,
+        height: 630,
+        alt: 'Competitive Edge Business Solutions',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Competitive Edge Business Solutions',
+    description: 'Custom technology and strategy for businesses that want a competitive edge.',
+    images: ['/cebsthumbnail.png'],
+  },
 }
 
 export default function RootLayout({
