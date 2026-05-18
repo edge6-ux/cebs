@@ -98,6 +98,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Stats Bar ── */}
+      <section className="bg-brand-purple py-12 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-stretch">
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
+                $1,000–$2,000
+              </p>
+              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
+                saved on average per month
+              </p>
+            </div>
+
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
+                multiple platforms
+              </p>
+              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
+                replaced with integrated custom systems
+              </p>
+            </div>
+
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
+                100% custom
+              </p>
+              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
+                built for the business, not the other way around
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── What We Do ── */}
       <section id="what-we-do" className="bg-brand-dark py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
@@ -266,40 +300,6 @@ export default function Home() {
                 We come in, audit everything, cut what&apos;s wasteful, and build what&apos;s
                 missing. The businesses we work with come out sharper, leaner, and harder to
                 compete against.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Stats Bar ── */}
-      <section className="bg-brand-purple py-12 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-stretch">
-            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
-              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
-                $1,000–$2,000
-              </p>
-              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
-                saved on average per month
-              </p>
-            </div>
-
-            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
-              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
-                multiple platforms
-              </p>
-              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
-                replaced with integrated custom systems
-              </p>
-            </div>
-
-            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
-              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
-                100% custom
-              </p>
-              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
-                built for the business, not the other way around
               </p>
             </div>
           </div>
