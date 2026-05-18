@@ -65,10 +65,10 @@ export default function Home() {
               Book a Free Consultation
             </Link>
             <Link
-              href="/work"
+              href="#what-we-do"
               className="font-heading text-base text-white bg-transparent border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200 text-center"
             >
-              See Our Work
+              What We Do
             </Link>
           </div>
 
@@ -98,118 +98,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Stats Bar ── */}
-      <section className="bg-brand-purple py-12 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-stretch">
-            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
-              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
-                $1,000–$2,000
-              </p>
-              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
-                saved on average per month
-              </p>
-            </div>
-
-            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
-              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
-                multiple platforms
-              </p>
-              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
-                replaced with integrated custom systems
-              </p>
-            </div>
-
-            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
-              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
-                100% custom
-              </p>
-              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
-                built for the business, not the other way around
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Problem Section ── */}
-      <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12 md:mb-16">
-            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-widest mb-4">
-              The Problem
-            </p>
-            <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6">
-              Most small businesses are overpaying for tools that don&apos;t work together.
-            </h2>
-            <p className="font-body text-brand-muted text-base md:text-lg max-w-2xl mx-auto leading-[1.7]">
-              The average small business runs 6 to 8 separate software subscriptions. They
-              don&apos;t integrate. Nobody fully understands them. And the business pays for all
-              of it every single month.
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
-                <DollarSign size={22} className="text-brand-purple" />
-              </div>
-              <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
-                Overpaying
-              </h3>
-              <p className="font-body text-brand-muted text-[15px] leading-[1.7]">
-                Multiple subscriptions charging $50–$300/month each for tools that duplicate
-                each other&apos;s functionality.
-              </p>
-            </div>
-
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
-                <Puzzle size={22} className="text-brand-purple" />
-              </div>
-              <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
-                Disconnected
-              </h3>
-              <p className="font-body text-brand-muted text-[15px] leading-[1.7]">
-                Tools that don&apos;t talk to each other force manual work, create gaps, and
-                cost time the business doesn&apos;t have.
-              </p>
-            </div>
-
-            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
-                <Clock size={22} className="text-brand-purple" />
-              </div>
-              <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
-                No Time to Fix It
-              </h3>
-              <p className="font-body text-brand-muted text-[15px] leading-[1.7]">
-                Running a business leaves no bandwidth to audit, research, and implement
-                better solutions. So nothing changes.
-              </p>
-            </div>
-          </div>
-
-          {/* Transition statement */}
-          <div className="mt-16 md:mt-20 flex justify-center">
-            <div className="bg-brand-dark rounded-2xl px-6 md:px-10 py-6 md:py-8 max-w-3xl w-full text-center">
-              <p className="font-heading font-bold text-white text-xl md:text-2xl leading-[1.4]">
-                That&apos;s what we fix.
-              </p>
-              <p className="font-body text-white/60 text-base mt-3 leading-relaxed">
-                We come in, audit everything, cut what&apos;s wasteful, and build what&apos;s
-                missing. The businesses we work with come out sharper, leaner, and harder to
-                compete against.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── What We Do ── */}
-      <section className="bg-brand-dark py-16 md:py-24 px-4 md:px-6">
+      <section id="what-we-do" className="bg-brand-dark py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-12 md:mb-16">
@@ -306,6 +196,116 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Problem Section ── */}
+      <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12 md:mb-16">
+            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-widest mb-4">
+              The Problem
+            </p>
+            <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6">
+              Most small businesses are overpaying for tools that don&apos;t work together.
+            </h2>
+            <p className="font-body text-brand-muted text-base md:text-lg max-w-2xl mx-auto leading-[1.7]">
+              The average small business runs 6 to 8 separate software subscriptions. They
+              don&apos;t integrate. Nobody fully understands them. And the business pays for all
+              of it every single month.
+            </p>
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
+                <DollarSign size={22} className="text-brand-purple" />
+              </div>
+              <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
+                Overpaying
+              </h3>
+              <p className="font-body text-brand-muted text-[15px] leading-[1.7]">
+                Multiple subscriptions charging $50–$300/month each for tools that duplicate
+                each other&apos;s functionality.
+              </p>
+            </div>
+
+            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
+                <Puzzle size={22} className="text-brand-purple" />
+              </div>
+              <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
+                Disconnected
+              </h3>
+              <p className="font-body text-brand-muted text-[15px] leading-[1.7]">
+                Tools that don&apos;t talk to each other force manual work, create gaps, and
+                cost time the business doesn&apos;t have.
+              </p>
+            </div>
+
+            <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
+                <Clock size={22} className="text-brand-purple" />
+              </div>
+              <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
+                No Time to Fix It
+              </h3>
+              <p className="font-body text-brand-muted text-[15px] leading-[1.7]">
+                Running a business leaves no bandwidth to audit, research, and implement
+                better solutions. So nothing changes.
+              </p>
+            </div>
+          </div>
+
+          {/* Transition statement */}
+          <div className="mt-16 md:mt-20 flex justify-center">
+            <div className="bg-brand-dark rounded-2xl px-6 md:px-10 py-6 md:py-8 max-w-3xl w-full text-center">
+              <p className="font-heading font-bold text-white text-xl md:text-2xl leading-[1.4]">
+                That&apos;s what we fix.
+              </p>
+              <p className="font-body text-white/60 text-base mt-3 leading-relaxed">
+                We come in, audit everything, cut what&apos;s wasteful, and build what&apos;s
+                missing. The businesses we work with come out sharper, leaner, and harder to
+                compete against.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Stats Bar ── */}
+      <section className="bg-brand-purple py-12 px-4 md:px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-stretch">
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
+                $1,000–$2,000
+              </p>
+              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
+                saved on average per month
+              </p>
+            </div>
+
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
+                multiple platforms
+              </p>
+              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
+                replaced with integrated custom systems
+              </p>
+            </div>
+
+            <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
+              <p className="font-heading font-bold text-white text-[36px] md:text-[42px] leading-none">
+                100% custom
+              </p>
+              <p className="font-body text-white/70 text-[15px] mt-2 leading-relaxed">
+                built for the business, not the other way around
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Who We Work With ── */}
       <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
@@ -382,10 +382,10 @@ export default function Home() {
               Get Your Free Consultation
             </Link>
             <Link
-              href="/work"
+              href="#what-we-do"
               className="font-heading text-base text-white border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200 text-center"
             >
-              See Our Work
+              What We Do
             </Link>
           </div>
         </div>
