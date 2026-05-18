@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const { error: dbError } = await supabaseAdmin
+  const { data: lead, error: dbError } = await supabaseAdmin
     .from('cebs_leads')
     .insert({
       full_name: fullName,
@@ -36,13 +36,46 @@ export async function POST(req: NextRequest) {
       hear_about_us: hearAboutUs || '',
       status: 'new',
     })
+    .select('id')
+    .single()
 
-  if (dbError) {
+  if (dbError || !lead) {
     console.error('DB error:', dbError)
     return NextResponse.json(
       { error: 'Failed to save' },
       { status: 500 }
     )
+  }
+
+  try {
+    const { data: existing } = await supabaseAdmin
+      .from('customers')
+      .select('id, email')
+      .eq('email', email)
+      .maybeSingle()
+
+    if (existing) {
+      await supabaseAdmin
+        .from('customers')
+        .update({ lead_id: lead.id, updated_at: new Date().toISOString() })
+        .eq('id', existing.id)
+      console.log('Linked to existing customer:', existing.id)
+    } else {
+      await supabaseAdmin
+        .from('customers')
+        .insert({
+          lead_id: lead.id,
+          business_name: businessName,
+          contact_name: fullName,
+          email,
+          phone: phone || '',
+          industry: industry || '',
+          status: 'active',
+        })
+      console.log('New customer created:', email)
+    }
+  } catch (err) {
+    console.error('Customer auto-creation failed:', err)
   }
 
   try {
