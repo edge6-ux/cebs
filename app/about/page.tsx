@@ -207,7 +207,7 @@ export default function AboutPage() {
           href="/contact"
           className="inline-block font-heading font-bold text-base text-brand-purple bg-white px-8 py-4 rounded-xl hover:bg-white/90 transition-colors w-full sm:w-auto text-center"
         >
-          Book a Free Consultation
+          Get a Free Consultation
         </Link>
       </section>
     </div>

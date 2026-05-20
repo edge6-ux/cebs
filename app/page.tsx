@@ -62,7 +62,7 @@ export default function Home() {
               href="/contact"
               className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] hover:-translate-y-px transition-all duration-200 text-center"
             >
-              Book a Free Consultation
+              Get a Free Consultation
             </Link>
             <Link
               href="#what-we-do"

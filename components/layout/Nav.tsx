@@ -76,8 +76,8 @@ export default function Nav() {
               href="/contact"
               className="hidden md:inline-block bg-brand-purple text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-[#7A28B8] transition-colors"
             >
-              <span className="hidden lg:inline">Book a Free Consultation</span>
-              <span className="lg:hidden">Free Audit</span>
+              <span className="hidden lg:inline">Get a Free Consultation</span>
+              <span className="lg:hidden">Free Consultation</span>
             </Link>
 
             {/* Mobile hamburger */}
@@ -119,7 +119,7 @@ export default function Nav() {
             onClick={() => setMobileOpen(false)}
             className="mt-6 min-h-[44px] flex items-center bg-brand-purple text-white font-heading text-lg font-semibold px-8 py-3 rounded-xl hover:bg-[#7A28B8] transition-colors"
           >
-            Book a Free Consultation
+            Get a Free Consultation
           </Link>
         </div>
       )}

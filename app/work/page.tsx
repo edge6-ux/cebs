@@ -246,7 +246,7 @@ export default function WorkPage() {
           href="/contact"
           className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors w-full sm:w-auto text-center"
         >
-          Book a Free Consultation
+          Get a Free Consultation
         </Link>
       </section>
     </div>

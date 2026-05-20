@@ -318,11 +318,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <p className="font-body text-[#9CA3AF] text-[13px] mt-6 leading-relaxed">
-                  By submitting you agree that Competitive Edge Business Solutions may contact
-                  you about your consultation request. We don&apos;t share your information.
-                </p>
-
                 <button
                   type="submit"
                   disabled={!requiredFilled || loading}
@@ -350,9 +345,35 @@ export default function ContactPage() {
                       Submitting...
                     </>
                   ) : (
-                    'Submit Request'
+                    'Request Free Consultation'
                   )}
                 </button>
+
+                <div className="flex items-center gap-3 my-4">
+                  <hr className="flex-1 border-[#E5E7EB]" />
+                  <span className="font-body text-[#9CA3AF] text-[13px]">or</span>
+                  <hr className="flex-1 border-[#E5E7EB]" />
+                </div>
+
+                <div className="bg-[#F9F9F9] rounded-xl p-4 text-center">
+                  <p className="font-body text-[#4A4A4A] text-[14px] mb-2">
+                    Want to give us more context before we talk?
+                  </p>
+                  <Link
+                    href="/intake"
+                    className="font-body text-[#8B2FC9] text-[14px] font-medium hover:underline"
+                  >
+                    Complete the full intake →
+                  </Link>
+                  <p className="font-body text-[#9CA3AF] text-[12px] mt-1">
+                    Takes about 5 minutes. Helps us prepare a more specific plan for your business.
+                  </p>
+                </div>
+
+                <p className="font-body text-[#9CA3AF] text-[13px] mt-6 leading-relaxed">
+                  By submitting you agree that Competitive Edge Business Solutions may contact
+                  you about your consultation request. We don&apos;t share your information.
+                </p>
 
                 {error && (
                   <p className="font-body text-[#E24B4A] text-[13px] mt-3 leading-relaxed">
