@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SolutionImage from '@/components/solutions/SolutionImage'
 import {
   Globe,
   LayoutDashboard,
@@ -19,6 +20,7 @@ type Solution = {
   bullets: string[]
   tag: string
   hasScreenshot: boolean
+  screenshot?: string
 }
 
 type Category = {
@@ -58,9 +60,10 @@ const categories: Category[] = [
     icon: 'Globe',
     solutions: [
       {
-        name: 'Business Website',
+        name: 'Starter Website',
         tag: 'Most Popular',
-        hasScreenshot: false,
+        hasScreenshot: true,
+        screenshot: '/starterwebsite.png',
         description:
           'A fast, mobile-optimized website that represents the business professionally and converts visitors into leads.',
         bullets: [
@@ -73,7 +76,8 @@ const categories: Category[] = [
       {
         name: 'Landing Page',
         tag: '',
-        hasScreenshot: false,
+        hasScreenshot: true,
+        screenshot: '/landingpageexample.png',
         description:
           'A single high-converting page for a specific service, campaign, or offer.',
         bullets: [
@@ -366,22 +370,28 @@ export default function SolutionsPage() {
                     key={solution.name}
                     className="flex flex-col h-full bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden shadow-sm hover:shadow-md hover:border-[#D1D5DB] transition-all duration-200"
                   >
-                    {/* Visual area */}
-                    <div className="h-48 flex-shrink-0 relative">
+                    {/* Visual area — img tags use: className="w-full h-full object-cover object-top" */}
+                    <div className="h-44 flex-shrink-0 relative">
                       {solution.hasScreenshot ? (
-                        <div className="bg-[#0D0D0D] h-full w-full flex flex-col items-center justify-center">
-                          <div
-                            className="w-14 h-14 rounded-xl flex items-center justify-center mb-3"
-                            style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: 'white' }}
-                          >
-                            {iconMapSm[cat.icon]}
-                          </div>
-                          <p
-                            className="font-body text-center mt-2"
-                            style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}
-                          >
-                            Screenshot coming soon
-                          </p>
+                        <div className="bg-[#0D0D0D] h-full w-full relative">
+                          {solution.screenshot ? (
+                            <SolutionImage src={solution.screenshot} alt={solution.name} />
+                          ) : (
+                            <div className="h-full w-full flex flex-col items-center justify-center">
+                              <div
+                                className="w-14 h-14 rounded-xl flex items-center justify-center mb-3"
+                                style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: 'white' }}
+                              >
+                                {iconMapSm[cat.icon]}
+                              </div>
+                              <p
+                                className="font-body text-center mt-2"
+                                style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}
+                              >
+                                Screenshot coming soon
+                              </p>
+                            </div>
+                          )}
                           <div
                             className="absolute top-3 right-3 px-2 py-1 rounded-full"
                             style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}

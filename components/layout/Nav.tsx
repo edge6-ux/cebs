@@ -41,46 +41,48 @@ export default function Nav() {
         }`}
       >
         <div className="w-full px-4 md:px-6 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <Target
-              size={18}
-              className={`shrink-0 transition-colors ${scrolled ? 'text-brand-purple' : 'text-white/70'}`}
-            />
-            <div className="flex flex-col leading-tight">
-              <span
-                className={`font-body font-bold text-base tracking-tight transition-colors ${
-                  scrolled ? 'text-[#1A1A1A]' : 'text-white'
-                }`}
-              >
-                Competitive Edge
-              </span>
-              <span
-                className={`font-body font-medium text-[11px] tracking-wide uppercase transition-colors ${
-                  scrolled ? 'text-brand-muted' : 'text-white/60'
-                }`}
-              >
-                Business Solutions
-              </span>
-            </div>
-          </Link>
+          {/* Left: logo + nav links grouped together */}
+          <div className="flex items-center gap-8">
+            <Link href="/" className="flex items-center gap-3">
+              <Target
+                size={18}
+                className={`shrink-0 transition-colors ${scrolled ? 'text-brand-purple' : 'text-white/70'}`}
+              />
+              <div className="flex flex-col leading-tight">
+                <span
+                  className={`font-body font-bold text-base tracking-tight transition-colors ${
+                    scrolled ? 'text-[#1A1A1A]' : 'text-white'
+                  }`}
+                >
+                  Competitive Edge
+                </span>
+                <span
+                  className={`font-body font-medium text-[11px] tracking-wide uppercase transition-colors ${
+                    scrolled ? 'text-brand-muted' : 'text-white/60'
+                  }`}
+                >
+                  Business Solutions
+                </span>
+              </div>
+            </Link>
 
-          {/* Desktop nav links */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-body text-sm font-medium transition-colors hover:text-brand-purple ${
-                  scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {/* Desktop nav links */}
+            <div className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`font-body text-sm font-medium transition-colors hover:text-brand-purple ${
+                    scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* Right side */}
+          {/* Right: CTA + mobile hamburger */}
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
