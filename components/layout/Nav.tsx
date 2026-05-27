@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Menu, X, Target, ArrowRight } from 'lucide-react'
 
@@ -13,6 +14,7 @@ const navLinks = [
 ]
 
 export default function Nav() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -26,6 +28,8 @@ export default function Nav() {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
+
+  if (pathname === '/intake') return null
 
   return (
     <>
