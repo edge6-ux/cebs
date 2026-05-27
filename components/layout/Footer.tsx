@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { Target } from 'lucide-react'
 
 const services = ['Audit & Strategy', 'Optimize & Consolidate', 'Build']
 const company = [
@@ -19,14 +19,16 @@ export default function Footer() {
         <div className="flex justify-between flex-wrap gap-8 pb-8 border-b border-gray-200">
           {/* Left: badge + tagline */}
           <div className="flex flex-col items-start gap-3">
-            <Link href="/">
-              <Image
-                src="/cebs-logo.png"
-                alt="Competitive Edge Business Solutions"
-                width={100}
-                height={100}
-                className="rounded-full"
-              />
+            <Link href="/" className="flex items-center gap-3">
+              <Target size={18} className="text-brand-purple shrink-0" />
+              <div className="flex flex-col leading-tight">
+                <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">
+                  Competitive Edge
+                </span>
+                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-muted">
+                  Business Solutions
+                </span>
+              </div>
             </Link>
             <p className="font-body text-brand-muted text-sm max-w-xs leading-relaxed">
               Custom technology and strategy for businesses that want a competitive edge.

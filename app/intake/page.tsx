@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-import { Phone, Mail, Calendar, Check } from 'lucide-react'
+import { Phone, Mail, Calendar, Check, Target } from 'lucide-react'
 
 interface FormState {
   // Step 1
@@ -133,18 +132,17 @@ export default function IntakePage() {
 
       {/* ── Header ── */}
       <header className="bg-white border-b border-[#E5E7EB] px-6 py-4">
-        <div className="max-w-3xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src="/logo.jpg"
-              alt="Competitive Edge Business Solutions"
-              width={32}
-              height={32}
-              className="rounded-full object-contain"
-            />
-            <span className="font-heading font-bold text-[16px] text-[#0D0D0D]">
-              Cutting Edge
-            </span>
+        <div className="flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3">
+            <Target size={18} className="text-brand-purple shrink-0" />
+            <div className="flex flex-col leading-tight">
+              <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">
+                Competitive Edge
+              </span>
+              <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-muted">
+                Business Solutions
+              </span>
+            </div>
           </Link>
           <Link
             href="/contact"
@@ -205,7 +203,16 @@ export default function IntakePage() {
               canContinue={form.ctaPreference !== ''}
             />
           )}
-          {step === 3 && <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">Step 3 — coming soon</div>}
+          {step === 3 && (
+            <Step3
+              form={form}
+              onChange={handleChange}
+              onSetField={handleSetField}
+              onBack={() => goToStep(2)}
+              onContinue={() => goToStep(4)}
+              canContinue={form.servicesOffered.trim() !== ''}
+            />
+          )}
           {step === 4 && <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">Step 4 — coming soon</div>}
           {step === 5 && <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">Step 5 — coming soon</div>}
 
@@ -489,7 +496,144 @@ function Step2({ form, onChange, onToggleBadge, onSetField, onBack, onContinue, 
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-gray-300 transition-colors"
+          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#8B2FC9] hover:text-[#8B2FC9] transition-colors duration-150"
+        >
+          ← Back
+        </button>
+        <button
+          onClick={onContinue}
+          disabled={!canContinue}
+          className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-6 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        >
+          Continue →
+        </button>
+      </div>
+    </>
+  )
+}
+
+const PRICE_RANGE_OPTIONS = [
+  { value: '$', label: '$' },
+  { value: '$$', label: '$$' },
+  { value: '$$$', label: '$$$' },
+  { value: '$$$$', label: '$$$$' },
+] as const
+
+type HoursKey = 'mondayHours' | 'tuesdayHours' | 'wednesdayHours' | 'thursdayHours' | 'fridayHours' | 'saturdayHours' | 'sundayHours'
+
+const DAYS: { label: string; key: HoursKey }[] = [
+  { label: 'Monday', key: 'mondayHours' },
+  { label: 'Tuesday', key: 'tuesdayHours' },
+  { label: 'Wednesday', key: 'wednesdayHours' },
+  { label: 'Thursday', key: 'thursdayHours' },
+  { label: 'Friday', key: 'fridayHours' },
+  { label: 'Saturday', key: 'saturdayHours' },
+  { label: 'Sunday', key: 'sundayHours' },
+]
+
+interface Step3Props {
+  form: FormState
+  onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void
+  onSetField: <K extends keyof FormState>(key: K, value: FormState[K]) => void
+  onBack: () => void
+  onContinue: () => void
+  canContinue: boolean
+}
+
+function Step3({ form, onChange, onSetField, onBack, onContinue, canContinue }: Step3Props) {
+  return (
+    <>
+      <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">
+
+        <div className="mb-6">
+          <p className="font-body text-[#8B2FC9] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
+            Step 3 of 5
+          </p>
+          <h2 className="font-heading font-bold text-[#0D0D0D] text-[22px] mb-1">
+            Your Services
+          </h2>
+          <p className="font-body text-[#6B7280] text-[14px] leading-[1.5]">
+            Tell us what you offer, what you charge, and when you&apos;re open.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+
+          {/* Services Offered */}
+          <div>
+            <p className="font-body text-[#4A4A4A] text-[14px] font-medium mb-1">
+              Services You Offer <span className="text-[#8B2FC9]">*</span>
+            </p>
+            <p className="font-body text-[#9CA3AF] text-[12px] mb-2">List the services your business provides</p>
+            <textarea
+              name="servicesOffered"
+              rows={4}
+              placeholder="e.g. Oil changes, tire rotations, brake repair, engine diagnostics, transmission service..."
+              value={form.servicesOffered}
+              onChange={onChange}
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] transition-all duration-150 resize-none"
+            />
+          </div>
+
+          {/* Price Range */}
+          <div>
+            <p className="font-body text-[#4A4A4A] text-[14px] font-medium mb-1">Price Range</p>
+            <p className="font-body text-[#9CA3AF] text-[12px] mb-2">General pricing tier for your services</p>
+            <div className="flex gap-3 flex-wrap mt-2">
+              {PRICE_RANGE_OPTIONS.map(({ value, label }) => {
+                const selected = form.priceRange === value
+                return (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => onSetField('priceRange', value)}
+                    className={`font-body text-[15px] font-semibold px-6 py-2.5 rounded-full cursor-pointer border-[1.5px] transition-all duration-150 ${
+                      selected
+                        ? 'bg-[#0D0D0D] border-[#0D0D0D] text-white'
+                        : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#8B2FC9] hover:text-[#8B2FC9]'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                )
+              })}
+            </div>
+            <p className="font-body text-[#9CA3AF] text-[12px] mt-2">
+              $ Budget-friendly &nbsp;·&nbsp; $$ Moderate &nbsp;·&nbsp; $$$ Premium &nbsp;·&nbsp; $$$$ Luxury
+            </p>
+          </div>
+
+          {/* Opening Hours */}
+          <div>
+            <p className="font-body text-[#4A4A4A] text-[14px] font-medium mb-1">Opening Hours</p>
+            <p className="font-body text-[#9CA3AF] text-[12px] mb-2">Enter your typical hours or &apos;Closed&apos; for days you&apos;re not open</p>
+            <div className="space-y-2 mt-2">
+              {DAYS.map((day) => (
+                <div key={day.key} className="flex items-center gap-3">
+                  <span className="font-body text-[#4A4A4A] text-[14px] font-medium w-28 shrink-0">
+                    {day.label}
+                  </span>
+                  <input
+                    name={day.key}
+                    type="text"
+                    placeholder="9:00 AM – 5:00 PM"
+                    value={form[day.key]}
+                    onChange={onChange}
+                    className="flex-1 border border-[#E5E7EB] rounded-xl px-4 py-2.5 font-body text-[14px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] transition-all duration-150"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <div className="flex items-center justify-between">
+        <button
+          onClick={onBack}
+          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#8B2FC9] hover:text-[#8B2FC9] transition-colors duration-150"
         >
           ← Back
         </button>
