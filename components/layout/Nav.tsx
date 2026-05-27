@@ -40,9 +40,9 @@ export default function Nav() {
             : 'bg-transparent border-none'
         }`}
       >
-        <div className="w-full px-4 md:px-6 h-16 flex items-center justify-between">
-          {/* Left: logo + nav links grouped together */}
-          <div className="flex items-center gap-8">
+        <div className="w-full px-4 md:px-6 h-16 grid grid-cols-3 items-center">
+          {/* Left: logo */}
+          <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3">
               <Target
                 size={18}
@@ -65,25 +65,25 @@ export default function Nav() {
                 </span>
               </div>
             </Link>
+          </div>
 
-            {/* Desktop nav links */}
-            <div className="hidden md:flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`font-body text-sm font-medium transition-colors hover:text-brand-purple ${
-                    scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+          {/* Center: desktop nav links */}
+          <div className="hidden md:flex items-center justify-center gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-body text-sm font-medium transition-colors hover:text-brand-purple ${
+                  scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Right: CTA + mobile hamburger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-end gap-3">
             <Link
               href="/contact"
               className="hidden md:inline-block bg-brand-purple text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-[#7A28B8] transition-colors"
