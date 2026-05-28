@@ -40,7 +40,7 @@ export default function Nav() {
             : 'bg-transparent border-none'
         }`}
       >
-        <div className="w-full px-4 md:px-6 h-16 grid grid-cols-3 items-center">
+        <div className="w-full px-4 md:px-6 h-16 grid grid-cols-[1fr_auto] md:grid-cols-3 items-center">
           {/* Left: logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-3">
@@ -50,14 +50,14 @@ export default function Nav() {
               />
               <div className="flex flex-col leading-tight">
                 <span
-                  className={`font-body font-bold text-base tracking-tight transition-colors ${
+                  className={`font-body font-bold text-base tracking-tight whitespace-nowrap transition-colors ${
                     scrolled ? 'text-[#1A1A1A]' : 'text-white'
                   }`}
                 >
                   Competitive Edge
                 </span>
                 <span
-                  className={`font-body font-medium text-[11px] tracking-wide uppercase transition-colors ${
+                  className={`font-body font-medium text-[11px] tracking-wide uppercase whitespace-nowrap transition-colors ${
                     scrolled ? 'text-brand-muted' : 'text-white/60'
                   }`}
                 >
