@@ -21,6 +21,7 @@ type Solution = {
   tag: string
   hasScreenshot: boolean
   screenshot?: string
+  hidden?: boolean
 }
 
 type Category = {
