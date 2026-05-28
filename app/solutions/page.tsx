@@ -90,7 +90,8 @@ const categories: Category[] = [
       {
         name: 'Local SEO Setup',
         tag: 'Quick Win',
-        hasScreenshot: false,
+        hasScreenshot: true,
+        screenshot: '/seoexample.png',
         description:
           'Everything needed to show up when local customers search for your services on Google.',
         bullets: [
@@ -113,6 +114,7 @@ const categories: Category[] = [
         name: 'Custom Admin Dashboard',
         tag: 'Real Build',
         hasScreenshot: true,
+        screenshot: '/admindashboard.png',
         description:
           'A full internal operations hub — leads, jobs, customers, revenue, and team management in one place.',
         bullets: [
@@ -125,7 +127,8 @@ const categories: Category[] = [
       {
         name: 'Customer Portal',
         tag: '',
-        hasScreenshot: false,
+        hasScreenshot: true,
+        screenshot: '/customerportal.png',
         description:
           'A branded portal where customers can track jobs, view proposals, approve quotes, and message the team.',
         bullets: [
@@ -138,7 +141,8 @@ const categories: Category[] = [
       {
         name: 'Scheduling & Dispatch',
         tag: '',
-        hasScreenshot: false,
+        hasScreenshot: true,
+        screenshot: '/scheduling.png',
         description:
           'Custom scheduling built around your team — assign jobs, manage availability, and dispatch crews from one screen.',
         bullets: [
@@ -151,6 +155,7 @@ const categories: Category[] = [
       {
         name: 'Invoicing & Payments',
         tag: '',
+        hidden: true,
         hasScreenshot: false,
         description:
           'Generate professional invoices and accept payments online — integrated into your existing workflow.',
@@ -365,7 +370,7 @@ export default function SolutionsPage() {
 
               {/* Solutions grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                {cat.solutions.map((solution) => (
+                {cat.solutions.filter((s) => !s.hidden).map((solution) => (
                   <div
                     key={solution.name}
                     className="flex flex-col h-full bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden shadow-sm hover:shadow-md hover:border-[#D1D5DB] transition-all duration-200"
