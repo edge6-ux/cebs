@@ -24,7 +24,7 @@ export default function Home() {
         />
 
         {/* Content */}
-        <div className="relative z-[1] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="relative z-[1] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-12 items-center">
 
           {/* LEFT — copy */}
           <div className="flex flex-col items-start gap-8">
@@ -132,18 +132,18 @@ export default function Home() {
               <div style={{ display: 'flex', backgroundColor: '#f0f2f5' }}>
 
                 {/* Sidebar */}
-                <div style={{ width: '130px', backgroundColor: '#0D0A1A', flexShrink: 0, display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ padding: '10px', borderBottom: '0.5px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', gap: '7px' }}>
-                    <div style={{ width: '22px', height: '22px', borderRadius: '5px', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                      <Sparkles size={11} className="text-white" />
+                <div style={{ width: '165px', backgroundColor: '#0D0A1A', flexShrink: 0, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ padding: '14px', borderBottom: '0.5px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', gap: '9px' }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '6px', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Sparkles size={13} className="text-white" />
                     </div>
                     <div>
-                      <div className="font-heading" style={{ fontSize: '10px', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>Honed Ops</div>
-                      <div style={{ fontSize: '8px', color: 'rgba(255,255,255,0.3)' }}>Dashboard</div>
+                      <div className="font-heading" style={{ fontSize: '13px', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>Honed Ops</div>
+                      <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.3)' }}>Dashboard</div>
                     </div>
                   </div>
-                  <div style={{ padding: '8px 7px', flex: 1 }}>
-                    <div style={{ fontSize: '7px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.25)', padding: '0 5px', marginTop: '6px', marginBottom: '4px' }}>Main</div>
+                  <div style={{ padding: '10px 9px', flex: 1 }}>
+                    <div style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.25)', padding: '0 6px', marginTop: '8px', marginBottom: '5px' }}>Main</div>
                     {[
                       { label: 'Dashboard', active: true },
                       { label: 'Clients', badge: '8' },
@@ -155,24 +155,24 @@ export default function Home() {
                         key={label}
                         style={{
                           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                          padding: '4px 7px', borderRadius: '5px', fontSize: '10px', marginBottom: '1px', cursor: 'default',
+                          padding: '6px 9px', borderRadius: '6px', fontSize: '12px', marginBottom: '2px', cursor: 'default',
                           color: active ? '#fff' : 'rgba(255,255,255,0.5)',
                           backgroundColor: active ? 'rgba(139,47,201,0.3)' : 'transparent',
                         }}
                       >
                         <span>{label}</span>
                         {badge && (
-                          <span style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '8px', fontWeight: 700, padding: '1px 5px', borderRadius: '8px' }}>{badge}</span>
+                          <span style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '10px', fontWeight: 700, padding: '1px 6px', borderRadius: '8px' }}>{badge}</span>
                         )}
                       </div>
                     ))}
                   </div>
-                  <div style={{ padding: '8px 7px', borderTop: '0.5px solid rgba(255,255,255,0.07)' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 5px' }}>
-                      <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '7px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>EW</div>
+                  <div style={{ padding: '10px 9px', borderTop: '0.5px solid rgba(255,255,255,0.07)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '5px 6px' }}>
+                      <div style={{ width: '26px', height: '26px', borderRadius: '50%', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>EW</div>
                       <div>
-                        <div style={{ fontSize: '9px', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Edgerrin</div>
-                        <div style={{ fontSize: '8px', color: 'rgba(255,255,255,0.3)' }}>Admin</div>
+                        <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Edgerrin</div>
+                        <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.3)' }}>Admin</div>
                       </div>
                     </div>
                   </div>
@@ -182,52 +182,52 @@ export default function Home() {
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
 
                   {/* Topbar */}
-                  <div style={{ backgroundColor: '#fff', borderBottom: '0.5px solid #e2e8f0', padding: '0 12px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-                    <div className="font-heading" style={{ fontSize: '11px', fontWeight: 700, color: '#0D0D0D' }}>Operations Dashboard</div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <span style={{ fontSize: '9px', color: '#888' }}>Jun 2, 2026</span>
-                      <div style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '9px', fontWeight: 700, padding: '3px 9px', borderRadius: '5px', display: 'flex', alignItems: 'center', gap: '3px' }}>+ New</div>
+                  <div style={{ backgroundColor: '#fff', borderBottom: '0.5px solid #e2e8f0', padding: '0 16px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+                    <div className="font-heading" style={{ fontSize: '14px', fontWeight: 700, color: '#0D0D0D' }}>Operations Dashboard</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span style={{ fontSize: '11px', color: '#888' }}>Jun 2, 2026</span>
+                      <div style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '11px', fontWeight: 700, padding: '4px 12px', borderRadius: '6px' }}>+ New</div>
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div style={{ padding: '10px 12px', overflow: 'hidden' }}>
+                  <div style={{ padding: '16px 18px', overflow: 'hidden' }}>
 
                     {/* KPI row */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '7px', marginBottom: '9px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '10px', marginBottom: '12px' }}>
                       {[
                         { label: 'Revenue', value: '$18.4k', trend: '+22%', up: true },
                         { label: 'Clients', value: '34', trend: '+3', up: true },
                         { label: 'Projects', value: '12', trend: '+2', up: true },
                         { label: 'Outstanding', value: '$3.2k', trend: '2 open', up: false },
                       ].map(({ label, value, trend, up }) => (
-                        <div key={label} style={{ backgroundColor: '#fff', borderRadius: '7px', padding: '8px', border: '0.5px solid #e2e8f0' }}>
-                          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '5px' }}>
-                            <span style={{ fontSize: '8px', fontWeight: 700, color: up ? '#16a34a' : '#d97706', backgroundColor: up ? '#dcfce7' : '#fef3c7', borderRadius: '7px', padding: '1px 4px' }}>{trend}</span>
+                        <div key={label} style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '13px', border: '0.5px solid #e2e8f0' }}>
+                          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '7px' }}>
+                            <span style={{ fontSize: '10px', fontWeight: 700, color: up ? '#16a34a' : '#d97706', backgroundColor: up ? '#dcfce7' : '#fef3c7', borderRadius: '7px', padding: '2px 6px' }}>{trend}</span>
                           </div>
-                          <div className="font-heading" style={{ fontSize: '14px', fontWeight: 700, color: '#0D0D0D', lineHeight: 1, marginBottom: '2px' }}>{value}</div>
-                          <div style={{ fontSize: '8px', color: '#888' }}>{label}</div>
+                          <div className="font-heading" style={{ fontSize: '22px', fontWeight: 700, color: '#0D0D0D', lineHeight: 1, marginBottom: '4px' }}>{value}</div>
+                          <div style={{ fontSize: '11px', color: '#888' }}>{label}</div>
                         </div>
                       ))}
                     </div>
 
                     {/* Bottom panels */}
-                    <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: '7px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: '10px' }}>
 
                       {/* Projects table */}
-                      <div style={{ backgroundColor: '#fff', borderRadius: '7px', padding: '9px', border: '0.5px solid #e2e8f0' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '7px' }}>
+                      <div style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '13px', border: '0.5px solid #e2e8f0' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '9px' }}>
                           <div>
-                            <div className="font-heading" style={{ fontSize: '10px', fontWeight: 700, color: '#0D0D0D' }}>Active projects</div>
-                            <div style={{ fontSize: '8px', color: '#aaa' }}>Next 7 days</div>
+                            <div className="font-heading" style={{ fontSize: '12px', fontWeight: 700, color: '#0D0D0D' }}>Active projects</div>
+                            <div style={{ fontSize: '10px', color: '#aaa' }}>Next 7 days</div>
                           </div>
-                          <span style={{ fontSize: '8px', backgroundColor: '#dbeafe', color: '#1e40af', fontWeight: 700, padding: '2px 6px', borderRadius: '8px' }}>8 active</span>
+                          <span style={{ fontSize: '10px', backgroundColor: '#dbeafe', color: '#1e40af', fontWeight: 700, padding: '3px 8px', borderRadius: '8px' }}>8 active</span>
                         </div>
                         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                           <thead>
                             <tr>
                               {(['Client', 'Status', 'Value'] as const).map((h, i) => (
-                                <th key={h} style={{ fontSize: '7px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#aaa', fontWeight: 600, paddingBottom: '5px', textAlign: i === 2 ? 'right' : 'left', borderBottom: '0.5px solid #f0f0f0' }}>{h}</th>
+                                <th key={h} style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#aaa', fontWeight: 600, paddingBottom: '7px', textAlign: i === 2 ? 'right' : 'left', borderBottom: '0.5px solid #f0f0f0' }}>{h}</th>
                               ))}
                             </tr>
                           </thead>
@@ -239,14 +239,14 @@ export default function Home() {
                               { client: 'Bright Dental', type: 'CRM Setup', status: 'Completed', sBg: '#f1f5f9', sColor: '#64748b', value: '$3,500' },
                             ].map((row) => (
                               <tr key={row.client}>
-                                <td style={{ padding: '5px 0', borderBottom: '0.5px solid #f5f5f5', fontSize: '9px', color: '#333', fontWeight: 500 }}>
+                                <td style={{ padding: '6px 0', borderBottom: '0.5px solid #f5f5f5', fontSize: '11px', color: '#333', fontWeight: 500 }}>
                                   {row.client}
-                                  <span style={{ display: 'block', fontSize: '8px', color: '#aaa', fontWeight: 400 }}>{row.type}</span>
+                                  <span style={{ display: 'block', fontSize: '10px', color: '#aaa', fontWeight: 400 }}>{row.type}</span>
                                 </td>
-                                <td style={{ padding: '5px 0', borderBottom: '0.5px solid #f5f5f5' }}>
-                                  <span style={{ fontSize: '8px', padding: '1px 5px', borderRadius: '8px', fontWeight: 600, backgroundColor: row.sBg, color: row.sColor, whiteSpace: 'nowrap' as const }}>{row.status}</span>
+                                <td style={{ padding: '6px 0', borderBottom: '0.5px solid #f5f5f5' }}>
+                                  <span style={{ fontSize: '10px', padding: '2px 7px', borderRadius: '8px', fontWeight: 600, backgroundColor: row.sBg, color: row.sColor, whiteSpace: 'nowrap' as const }}>{row.status}</span>
                                 </td>
-                                <td style={{ padding: '5px 0', borderBottom: '0.5px solid #f5f5f5', fontSize: '9px', fontWeight: 700, color: '#0D0D0D', textAlign: 'right' as const }}>{row.value}</td>
+                                <td style={{ padding: '6px 0', borderBottom: '0.5px solid #f5f5f5', fontSize: '11px', fontWeight: 700, color: '#0D0D0D', textAlign: 'right' as const }}>{row.value}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -254,13 +254,13 @@ export default function Home() {
                       </div>
 
                       {/* Lead pipeline */}
-                      <div style={{ backgroundColor: '#fff', borderRadius: '7px', padding: '9px', border: '0.5px solid #e2e8f0' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '7px' }}>
+                      <div style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '13px', border: '0.5px solid #e2e8f0' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '9px' }}>
                           <div>
-                            <div className="font-heading" style={{ fontSize: '10px', fontWeight: 700, color: '#0D0D0D' }}>Lead pipeline</div>
-                            <div style={{ fontSize: '8px', color: '#aaa' }}>$28.6k potential</div>
+                            <div className="font-heading" style={{ fontSize: '12px', fontWeight: 700, color: '#0D0D0D' }}>Lead pipeline</div>
+                            <div style={{ fontSize: '10px', color: '#aaa' }}>$28.6k potential</div>
                           </div>
-                          <span style={{ fontSize: '8px', backgroundColor: '#fef3c7', color: '#92400e', fontWeight: 700, padding: '2px 6px', borderRadius: '8px' }}>7 leads</span>
+                          <span style={{ fontSize: '10px', backgroundColor: '#fef3c7', color: '#92400e', fontWeight: 700, padding: '3px 8px', borderRadius: '8px' }}>7 leads</span>
                         </div>
                         {[
                           { init: 'RW', bg: '#dc2626', name: 'R. Walsh', type: 'Full audit + build', value: '$7,200', heat: 'Hot' },
@@ -270,15 +270,15 @@ export default function Home() {
                           { init: 'TC', bg: '#64748b', name: 'T. Chen', type: 'Website + SEO', value: '$2,600', heat: 'Warm' },
                           { init: 'AR', bg: '#0891b2', name: 'A. Ross', type: 'Audit only', value: '$980', heat: 'Cold' },
                         ].map((lead) => (
-                          <div key={lead.init} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0', borderBottom: '0.5px solid #f5f5f5' }}>
-                            <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: lead.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '7px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>{lead.init}</div>
+                          <div key={lead.init} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 0', borderBottom: '0.5px solid #f5f5f5' }}>
+                            <div style={{ width: '28px', height: '28px', borderRadius: '50%', backgroundColor: lead.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>{lead.init}</div>
                             <div style={{ flex: 1, minWidth: 0 }}>
-                              <div style={{ fontSize: '9px', fontWeight: 600, color: '#0D0D0D' }}>{lead.name}</div>
-                              <div style={{ fontSize: '8px', color: '#aaa', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const }}>{lead.type}</div>
+                              <div style={{ fontSize: '11px', fontWeight: 600, color: '#0D0D0D' }}>{lead.name}</div>
+                              <div style={{ fontSize: '10px', color: '#aaa', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const }}>{lead.type}</div>
                             </div>
-                            <div style={{ fontSize: '9px', fontWeight: 700, color: '#0D0D0D' }}>{lead.value}</div>
+                            <div style={{ fontSize: '11px', fontWeight: 700, color: '#0D0D0D' }}>{lead.value}</div>
                             <span style={{
-                              fontSize: '7px', fontWeight: 700, padding: '1px 4px', borderRadius: '7px',
+                              fontSize: '9px', fontWeight: 700, padding: '2px 6px', borderRadius: '7px',
                               backgroundColor: lead.heat === 'Hot' ? '#fee2e2' : lead.heat === 'Warm' ? '#fef3c7' : '#dbeafe',
                               color: lead.heat === 'Hot' ? '#991b1b' : lead.heat === 'Warm' ? '#92400e' : '#1e40af',
                             }}>{lead.heat}</span>
