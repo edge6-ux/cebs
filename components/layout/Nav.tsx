@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { Menu, X, Target, ArrowRight } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 
 const navLinks = [
   { label: 'Services', href: '/services' },
@@ -43,27 +43,17 @@ export default function Nav() {
         <div className="w-full px-4 md:px-6 h-16 grid grid-cols-[1fr_auto] md:grid-cols-3 items-center">
           {/* Left: logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-3">
-              <Target
-                size={18}
-                className={`shrink-0 transition-colors ${scrolled ? 'text-brand-purple' : 'text-white/70'}`}
-              />
-              <div className="flex flex-col leading-tight">
-                <span
-                  className={`font-body font-bold text-base tracking-tight whitespace-nowrap transition-colors ${
-                    scrolled ? 'text-[#1A1A1A]' : 'text-white'
-                  }`}
-                >
-                  Competitive Edge
-                </span>
-                <span
-                  className={`font-body font-medium text-[11px] tracking-wide uppercase whitespace-nowrap transition-colors ${
-                    scrolled ? 'text-brand-muted' : 'text-white/60'
-                  }`}
-                >
-                  Business Solutions
-                </span>
-              </div>
+            <Link href="/" className="flex flex-col leading-tight">
+              <span
+                className={`font-body font-bold text-base tracking-tight whitespace-nowrap transition-colors ${
+                  scrolled ? 'text-[#1A1A1A]' : 'text-white'
+                }`}
+              >
+                Honed Ops
+              </span>
+              <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple whitespace-nowrap">
+                Operate With an Edge
+              </span>
             </Link>
           </div>
 
@@ -86,7 +76,7 @@ export default function Nav() {
           <div className="flex items-center justify-end gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-block bg-brand-purple text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-[#7A28B8] transition-colors"
+              className="hidden md:inline-block bg-brand-purple text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:brightness-110 transition-all"
             >
               <span className="hidden lg:inline">Get a Free Consultation</span>
               <span className="lg:hidden">Free Consultation</span>
@@ -127,9 +117,11 @@ export default function Nav() {
 
           {/* Panel header */}
           <div className="flex items-center justify-between px-6 h-16">
-            <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
-              <Target size={15} className="text-brand-purple shrink-0" />
-              <span className="font-body font-bold text-sm tracking-tight text-white">Competitive Edge</span>
+            <Link href="/" onClick={() => setMobileOpen(false)} className="flex flex-col leading-tight">
+              <span className="font-body font-bold text-sm tracking-tight text-white">Honed Ops</span>
+              <span className="font-body font-medium text-[10px] tracking-wide uppercase text-brand-purple">
+                Operate With an Edge
+              </span>
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
@@ -174,7 +166,7 @@ export default function Nav() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center w-full bg-brand-purple text-white font-heading font-semibold text-sm px-6 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors"
+              className="flex items-center justify-center w-full bg-brand-purple text-white font-heading font-semibold text-sm px-6 py-3.5 rounded-xl hover:brightness-110 transition-all"
             >
               Get a Free Consultation
             </Link>

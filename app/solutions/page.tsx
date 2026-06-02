@@ -9,7 +9,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Solutions | Competitive Edge Business Solutions',
+  title: 'Solutions | Honed Ops',
   description:
     'Custom technology solutions for local businesses — from websites and booking systems to AI-powered tools and admin dashboards.',
 }

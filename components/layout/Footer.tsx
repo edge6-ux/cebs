@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Target } from 'lucide-react'
+import Image from 'next/image'
 
 const services = ['Audit & Strategy', 'Optimize & Consolidate', 'Build']
 const company = [
@@ -17,21 +17,18 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         {/* Top row */}
         <div className="flex justify-between flex-wrap gap-8 pb-8 border-b border-gray-200">
-          {/* Left: badge + tagline */}
+          {/* Left: logo + tagline */}
           <div className="flex flex-col items-start gap-3">
-            <Link href="/" className="flex items-center gap-3">
-              <Target size={18} className="text-brand-purple shrink-0" />
-              <div className="flex flex-col leading-tight">
-                <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">
-                  Competitive Edge
-                </span>
-                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-muted">
-                  Business Solutions
-                </span>
-              </div>
+            <Link href="/">
+              <Image
+                src="/honed-ops-logo.png"
+                alt="Honed Ops"
+                width={140}
+                height={36}
+              />
             </Link>
             <p className="font-body text-brand-muted text-sm max-w-xs leading-relaxed">
-              Custom technology and strategy for businesses that want a competitive edge.
+              Custom technology and strategy for businesses that want to operate with an edge.
             </p>
           </div>
 
@@ -47,7 +44,7 @@ export default function Footer() {
                   <li key={service}>
                     <Link
                       href="/services"
-                      className="font-body text-brand-muted text-sm hover:text-brand-dark transition-colors"
+                      className="font-body text-brand-muted text-sm hover:text-brand-purple transition-colors"
                     >
                       {service}
                     </Link>
@@ -66,7 +63,7 @@ export default function Footer() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="font-body text-brand-muted text-sm hover:text-brand-dark transition-colors"
+                      className="font-body text-brand-muted text-sm hover:text-brand-purple transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -80,10 +77,10 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex justify-between flex-wrap gap-4 pt-6">
           <p className="font-body text-gray-400 text-[13px]">
-            © 2026 Competitive Edge Business Solutions. All rights reserved.
+            © 2026 Honed Ops. All rights reserved.
           </p>
           <p className="font-body text-gray-400 text-[13px]">
-            Built by Competitive Edge
+            Built by Honed Ops
           </p>
         </div>
       </div>

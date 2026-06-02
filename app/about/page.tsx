@@ -80,7 +80,7 @@ export default function AboutPage() {
             We help businesses compete on their own terms.
           </h1>
           <p className="font-body text-white/60 text-base md:text-xl max-w-2xl mx-auto leading-[1.7]">
-            Competitive Edge Business Solutions was built for the businesses that don&apos;t have a
+            Honed Ops was built for the businesses that don&apos;t have a
             dedicated IT team or a venture-backed budget — but still want to win.
           </p>
         </div>

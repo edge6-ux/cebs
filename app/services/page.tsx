@@ -225,7 +225,7 @@ export default function ServicesPage() {
               scratch. Custom software designed for the specific business — not adapted from a
               generic template.
               <br /><br />
-              This is where the real competitive edge is created. When a competitor can&apos;t
+              This is where the real edge is created. When a competitor can&apos;t
               replicate what you have because it was built specifically for you.
             </p>
             <ul className="space-y-3 mb-8">
@@ -269,7 +269,7 @@ export default function ServicesPage() {
             </ul>
             <Link
               href="/work"
-              className="block mt-6 font-body text-brand-purple text-sm font-medium hover:text-brand-magenta transition-colors"
+              className="block mt-6 font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors"
             >
               Read the full case study →
             </Link>

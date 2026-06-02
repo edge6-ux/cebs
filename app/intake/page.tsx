@@ -137,10 +137,7 @@ export default function IntakePage() {
             <Target size={18} className="text-brand-purple shrink-0" />
             <div className="flex flex-col leading-tight">
               <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">
-                Competitive Edge
-              </span>
-              <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-muted">
-                Business Solutions
+                Honed Ops
               </span>
             </div>
           </Link>

@@ -371,7 +371,7 @@ export default function ContactPage() {
                 </div>
 
                 <p className="font-body text-[#9CA3AF] text-[13px] mt-6 leading-relaxed">
-                  By submitting you agree that Competitive Edge Business Solutions may contact
+                  By submitting you agree that Honed Ops may contact
                   you about your consultation request. We don&apos;t share your information.
                 </p>
 

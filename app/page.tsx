@@ -1,99 +1,297 @@
 import Link from 'next/link'
-import HeroParticles from '@/components/home/HeroParticles'
-import FluidBackground from '@/components/home/FluidBackground'
 import {
-  ChevronDown, DollarSign, Puzzle, Clock, Search, Code2, TrendingDown,
+  DollarSign, Puzzle, Clock,
   Wrench, Utensils, TreePine, Building2, Car, Heart, Scale, Zap,
+  Sparkles, Lock,
 } from 'lucide-react'
 
 export default function Home() {
   return (
     <div>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-brand-dark min-h-screen">
-        {/* Fluid animated background */}
-        <FluidBackground />
-
-        {/* Dark vignette so text stays readable */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/60 pointer-events-none" />
-
-        {/* Particles */}
-        <HeroParticles />
+      <section
+        className="relative overflow-hidden min-h-[90vh] px-6 py-24"
+        style={{ backgroundColor: '#0D0D0D' }}
+      >
+        {/* Dot grid background */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
+          }}
+        />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center min-h-screen px-4 md:px-6 pt-32 md:pt-40 pb-16 max-w-5xl mx-auto">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 border border-[rgba(139,47,201,0.4)] bg-[rgba(139,47,201,0.08)] rounded-full px-4 py-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-purple animate-pulse" />
-            <span className="font-body text-white/70 text-[13px] font-medium">
-              Custom Technology &amp; Strategy
-            </span>
-          </div>
+        <div className="relative z-[1] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Headline */}
-          <h1 className="font-heading mb-6">
-            <span className="block text-lg md:text-2xl font-medium text-white/50 tracking-normal mb-3">
-              Give your business a
-            </span>
-            <span className="block font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.03em]">
-              competitive{' '}
-              <span className="text-brand-purple relative inline-block">
-                edge
-                <span
-                  className="absolute left-0 w-full h-[4px] rounded-sm"
-                  style={{
-                    bottom: '-6px',
-                    background: 'linear-gradient(90deg, #8B2FC9, #E040FB)',
-                  }}
-                />
+          {/* LEFT — copy */}
+          <div className="flex flex-col items-start gap-8">
+
+            {/* Eyebrow */}
+            <div className="flex items-center gap-2 mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#8B2FC9] animate-pulse" />
+              <span className="font-body text-white/50 text-[13px] font-semibold uppercase tracking-[0.1em]">
+                Business Technology &amp; Strategy
               </span>
-            </span>
-          </h1>
+            </div>
 
-          {/* Subheadline */}
-          <p className="font-body text-white/60 text-base md:text-xl leading-[1.6] mb-10 max-w-2xl mx-auto">
-            Custom technology and strategy for businesses that want a competitive edge.
-            No fluff. Just results.
-          </p>
+            {/* Headline */}
+            <h1 className="font-heading font-bold leading-[1.05] tracking-[-0.02em] text-[44px] lg:text-[64px]">
+              <span className="text-white">Operate with</span>
+              <br />
+              <span className="text-[#8B2FC9]">an Edge.</span>
+            </h1>
 
-          {/* CTA row */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-            <Link
-              href="/contact"
-              className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] hover:-translate-y-px transition-all duration-200 text-center"
-            >
-              Get a Free Consultation
-            </Link>
-            <Link
-              href="#what-we-do"
-              className="font-heading text-base text-white bg-transparent border border-white/20 px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all duration-200 text-center"
-            >
-              What We Do
-            </Link>
+            {/* Subheadline */}
+            <p className="font-body text-white/60 text-[18px] leading-[1.7] max-w-md">
+              Custom technology and strategy for local businesses ready to cut waste, save time, and grow revenue.
+            </p>
+
+            {/* Stats row */}
+            <div className="flex gap-8 flex-wrap">
+              {[
+                { value: '22+', label: 'Services offered' },
+                { value: 'Free', label: 'Initial consultation' },
+                { value: '5+', label: 'Solution categories' },
+              ].map(({ value, label }) => (
+                <div key={label}>
+                  <p className="font-heading font-bold text-white text-[28px]">{value}</p>
+                  <p className="font-body text-white/40 text-[13px] mt-0.5">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA buttons */}
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/intake"
+                className="font-heading font-bold text-[15px] text-white bg-[#8B2FC9] hover:bg-[#7A28B8] px-8 py-4 rounded-xl uppercase transition-all duration-150"
+              >
+                Get a Free Consultation
+              </Link>
+              <Link
+                href="/solutions"
+                className="font-heading font-bold text-[15px] text-white bg-transparent border border-white/20 hover:border-white/40 hover:bg-white/5 px-8 py-4 rounded-xl uppercase transition-all duration-150"
+              >
+                See Our Solutions →
+              </Link>
+            </div>
           </div>
 
-          {/* Service tags */}
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-4 py-2">
-              <Search size={13} className="text-brand-purple" />
-              <span className="font-body text-white/60 text-[13px]">Audit &amp; Strategy</span>
-            </div>
-            <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-4 py-2">
-              <Code2 size={13} className="text-brand-purple" />
-              <span className="font-body text-white/60 text-[13px]">Custom Builds</span>
-            </div>
-            <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-4 py-2">
-              <TrendingDown size={13} className="text-brand-purple" />
-              <span className="font-body text-white/60 text-[13px]">Cost Reduction</span>
-            </div>
-          </div>
+          {/* RIGHT — dashboard mockup */}
+          <div className="relative">
+            {/* Glow behind browser */}
+            <div
+              aria-hidden="true"
+              className="absolute pointer-events-none"
+              style={{
+                width: '400px',
+                height: '400px',
+                background: 'radial-gradient(circle, rgba(139,47,201,0.3) 0%, transparent 70%)',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                filter: 'blur(60px)',
+              }}
+            />
 
-          {/* Scroll indicator */}
-          <div className="mt-12 flex flex-col items-center gap-2">
-            <span className="font-body text-white/30 text-xs uppercase tracking-widest">
-              Scroll
-            </span>
-            <ChevronDown size={20} className="text-white/30 animate-bounce" />
+            {/* Browser frame */}
+            <div
+              className="relative rounded-2xl overflow-hidden"
+              style={{
+                backgroundColor: '#1A1A1A',
+                border: '1px solid rgba(255,255,255,0.1)',
+                boxShadow: '0 32px 80px rgba(0,0,0,0.6)',
+              }}
+            >
+              {/* Browser chrome */}
+              <div
+                className="flex items-center gap-3 px-4 py-3"
+                style={{
+                  backgroundColor: '#111111',
+                  borderBottom: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                <div className="flex gap-1.5">
+                  <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#FF5F57' }} />
+                  <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#FEBC2E' }} />
+                  <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#28C840' }} />
+                </div>
+                <div
+                  className="flex-1 flex items-center gap-2 rounded-lg px-3 py-1.5"
+                  style={{ backgroundColor: '#0D0D0D' }}
+                >
+                  <Lock size={10} className="text-white/30" />
+                  <span className="font-body text-white/30 text-[12px]">app.honedops.com/dashboard</span>
+                </div>
+              </div>
+
+              {/* Dashboard — sidebar + main */}
+              <div style={{ display: 'flex', backgroundColor: '#f0f2f5' }}>
+
+                {/* Sidebar */}
+                <div style={{ width: '130px', backgroundColor: '#0D0A1A', flexShrink: 0, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ padding: '10px', borderBottom: '0.5px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', gap: '7px' }}>
+                    <div style={{ width: '22px', height: '22px', borderRadius: '5px', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <Sparkles size={11} className="text-white" />
+                    </div>
+                    <div>
+                      <div className="font-heading" style={{ fontSize: '10px', fontWeight: 700, color: '#fff', lineHeight: 1.2 }}>Honed Ops</div>
+                      <div style={{ fontSize: '8px', color: 'rgba(255,255,255,0.3)' }}>Dashboard</div>
+                    </div>
+                  </div>
+                  <div style={{ padding: '8px 7px', flex: 1 }}>
+                    <div style={{ fontSize: '7px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.25)', padding: '0 5px', marginTop: '6px', marginBottom: '4px' }}>Main</div>
+                    {[
+                      { label: 'Dashboard', active: true },
+                      { label: 'Clients', badge: '8' },
+                      { label: 'Projects' },
+                      { label: 'Invoices', badge: '3' },
+                      { label: 'Reports' },
+                    ].map(({ label, active, badge }) => (
+                      <div
+                        key={label}
+                        style={{
+                          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                          padding: '4px 7px', borderRadius: '5px', fontSize: '10px', marginBottom: '1px', cursor: 'default',
+                          color: active ? '#fff' : 'rgba(255,255,255,0.5)',
+                          backgroundColor: active ? 'rgba(139,47,201,0.3)' : 'transparent',
+                        }}
+                      >
+                        <span>{label}</span>
+                        {badge && (
+                          <span style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '8px', fontWeight: 700, padding: '1px 5px', borderRadius: '8px' }}>{badge}</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ padding: '8px 7px', borderTop: '0.5px solid rgba(255,255,255,0.07)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 5px' }}>
+                      <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '7px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>EW</div>
+                      <div>
+                        <div style={{ fontSize: '9px', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Edgerrin</div>
+                        <div style={{ fontSize: '8px', color: 'rgba(255,255,255,0.3)' }}>Admin</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Main area */}
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+
+                  {/* Topbar */}
+                  <div style={{ backgroundColor: '#fff', borderBottom: '0.5px solid #e2e8f0', padding: '0 12px', height: '36px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
+                    <div className="font-heading" style={{ fontSize: '11px', fontWeight: 700, color: '#0D0D0D' }}>Operations Dashboard</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <span style={{ fontSize: '9px', color: '#888' }}>Jun 2, 2026</span>
+                      <div style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '9px', fontWeight: 700, padding: '3px 9px', borderRadius: '5px', display: 'flex', alignItems: 'center', gap: '3px' }}>+ New</div>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div style={{ padding: '10px 12px', overflow: 'hidden' }}>
+
+                    {/* KPI row */}
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '7px', marginBottom: '9px' }}>
+                      {[
+                        { label: 'Revenue', value: '$18.4k', trend: '+22%', up: true },
+                        { label: 'Clients', value: '34', trend: '+3', up: true },
+                        { label: 'Projects', value: '12', trend: '+2', up: true },
+                        { label: 'Outstanding', value: '$3.2k', trend: '2 open', up: false },
+                      ].map(({ label, value, trend, up }) => (
+                        <div key={label} style={{ backgroundColor: '#fff', borderRadius: '7px', padding: '8px', border: '0.5px solid #e2e8f0' }}>
+                          <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '5px' }}>
+                            <span style={{ fontSize: '8px', fontWeight: 700, color: up ? '#16a34a' : '#d97706', backgroundColor: up ? '#dcfce7' : '#fef3c7', borderRadius: '7px', padding: '1px 4px' }}>{trend}</span>
+                          </div>
+                          <div className="font-heading" style={{ fontSize: '14px', fontWeight: 700, color: '#0D0D0D', lineHeight: 1, marginBottom: '2px' }}>{value}</div>
+                          <div style={{ fontSize: '8px', color: '#888' }}>{label}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Bottom panels */}
+                    <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: '7px' }}>
+
+                      {/* Projects table */}
+                      <div style={{ backgroundColor: '#fff', borderRadius: '7px', padding: '9px', border: '0.5px solid #e2e8f0' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '7px' }}>
+                          <div>
+                            <div className="font-heading" style={{ fontSize: '10px', fontWeight: 700, color: '#0D0D0D' }}>Active projects</div>
+                            <div style={{ fontSize: '8px', color: '#aaa' }}>Next 7 days</div>
+                          </div>
+                          <span style={{ fontSize: '8px', backgroundColor: '#dbeafe', color: '#1e40af', fontWeight: 700, padding: '2px 6px', borderRadius: '8px' }}>8 active</span>
+                        </div>
+                        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                          <thead>
+                            <tr>
+                              {(['Client', 'Status', 'Value'] as const).map((h, i) => (
+                                <th key={h} style={{ fontSize: '7px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#aaa', fontWeight: 600, paddingBottom: '5px', textAlign: i === 2 ? 'right' : 'left', borderBottom: '0.5px solid #f0f0f0' }}>{h}</th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {[
+                              { client: "Smith's Auto", type: 'Custom Dashboard', status: 'In progress', sBg: '#dcfce7', sColor: '#166534', value: '$4,200' },
+                              { client: "Garcia's Rest.", type: 'POS Integration', status: 'Scheduled', sBg: '#dbeafe', sColor: '#1e40af', value: '$2,800' },
+                              { client: 'Apex HVAC', type: 'Booking System', status: 'In Review', sBg: '#fef3c7', sColor: '#92400e', value: '$1,600' },
+                              { client: 'Bright Dental', type: 'CRM Setup', status: 'Completed', sBg: '#f1f5f9', sColor: '#64748b', value: '$3,500' },
+                            ].map((row) => (
+                              <tr key={row.client}>
+                                <td style={{ padding: '5px 0', borderBottom: '0.5px solid #f5f5f5', fontSize: '9px', color: '#333', fontWeight: 500 }}>
+                                  {row.client}
+                                  <span style={{ display: 'block', fontSize: '8px', color: '#aaa', fontWeight: 400 }}>{row.type}</span>
+                                </td>
+                                <td style={{ padding: '5px 0', borderBottom: '0.5px solid #f5f5f5' }}>
+                                  <span style={{ fontSize: '8px', padding: '1px 5px', borderRadius: '8px', fontWeight: 600, backgroundColor: row.sBg, color: row.sColor, whiteSpace: 'nowrap' as const }}>{row.status}</span>
+                                </td>
+                                <td style={{ padding: '5px 0', borderBottom: '0.5px solid #f5f5f5', fontSize: '9px', fontWeight: 700, color: '#0D0D0D', textAlign: 'right' as const }}>{row.value}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {/* Lead pipeline */}
+                      <div style={{ backgroundColor: '#fff', borderRadius: '7px', padding: '9px', border: '0.5px solid #e2e8f0' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '7px' }}>
+                          <div>
+                            <div className="font-heading" style={{ fontSize: '10px', fontWeight: 700, color: '#0D0D0D' }}>Lead pipeline</div>
+                            <div style={{ fontSize: '8px', color: '#aaa' }}>$28.6k potential</div>
+                          </div>
+                          <span style={{ fontSize: '8px', backgroundColor: '#fef3c7', color: '#92400e', fontWeight: 700, padding: '2px 6px', borderRadius: '8px' }}>7 leads</span>
+                        </div>
+                        {[
+                          { init: 'RW', bg: '#dc2626', name: 'R. Walsh', type: 'Full audit + build', value: '$7,200', heat: 'Hot' },
+                          { init: 'SB', bg: '#d97706', name: 'S. Burke', type: 'Tech stack overhaul', value: '$5,400', heat: 'Hot' },
+                          { init: 'JM', bg: '#2563eb', name: 'J. Morales', type: 'Custom CRM', value: '$4,100', heat: 'Warm' },
+                          { init: 'LP', bg: '#7c3aed', name: 'L. Park', type: 'Booking + reviews', value: '$3,200', heat: 'Warm' },
+                          { init: 'TC', bg: '#64748b', name: 'T. Chen', type: 'Website + SEO', value: '$2,600', heat: 'Warm' },
+                          { init: 'AR', bg: '#0891b2', name: 'A. Ross', type: 'Audit only', value: '$980', heat: 'Cold' },
+                        ].map((lead) => (
+                          <div key={lead.init} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0', borderBottom: '0.5px solid #f5f5f5' }}>
+                            <div style={{ width: '22px', height: '22px', borderRadius: '50%', backgroundColor: lead.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '7px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>{lead.init}</div>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                              <div style={{ fontSize: '9px', fontWeight: 600, color: '#0D0D0D' }}>{lead.name}</div>
+                              <div style={{ fontSize: '8px', color: '#aaa', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const }}>{lead.type}</div>
+                            </div>
+                            <div style={{ fontSize: '9px', fontWeight: 700, color: '#0D0D0D' }}>{lead.value}</div>
+                            <span style={{
+                              fontSize: '7px', fontWeight: 700, padding: '1px 4px', borderRadius: '7px',
+                              backgroundColor: lead.heat === 'Hot' ? '#fee2e2' : lead.heat === 'Warm' ? '#fef3c7' : '#dbeafe',
+                              color: lead.heat === 'Hot' ? '#991b1b' : lead.heat === 'Warm' ? '#92400e' : '#1e40af',
+                            }}>{lead.heat}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -212,7 +410,7 @@ export default function Home() {
                   Before we recommend anything we look at what the business is actually spending
                   and what it&apos;s getting in return. Most businesses are surprised by what we find.
                 </p>
-                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-magenta transition-colors">
+                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors">
                   Learn more →
                 </span>
               </div>
@@ -227,8 +425,8 @@ export default function Home() {
                 <span className="font-heading font-bold text-white/10 text-[56px] md:text-[80px] leading-none">02</span>
               </div>
               <div className="flex-1">
-                <div className="inline-flex items-center border border-brand-magenta bg-[rgba(224,64,251,0.1)] rounded-full px-3 py-1 mb-4">
-                  <span className="font-body text-brand-magenta text-xs font-semibold">Optimize &amp; Consolidate</span>
+                <div className="inline-flex items-center border border-brand-purple bg-[rgba(139,47,201,0.1)] rounded-full px-3 py-1 mb-4">
+                  <span className="font-body text-brand-purple text-xs font-semibold">Optimize &amp; Consolidate</span>
                 </div>
                 <h3 className="font-heading font-bold text-white text-[22px] md:text-[26px] tracking-[-0.01em] mb-3">
                   We cut the waste and connect the gaps.
@@ -238,7 +436,7 @@ export default function Home() {
                   systems that should be talking to each other. Most clients see immediate
                   monthly savings.
                 </p>
-                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-magenta transition-colors">
+                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors">
                   Learn more →
                 </span>
               </div>
@@ -263,7 +461,7 @@ export default function Home() {
                   When off-the-shelf solutions aren&apos;t enough we build custom software —
                   dashboards, portals, AI tools, and systems designed specifically for the business.
                 </p>
-                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-magenta transition-colors">
+                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors">
                   Learn more →
                 </span>
               </div>

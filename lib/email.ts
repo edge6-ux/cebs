@@ -7,7 +7,7 @@ function getResend() {
 
 const FROM = 'onboarding@resend.dev'
 const NOTIFY = 'edgerrinwashington@gmail.com'
-const COMPANY = 'Competitive Edge Business Solutions'
+const COMPANY = 'Honed Ops'
 
 function wrapper(body: string): string {
   return `
@@ -96,7 +96,7 @@ function wrapper(body: string): string {
   <div class="wrapper">
     <div class="container">
       <div class="header">
-        <div class="header-name">Competitive Edge Business Solutions</div>
+        <div class="header-name">Honed Ops</div>
         <div class="header-tag">Custom Technology &amp; Strategy</div>
       </div>
       <div class="accent-bar"></div>
@@ -104,7 +104,7 @@ function wrapper(body: string): string {
         ${body}
       </div>
       <div class="footer">
-        <p>Competitive Edge Business Solutions</p>
+        <p>Honed Ops</p>
       </div>
     </div>
   </div>
@@ -140,7 +140,7 @@ export async function sendAuditConfirmation(params: {
     </div>
     <p>If you have any questions reply to this email directly.</p>
     <p style="margin-top:24px;padding-top:20px;border-top:1px solid #E5E7EB;font-size:14px;color:#1A1A1A;font-weight:700;">
-      The Competitive Edge Team
+      The Honed Ops Team
     </p>
   `
 

@@ -17,25 +17,26 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Competitive Edge Business Solutions',
-  description: 'Custom technology and strategy for businesses that want a competitive edge.',
+  title: 'Honed Ops',
+  description: 'Custom technology and strategy for businesses that want to operate with an edge.',
   openGraph: {
-    title: 'Competitive Edge Business Solutions',
-    description: 'Custom technology and strategy for businesses that want a competitive edge.',
+    title: 'Honed Ops',
+    description: 'Custom technology and strategy for businesses that want to operate with an edge.',
+    siteName: 'Honed Ops',
     images: [
       {
         url: '/cebsthumbnail.png',
         width: 1200,
         height: 630,
-        alt: 'Competitive Edge Business Solutions',
+        alt: 'Honed Ops',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Competitive Edge Business Solutions',
-    description: 'Custom technology and strategy for businesses that want a competitive edge.',
+    title: 'Honed Ops',
+    description: 'Custom technology and strategy for businesses that want to operate with an edge.',
     images: ['/cebsthumbnail.png'],
   },
 }
