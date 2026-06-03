@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Target, Lightbulb, Shield, Zap } from 'lucide-react'
 import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'Honed Ops is a technology and strategy firm for local businesses. We build custom software, automate operations, and help businesses operate with an edge.',
+  alternates: { canonical: 'https://honedops.com/about' },
+}
 
 const values = [
   {

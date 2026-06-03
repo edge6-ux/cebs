@@ -122,6 +122,10 @@ function IntakeForm() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
+    document.title = 'Get Started | Honed Ops'
+  }, [])
+
+  useEffect(() => {
     const service = searchParams.get('service')
     const category = searchParams.get('category')
     if (service) setInterestedIn(service)

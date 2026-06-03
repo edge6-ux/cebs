@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
   Search, BarChart2, MessageSquare,
@@ -38,6 +38,10 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    document.title = 'Contact | Honed Ops'
+  }, [])
 
   const requiredFilled =
     formData.fullName.trim() !== '' &&

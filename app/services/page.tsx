@@ -1,6 +1,13 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
 import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Custom websites, automation, AI-powered tools, and operations systems for local businesses. Free consultation included.',
+  alternates: { canonical: 'https://honedops.com/services' },
+}
 
 function CheckItem({ text }: { text: string }) {
   return (

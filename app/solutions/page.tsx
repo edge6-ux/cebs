@@ -10,9 +10,9 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Solutions | Honed Ops',
-  description:
-    'Custom technology solutions for local businesses — from websites and booking systems to AI-powered tools and admin dashboards.',
+  title: 'Solutions',
+  description: 'See what we build — websites, booking systems, admin dashboards, AI assessment tools, customer portals, and more. Each solution built for local businesses.',
+  alternates: { canonical: 'https://honedops.com/solutions' },
 }
 
 type Solution = {

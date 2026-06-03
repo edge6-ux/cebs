@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   DollarSign, Puzzle, Clock,
@@ -6,9 +7,43 @@ import {
 } from 'lucide-react'
 import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
 
+export const metadata: Metadata = {
+  title: { absolute: 'Honed Ops — Operate With An Edge' },
+  description: 'Custom technology and strategy for local businesses. Websites, automation, AI tools, and operations systems built around how your business actually works.',
+  alternates: { canonical: 'https://honedops.com' },
+}
+
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ProfessionalService',
+            name: 'Honed Ops',
+            url: 'https://honedops.com',
+            email: 'contact@honedops.com',
+            description: 'Custom technology and strategy for local businesses.',
+            slogan: 'Operate With An Edge',
+            areaServed: 'United States',
+            serviceType: [
+              'Web Design',
+              'Business Automation',
+              'AI Tools',
+              'Operations Consulting',
+            ],
+            knowsAbout: [
+              'Local Business Technology',
+              'Website Development',
+              'Business Process Automation',
+              'Artificial Intelligence',
+              'Local SEO',
+            ],
+          }),
+        }}
+      />
       {/* ── Hero ── */}
       <section
         className="relative overflow-hidden min-h-[90vh] px-6 py-24"

@@ -1,9 +1,16 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Globe, Cpu, LayoutDashboard, FileText,
   Users, Mail, Map, Shield,
 } from 'lucide-react'
 import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+
+export const metadata: Metadata = {
+  title: 'Our Work',
+  description: 'Real projects built by Honed Ops for local businesses. Custom technology that cuts costs, saves time, and grows revenue.',
+  alternates: { canonical: 'https://honedops.com/work' },
+}
 
 const replacedPlatforms = [
   {
