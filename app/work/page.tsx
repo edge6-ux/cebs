@@ -8,17 +8,17 @@ import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundU
 const replacedPlatforms = [
   {
     name: 'Thryv',
-    cost: '$300+/month',
+    cost: '$1500+/month',
     body: 'CRM, scheduling, and customer communication. Replaced by the custom admin dashboard and automated email system.',
   },
   {
     name: 'FobFlo',
-    cost: '$2,500+/month',
+    cost: '$5,000+/month',
     body: 'Job management platform. Replaced by a custom pipeline with role-based access for admin, sales, crew leaders, and crew.',
   },
   {
     name: 'Bluehost',
-    cost: '$50+/month',
+    cost: '$250+/month',
     body: 'Web hosting for a generic website. Replaced by a custom-built Next.js site optimized for local SEO and lead generation.',
   },
 ]
@@ -107,7 +107,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* ── Case Study: Gordon Pro ── */}
+      {/* ── Case Study: North Lincoln ── */}
       <section className="bg-brand-light py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
 
@@ -118,7 +118,7 @@ export default function WorkPage() {
                 Case Study — 01
               </p>
               <h2 className="font-heading font-bold text-brand-dark text-[36px] md:text-[44px] tracking-[-0.02em] mb-4 leading-[1.05]">
-                Gordon Pro<br />Tree Service
+                North Lincoln<br />Tree Service
               </h2>
               <div className="flex flex-wrap gap-4 md:gap-6 font-body text-brand-muted text-sm">
                 <span>Industry: Tree Service</span>
@@ -142,7 +142,7 @@ export default function WorkPage() {
               The Challenge
             </p>
             <p className="font-body text-[#4A4A4A] text-base leading-[1.8]">
-              Gordon Pro Tree Service was running their business across multiple disconnected
+              North Lincoln Tree Service was running their business across multiple disconnected
               platforms — Thryv for CRM and customer communication, FobFlo for job management,
               and Bluehost for web hosting. Combined these tools were costing $2,000 to $3,000
               per month and required constant manual work to keep synchronized.
@@ -219,13 +219,13 @@ export default function WorkPage() {
               <div>
                 <p className="font-heading font-bold text-white text-3xl md:text-[42px] leading-none">100% custom</p>
                 <p className="font-body text-white/50 text-sm mt-2 leading-relaxed">
-                  built for how Gordon Pro actually operates
+                  built for how North Lincoln actually operates
                 </p>
               </div>
             </div>
             <div className="border-t border-white/[0.08] pt-8">
               <p className="font-body text-white/50 text-base max-w-3xl leading-[1.8]">
-                Gordon Pro went from a fragmented stack of expensive tools and paper contracts
+                North Lincoln went from a fragmented stack of expensive tools and paper contracts
                 to a fully integrated system built around how they actually work. The sales team
                 creates digital quotes on-site. Customers track their jobs in real time. The
                 office manages everything from one dashboard.
@@ -242,7 +242,7 @@ export default function WorkPage() {
           More case studies coming soon.
         </h2>
         <p className="font-body text-brand-muted text-[17px] max-w-lg mx-auto leading-[1.7] mb-8">
-          We&apos;re early. Gordon Pro is the first of many. If you want to be next,
+          We&apos;re early. North Lincoln is the first of many. If you want to be next,
           start with a free consultation.
         </p>
         <Link

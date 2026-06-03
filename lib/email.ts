@@ -5,8 +5,8 @@ function getResend() {
   return new Resend(process.env.RESEND_API_KEY)
 }
 
-const FROM = 'onboarding@resend.dev'
-const NOTIFY = 'edgerrinwashington@gmail.com'
+const FROM = 'contact@honedops.com'
+const NOTIFY = 'contact@honedops.com'
 const COMPANY = 'Honed Ops'
 
 function wrapper(body: string): string {

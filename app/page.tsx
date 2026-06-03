@@ -149,8 +149,8 @@ export default function Home() {
                     <div style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.25)', padding: '0 6px', marginTop: '8px', marginBottom: '5px' }}>Main</div>
                     {[
                       { label: 'Dashboard', active: true },
-                      { label: 'Clients', badge: '8' },
-                      { label: 'Projects' },
+                      { label: 'Customers', badge: '8' },
+                      { label: 'Jobs' },
                       { label: 'Invoices', badge: '3' },
                       { label: 'Reports' },
                     ].map(({ label, active, badge }) => (
@@ -172,10 +172,10 @@ export default function Home() {
                   </div>
                   <div style={{ padding: '10px 9px', borderTop: '0.5px solid rgba(255,255,255,0.07)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '5px 6px' }}>
-                      <div style={{ width: '26px', height: '26px', borderRadius: '50%', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>EW</div>
+                      <div style={{ width: '26px', height: '26px', borderRadius: '50%', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>MC</div>
                       <div>
-                        <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>Edgerrin</div>
-                        <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.3)' }}>Admin</div>
+                        <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>M. Cole</div>
+                        <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.3)' }}>Owner</div>
                       </div>
                     </div>
                   </div>
@@ -186,7 +186,7 @@ export default function Home() {
 
                   {/* Topbar */}
                   <div style={{ backgroundColor: '#fff', borderBottom: '0.5px solid #e2e8f0', padding: '0 16px', height: '50px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 }}>
-                    <div className="font-heading" style={{ fontSize: '14px', fontWeight: 700, color: '#0D0D0D' }}>Operations Dashboard</div>
+                    <div className="font-heading" style={{ fontSize: '14px', fontWeight: 700, color: '#0D0D0D' }}>Service Dashboard</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <span style={{ fontSize: '11px', color: '#888' }}>Jun 2, 2026</span>
                       <div style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '11px', fontWeight: 700, padding: '4px 12px', borderRadius: '6px' }}>+ New</div>
@@ -199,10 +199,10 @@ export default function Home() {
                     {/* KPI row */}
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '10px', marginBottom: '12px' }}>
                       {[
-                        { label: 'Revenue', value: '$18.4k', trend: '+22%', up: true },
-                        { label: 'Clients', value: '34', trend: '+3', up: true },
-                        { label: 'Projects', value: '12', trend: '+2', up: true },
-                        { label: 'Outstanding', value: '$3.2k', trend: '2 open', up: false },
+                        { label: 'Revenue', value: '$24.8k', trend: '+18%', up: true },
+                        { label: 'Customers', value: '47', trend: '+5', up: true },
+                        { label: 'Jobs', value: '18', trend: '+4', up: true },
+                        { label: 'Outstanding', value: '$2.1k', trend: '2 open', up: false },
                       ].map(({ label, value, trend, up }) => (
                         <div key={label} style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '13px', border: '0.5px solid #e2e8f0' }}>
                           <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '7px' }}>
@@ -221,7 +221,7 @@ export default function Home() {
                       <div style={{ backgroundColor: '#fff', borderRadius: '8px', padding: '13px', border: '0.5px solid #e2e8f0' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '9px' }}>
                           <div>
-                            <div className="font-heading" style={{ fontSize: '12px', fontWeight: 700, color: '#0D0D0D' }}>Active projects</div>
+                            <div className="font-heading" style={{ fontSize: '12px', fontWeight: 700, color: '#0D0D0D' }}>Active jobs</div>
                             <div style={{ fontSize: '10px', color: '#aaa' }}>Next 7 days</div>
                           </div>
                           <span style={{ fontSize: '10px', backgroundColor: '#dbeafe', color: '#1e40af', fontWeight: 700, padding: '3px 8px', borderRadius: '8px' }}>8 active</span>
@@ -229,17 +229,17 @@ export default function Home() {
                         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                           <thead>
                             <tr>
-                              {(['Client', 'Status', 'Value'] as const).map((h, i) => (
+                              {(['Customer', 'Status', 'Value'] as const).map((h, i) => (
                                 <th key={h} style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#aaa', fontWeight: 600, paddingBottom: '7px', textAlign: i === 2 ? 'right' : 'left', borderBottom: '0.5px solid #f0f0f0' }}>{h}</th>
                               ))}
                             </tr>
                           </thead>
                           <tbody>
                             {[
-                              { client: "Smith's Auto", type: 'Custom Dashboard', status: 'In progress', sBg: '#dcfce7', sColor: '#166534', value: '$4,200' },
-                              { client: "Garcia's Rest.", type: 'POS Integration', status: 'Scheduled', sBg: '#dbeafe', sColor: '#1e40af', value: '$2,800' },
-                              { client: 'Apex HVAC', type: 'Booking System', status: 'In Review', sBg: '#fef3c7', sColor: '#92400e', value: '$1,600' },
-                              { client: 'Bright Dental', type: 'CRM Setup', status: 'Completed', sBg: '#f1f5f9', sColor: '#64748b', value: '$3,500' },
+                              { client: 'Henderson Home', type: 'HVAC tune-up', status: 'In progress', sBg: '#dcfce7', sColor: '#166534', value: '$380' },
+                              { client: 'Oakwood Plaza', type: 'Plumbing repair', status: 'Scheduled', sBg: '#dbeafe', sColor: '#1e40af', value: '$840' },
+                              { client: 'Torres Residence', type: 'Electrical install', status: 'In Review', sBg: '#fef3c7', sColor: '#92400e', value: '$2,200' },
+                              { client: 'Kim Residence', type: 'Appliance repair', status: 'Completed', sBg: '#f1f5f9', sColor: '#64748b', value: '$520' },
                             ].map((row) => (
                               <tr key={row.client}>
                                 <td style={{ padding: '6px 0', borderBottom: '0.5px solid #f5f5f5', fontSize: '11px', color: '#333', fontWeight: 500 }}>
@@ -266,12 +266,12 @@ export default function Home() {
                           <span style={{ fontSize: '10px', backgroundColor: '#fef3c7', color: '#92400e', fontWeight: 700, padding: '3px 8px', borderRadius: '8px' }}>7 leads</span>
                         </div>
                         {[
-                          { init: 'RW', bg: '#dc2626', name: 'R. Walsh', type: 'Full audit + build', value: '$7,200', heat: 'Hot' },
-                          { init: 'SB', bg: '#d97706', name: 'S. Burke', type: 'Tech stack overhaul', value: '$5,400', heat: 'Hot' },
-                          { init: 'JM', bg: '#2563eb', name: 'J. Morales', type: 'Custom CRM', value: '$4,100', heat: 'Warm' },
-                          { init: 'LP', bg: '#7c3aed', name: 'L. Park', type: 'Booking + reviews', value: '$3,200', heat: 'Warm' },
-                          { init: 'TC', bg: '#64748b', name: 'T. Chen', type: 'Website + SEO', value: '$2,600', heat: 'Warm' },
-                          { init: 'AR', bg: '#0891b2', name: 'A. Ross', type: 'Audit only', value: '$980', heat: 'Cold' },
+                          { init: 'RW', bg: '#dc2626', name: 'R. Walsh', type: 'Full HVAC system', value: '$6,800', heat: 'Hot' },
+                          { init: 'SB', bg: '#d97706', name: 'S. Burke', type: 'Bathroom remodel', value: '$4,900', heat: 'Hot' },
+                          { init: 'JM', bg: '#2563eb', name: 'J. Morales', type: 'Kitchen plumbing', value: '$3,400', heat: 'Warm' },
+                          { init: 'LP', bg: '#7c3aed', name: 'L. Park', type: 'Electrical rewire', value: '$2,800', heat: 'Warm' },
+                          { init: 'TC', bg: '#64748b', name: 'T. Chen', type: 'HVAC maintenance', value: '$1,800', heat: 'Warm' },
+                          { init: 'AR', bg: '#0891b2', name: 'A. Ross', type: 'Drain cleaning', value: '$480', heat: 'Cold' },
                         ].map((lead) => (
                           <div key={lead.init} style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '6px 0', borderBottom: '0.5px solid #f5f5f5' }}>
                             <div style={{ width: '28px', height: '28px', borderRadius: '50%', backgroundColor: lead.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>{lead.init}</div>

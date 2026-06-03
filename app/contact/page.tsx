@@ -68,7 +68,7 @@ export default function ContactPage() {
       setSuccess(true)
     } catch {
       setError(
-        'Something went wrong. Please try again or email us directly at edgerrinwashington@gmail.com'
+        'Something went wrong. Please try again or email us directly at contact@honedops.com'
       )
     } finally {
       setLoading(false)
@@ -470,7 +470,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-brand-purple" />
                 <span className="font-body text-[#4A4A4A] text-sm">
-                  edgerrinwashington@gmail.com
+                  contact@honedops.com
                 </span>
               </div>
             </div>
