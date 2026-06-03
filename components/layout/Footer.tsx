@@ -14,18 +14,17 @@ export default function Footer() {
       className="border-t border-gray-200 px-6 py-10"
       style={{ backgroundColor: '#FFF5F7' }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl ml-0 mr-auto">
         {/* Top row */}
         <div className="flex justify-between flex-wrap gap-8 pb-8 border-b border-gray-200">
           {/* Left: logo + tagline */}
           <div className="flex flex-col items-start gap-3">
-            <Link href="/">
-              <Image
-                src="/honed-ops-logo.png"
-                alt="Honed Ops"
-                width={140}
-                height={36}
-              />
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image src="/honedopsicon.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
+              <div className="flex flex-col leading-tight">
+                <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">Honed Ops</span>
+                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple">Operate With an Edge</span>
+              </div>
             </Link>
             <p className="font-body text-brand-muted text-sm max-w-xs leading-relaxed">
               Custom technology and strategy for businesses that want to operate with an edge.
