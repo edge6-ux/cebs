@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, ArrowRight } from 'lucide-react'
 
 const navLinks = [
@@ -43,17 +44,20 @@ export default function Nav() {
         <div className="w-full px-4 md:px-6 h-16 grid grid-cols-[1fr_auto] md:grid-cols-3 items-center">
           {/* Left: logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex flex-col leading-tight">
-              <span
-                className={`font-body font-bold text-base tracking-tight whitespace-nowrap transition-colors ${
-                  scrolled ? 'text-[#1A1A1A]' : 'text-white'
-                }`}
-              >
-                Honed Ops
-              </span>
-              <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple whitespace-nowrap">
-                Operate With an Edge
-              </span>
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image src="/honedopsicon.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
+              <div className="flex flex-col leading-tight">
+                <span
+                  className={`font-body font-bold text-base tracking-tight whitespace-nowrap transition-colors ${
+                    scrolled ? 'text-[#1A1A1A]' : 'text-white'
+                  }`}
+                >
+                  Honed Ops
+                </span>
+                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple whitespace-nowrap">
+                  Operate With an Edge
+                </span>
+              </div>
             </Link>
           </div>
 
@@ -117,11 +121,14 @@ export default function Nav() {
 
           {/* Panel header */}
           <div className="flex items-center justify-between px-6 h-16">
-            <Link href="/" onClick={() => setMobileOpen(false)} className="flex flex-col leading-tight">
-              <span className="font-body font-bold text-sm tracking-tight text-white">Honed Ops</span>
-              <span className="font-body font-medium text-[10px] tracking-wide uppercase text-brand-purple">
-                Operate With an Edge
-              </span>
+            <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
+              <Image src="/honedopsicon.png" alt="Honed Ops" width={26} height={26} className="shrink-0" />
+              <div className="flex flex-col leading-tight">
+                <span className="font-body font-bold text-sm tracking-tight text-white">Honed Ops</span>
+                <span className="font-body font-medium text-[10px] tracking-wide uppercase text-brand-purple">
+                  Operate With an Edge
+                </span>
+              </div>
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
