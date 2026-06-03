@@ -6,6 +6,7 @@ import {
   Search, BarChart2, MessageSquare,
   CheckCircle, Mail,
 } from 'lucide-react'
+import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
 
 interface FormData {
   fullName: string
@@ -78,6 +79,8 @@ export default function ContactPage() {
     <div>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
+        <FluidBackgroundUltraVioletStatic />
+        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
         <div
           className="absolute pointer-events-none"
           style={{

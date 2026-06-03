@@ -4,6 +4,7 @@ import {
   Wrench, Utensils, TreePine, Building2, Car, Heart, Scale, Zap,
   Sparkles, Lock,
 } from 'lucide-react'
+import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
         className="relative overflow-hidden min-h-[90vh] px-6 py-24"
         style={{ backgroundColor: '#0D0D0D' }}
       >
+        <FluidBackgroundUltraVioletStatic />
+        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
         {/* Dot grid background */}
         <div
           aria-hidden="true"
@@ -24,7 +27,7 @@ export default function Home() {
         />
 
         {/* Content */}
-        <div className="relative z-[1] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-12 items-center">
+        <div className="relative z-[1] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-14 items-center">
 
           {/* LEFT — copy */}
           <div className="flex flex-col items-start gap-8">

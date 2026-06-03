@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import SolutionImage from '@/components/solutions/SolutionImage'
+import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
 import {
   Globe,
   LayoutDashboard,
@@ -286,9 +287,11 @@ export default function SolutionsPage() {
       {/* Hero */}
       <section
         style={{ backgroundColor: '#0D0D0D' }}
-        className="px-6 py-24 text-center"
+        className="relative overflow-hidden px-6 py-24 text-center"
       >
-        <div className="max-w-3xl mx-auto">
+        <FluidBackgroundUltraVioletStatic />
+        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
+        <div className="relative z-[1] max-w-3xl mx-auto">
           <p
             className="font-body font-semibold uppercase mb-4"
             style={{ color: '#A78BFA', fontSize: '13px', letterSpacing: '0.1em' }}
