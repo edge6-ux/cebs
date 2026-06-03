@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'Honed Ops',
     images: [
       {
-        url: '/cebsthumbnail.png',
+        url: '/honedopsthumb.png',
         width: 1200,
         height: 630,
         alt: 'Honed Ops',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Honed Ops',
     description: 'Custom technology and strategy for businesses that want to operate with an edge.',
-    images: ['/cebsthumbnail.png'],
+    images: ['/honedopsthumb.png'],
   },
 }
 

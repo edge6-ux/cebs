@@ -91,12 +91,6 @@ export default function ServicesPage() {
                 'Proposed next steps',
               ].map((item) => <CheckItem key={item} text={item} />)}
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors w-full sm:w-auto text-center"
-            >
-              Get a Free Consultation
-            </Link>
           </div>
 
           {/* Right: detail card */}
@@ -204,12 +198,6 @@ export default function ServicesPage() {
                 '30-day follow-up support',
               ].map((item) => <CheckItem key={item} text={item} />)}
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors w-full sm:w-auto text-center"
-            >
-              Get a Free Consultation
-            </Link>
           </div>
         </div>
       </section>
@@ -241,12 +229,6 @@ export default function ServicesPage() {
                 "Anything the business needs that doesn't exist yet",
               ].map((item) => <CheckItemLight key={item} text={item} />)}
             </ul>
-            <Link
-              href="/contact"
-              className="inline-block font-heading font-bold text-[15px] text-white border border-brand-purple bg-transparent px-7 py-3.5 rounded-xl hover:bg-brand-purple transition-all duration-200 w-full sm:w-auto text-center"
-            >
-              Tell Us What You Need
-            </Link>
           </div>
 
           {/* Right: case study card */}
