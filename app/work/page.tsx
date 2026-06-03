@@ -128,7 +128,7 @@ export default function WorkPage() {
             </div>
             <div className="bg-[rgba(139,47,201,0.08)] border border-[rgba(139,47,201,0.2)] rounded-2xl px-6 py-4 text-center w-full md:w-auto">
               <p className="font-heading font-bold text-brand-purple text-[36px] leading-none">
-                $2–3K
+                $5–7K
               </p>
               <p className="font-body text-brand-purple text-[13px] mt-1">
                 saved per month
@@ -144,7 +144,7 @@ export default function WorkPage() {
             <p className="font-body text-[#4A4A4A] text-base leading-[1.8]">
               North Lincoln Tree Service was running their business across multiple disconnected
               platforms — Thryv for CRM and customer communication, FobFlo for job management,
-              and Bluehost for web hosting. Combined these tools were costing $2,000 to $3,000
+              and Bluehost for web hosting. Combined these tools were costing $5,000 to $7,000
               per month and required constant manual work to keep synchronized.
             </p>
             <p className="font-body text-[#4A4A4A] text-base leading-[1.8] mt-4">

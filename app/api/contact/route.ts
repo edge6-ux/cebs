@@ -14,6 +14,8 @@ export async function POST(req: NextRequest) {
     challenge,
     monthlySpend,
     hearAboutUs,
+    interestedIn,
+    interestedCategory,
   } = body
 
   if (!fullName || !businessName || !email || !challenge) {
@@ -34,6 +36,8 @@ export async function POST(req: NextRequest) {
       challenge,
       monthly_spend: monthlySpend || '',
       hear_about_us: hearAboutUs || '',
+      interested_in: interestedIn || '',
+      interested_category: interestedCategory || '',
       status: 'new',
     })
     .select('id')

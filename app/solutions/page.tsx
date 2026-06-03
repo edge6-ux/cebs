@@ -482,7 +482,7 @@ export default function SolutionsPage() {
 
                       {/* CTA */}
                       <Link
-                        href="/intake"
+                        href={`/intake?service=${encodeURIComponent(solution.name)}&category=${encodeURIComponent(cat.name)}`}
                         className="mt-auto flex items-center gap-2 group"
                         style={{ color: cat.color, fontSize: '14px' }}
                       >
