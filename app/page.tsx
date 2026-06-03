@@ -84,7 +84,7 @@ export default function Home() {
           </div>
 
           {/* RIGHT — dashboard mockup */}
-          <div className="relative">
+          <div className="relative lg:-mt-8">
             {/* Glow behind browser */}
             <div
               aria-hidden="true"

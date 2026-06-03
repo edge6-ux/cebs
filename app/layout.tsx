@@ -17,6 +17,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://honedops.com'),
   title: 'Honed Ops',
   description: 'Custom technology and strategy for businesses that want to operate with an edge.',
   openGraph: {
