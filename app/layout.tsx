@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Honed Ops — Operate With An Edge',
     description: 'Custom technology and strategy for local businesses.',
     images: ['/honed666.png'],
