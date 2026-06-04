@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, Calendar, Check, CheckCircle, Target, Sparkles, Upload } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 
@@ -348,12 +349,11 @@ function IntakeForm() {
       {/* ── Header ── */}
       <header className="bg-white border-b border-[#E5E7EB] px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Target size={18} className="text-brand-purple shrink-0" />
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image src="/honedopsnobg.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
             <div className="flex flex-col leading-tight">
-              <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">
-                Honed Ops
-              </span>
+              <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">Honed Ops</span>
+              <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple">Operate With an Edge</span>
             </div>
           </Link>
           <Link
