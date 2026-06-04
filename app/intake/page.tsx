@@ -350,7 +350,7 @@ function IntakeForm() {
       <header className="bg-white border-b border-[#E5E7EB] px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/honedopsnobg.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
+            <Image src="/honed666.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
             <div className="flex flex-col leading-tight">
               <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">Honed Ops</span>
               <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple">Operate With an Edge</span>

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     description: 'Custom technology and strategy for local businesses. Websites, automation, AI tools, and operations systems.',
     images: [
       {
-        url: '/honedopsicon.png',
+        url: '/honed666.png',
         width: 114,
         height: 114,
         alt: 'Honed Ops — Operate With An Edge',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Honed Ops — Operate With An Edge',
     description: 'Custom technology and strategy for local businesses.',
-    images: ['/honedopsicon.png'],
+    images: ['/honed666.png'],
   },
   robots: {
     index: true,
