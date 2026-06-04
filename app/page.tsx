@@ -88,7 +88,7 @@ export default function Home() {
             </p>
 
             {/* Stats row */}
-            <div className="flex gap-8 flex-wrap">
+            <div className="flex gap-4 sm:gap-8">
               {[
                 { value: '22+', label: 'Services offered' },
                 { value: 'Free', label: 'Initial consultation' },
@@ -96,7 +96,7 @@ export default function Home() {
               ].map(({ value, label }) => (
                 <div key={label}>
                   <p className="font-heading font-bold text-white text-[28px]">{value}</p>
-                  <p className="font-body text-white/40 text-[13px] mt-0.5">{label}</p>
+                  <p className="font-body text-white/40 text-[11px] sm:text-[13px] mt-0.5">{label}</p>
                 </div>
               ))}
             </div>
