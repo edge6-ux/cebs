@@ -45,7 +45,7 @@ export default function Nav() {
           {/* Left: logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2.5">
-              <Image src="/honedopsicon.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
+              <Image src="/honedopsnobg.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
               <div className="flex flex-col leading-tight">
                 <span
                   className={`font-body font-bold text-base tracking-tight whitespace-nowrap transition-colors ${
@@ -122,7 +122,7 @@ export default function Nav() {
           {/* Panel header */}
           <div className="flex items-center justify-between px-6 h-16">
             <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
-              <Image src="/honedopsicon.png" alt="Honed Ops" width={26} height={26} className="shrink-0" />
+              <Image src="/honedopsnobg.png" alt="Honed Ops" width={26} height={26} className="shrink-0" />
               <div className="flex flex-col leading-tight">
                 <span className="font-body font-bold text-sm tracking-tight text-white">Honed Ops</span>
                 <span className="font-body font-medium text-[10px] tracking-wide uppercase text-brand-purple">
