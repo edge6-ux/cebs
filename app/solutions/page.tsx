@@ -310,8 +310,7 @@ export default function SolutionsPage() {
             className="font-body mb-8 max-w-xl mx-auto"
             style={{ color: 'rgba(255,255,255,0.6)', fontSize: '20px', lineHeight: '1.6' }}
           >
-            Every solution is built around how your business actually works —
-            not a generic template dropped in and forgotten.
+            Every solution is built around how your business actually works.
           </p>
 
           <Link
