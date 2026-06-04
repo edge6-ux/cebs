@@ -136,48 +136,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Team ── */}
-      <section className="bg-white py-16 md:py-24 px-4 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10 md:mb-12">
-            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
-              The Team
-            </p>
-            <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl tracking-[-0.02em]">
-              Small team. Big results.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-brand-light border border-[#E5E7EB] rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 rounded-full bg-[rgba(139,47,201,0.1)] flex items-center justify-center mx-auto mb-4">
-                <span className="font-heading font-bold text-brand-purple text-xl">EW</span>
-              </div>
-              <p className="font-heading font-bold text-brand-dark text-[17px] mb-1">Edgerrin Washington</p>
-              <p className="font-body text-brand-purple text-[13px] font-semibold mb-3">Founder</p>
-              <p className="font-body text-brand-muted text-[13px] leading-[1.6]">
-                Strategy, technology, and operations. Edgerrin works directly with every client
-                from audit through delivery.
-              </p>
-            </div>
-
-            <div className="bg-brand-light border border-dashed border-[#E5E7EB] rounded-2xl p-6 flex flex-col items-center justify-center min-h-[200px]">
-              <div className="w-16 h-16 rounded-full bg-[rgba(139,47,201,0.05)] border border-dashed border-[rgba(139,47,201,0.2)] flex items-center justify-center mx-auto mb-4">
-                <span className="font-heading font-bold text-brand-purple/40 text-xl">+</span>
-              </div>
-              <p className="font-body text-brand-muted text-sm text-center">Growing team — stay tuned.</p>
-            </div>
-
-            <div className="bg-brand-light border border-dashed border-[#E5E7EB] rounded-2xl p-6 flex flex-col items-center justify-center min-h-[200px]">
-              <div className="w-16 h-16 rounded-full bg-[rgba(139,47,201,0.05)] border border-dashed border-[rgba(139,47,201,0.2)] flex items-center justify-center mx-auto mb-4">
-                <span className="font-heading font-bold text-brand-purple/40 text-xl">+</span>
-              </div>
-              <p className="font-body text-brand-muted text-sm text-center">Growing team — stay tuned.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── How We Work ── */}
       <section className="bg-brand-dark py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">

@@ -8,7 +8,7 @@ import {
 import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Honed Ops — Operate With An Edge' },
+  title: { absolute: 'Honed Ops — Operate With An edge' },
   description: 'Custom technology and strategy for local businesses. Websites, automation, AI tools, and operations systems built around how your business actually works.',
   alternates: { canonical: 'https://honedops.com' },
 }
