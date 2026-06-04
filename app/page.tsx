@@ -26,7 +26,7 @@ export default function Home() {
             url: 'https://honedops.com',
             email: 'contact@honedops.com',
             description: 'Custom technology and strategy for local businesses.',
-            slogan: 'Operate With An Edge',
+            slogan: 'Operate With An edge',
             areaServed: 'United States',
             serviceType: [
               'Web Design',
@@ -79,7 +79,7 @@ export default function Home() {
             <h1 className="font-heading font-bold leading-[1.05] tracking-[-0.02em] text-[44px] lg:text-[64px]">
               <span className="text-white">Operate with</span>
               <br />
-              <span className="text-[#8B2FC9]">an Edge.</span>
+              <span className="text-[#8B2FC9]">an edge.</span>
             </h1>
 
             {/* Subheadline */}
