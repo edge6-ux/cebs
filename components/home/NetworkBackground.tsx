@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef } from 'react';
 
@@ -21,6 +21,8 @@ export default function NetworkBackground() {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+    const c = ctx;
+    const cv = canvas;
 
     type Node = { x: number; y: number; vx: number; vy: number; r: number; phase: number };
     type Particle = { fromIdx: number; toIdx: number; progress: number; speed: number; size: number; opacity: number; targetOpacity: number };
@@ -96,8 +98,8 @@ export default function NetworkBackground() {
       animId = requestAnimationFrame(draw);
       tick++;
 
-      ctx.fillStyle = CFG.bgColor;
-      ctx.fillRect(0, 0, W, H);
+      c.fillStyle = CFG.bgColor;
+      c.fillRect(0, 0, W, H);
 
       nodes.forEach(n => {
         n.x += n.vx; n.y += n.vy;
@@ -120,26 +122,26 @@ export default function NetworkBackground() {
           const dist = Math.sqrt(dx * dx + dy * dy);
           const t = 1 - dist / d;
           const alpha = 0.18 * t * t * t;
-          ctx.beginPath();
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = rgba(CFG.edgeColor, alpha);
-          ctx.lineWidth = 0.55;
-          ctx.stroke();
+          c.beginPath();
+          c.moveTo(nodes[i].x, nodes[i].y);
+          c.lineTo(nodes[j].x, nodes[j].y);
+          c.strokeStyle = rgba(CFG.edgeColor, alpha);
+          c.lineWidth = 0.55;
+          c.stroke();
         }
       }
 
       nodes.forEach(n => {
         const pulse = 0.5 + 0.5 * Math.sin(tick * 0.018 + n.phase);
         const r = n.r * (0.88 + 0.12 * pulse);
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, r + 4.5, 0, Math.PI * 2);
-        ctx.fillStyle = rgba(CFG.nodeColor, 0.04 + 0.03 * pulse);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = rgba(CFG.nodeColor, 0.55 + 0.25 * pulse);
-        ctx.fill();
+        c.beginPath();
+        c.arc(n.x, n.y, r + 4.5, 0, Math.PI * 2);
+        c.fillStyle = rgba(CFG.nodeColor, 0.04 + 0.03 * pulse);
+        c.fill();
+        c.beginPath();
+        c.arc(n.x, n.y, r, 0, Math.PI * 2);
+        c.fillStyle = rgba(CFG.nodeColor, 0.55 + 0.25 * pulse);
+        c.fill();
       });
 
       particles.forEach(p => {
@@ -154,10 +156,10 @@ export default function NetworkBackground() {
               const prog = Math.min(p.progress, 1);
               const px = nodes[p.fromIdx].x + (nodes[p.toIdx].x - nodes[p.fromIdx].x) * prog;
               const py = nodes[p.fromIdx].y + (nodes[p.toIdx].y - nodes[p.fromIdx].y) * prog;
-              ctx.beginPath();
-              ctx.arc(px, py, p.size * 0.8, 0, Math.PI * 2);
-              ctx.fillStyle = rgba(CFG.particleColor, p.opacity * 0.6);
-              ctx.fill();
+              c.beginPath();
+              c.arc(px, py, p.size * 0.8, 0, Math.PI * 2);
+              c.fillStyle = rgba(CFG.particleColor, p.opacity * 0.6);
+              c.fill();
             }
             return;
           }
@@ -178,27 +180,27 @@ export default function NetworkBackground() {
         const tx = a.x + (b.x - a.x) * trailProg;
         const ty = a.y + (b.y - a.y) * trailProg;
 
-        const grad = ctx.createLinearGradient(tx, ty, px, py);
+        const grad = c.createLinearGradient(tx, ty, px, py);
         grad.addColorStop(0, rgba(CFG.particleColor, 0));
         grad.addColorStop(1, rgba(CFG.particleColor, p.opacity * 0.75));
-        ctx.beginPath();
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(px, py);
-        ctx.strokeStyle = grad;
-        ctx.lineWidth = p.size;
-        ctx.lineCap = 'round';
-        ctx.stroke();
+        c.beginPath();
+        c.moveTo(tx, ty);
+        c.lineTo(px, py);
+        c.strokeStyle = grad;
+        c.lineWidth = p.size;
+        c.lineCap = 'round';
+        c.stroke();
 
-        ctx.beginPath();
-        ctx.arc(px, py, p.size * 0.85, 0, Math.PI * 2);
-        ctx.fillStyle = rgba(CFG.particleColor, p.opacity);
-        ctx.fill();
+        c.beginPath();
+        c.arc(px, py, p.size * 0.85, 0, Math.PI * 2);
+        c.fillStyle = rgba(CFG.particleColor, p.opacity);
+        c.fill();
       });
     }
 
     function resize() {
-      W = canvas.width  = canvas.offsetWidth;
-      H = canvas.height = canvas.offsetHeight;
+      W = cv.width  = cv.offsetWidth;
+      H = cv.height = cv.offsetHeight;
       initNodes();
       initParticles();
     }
@@ -238,3 +240,5 @@ export default function NetworkBackground() {
     </>
   );
 }
+
+
