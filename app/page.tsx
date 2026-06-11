@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   DollarSign, Puzzle, Clock,
   Wrench, Utensils, TreePine, Building2, Car, Heart, Scale, Zap,
   Sparkles, Lock,
 } from 'lucide-react'
-import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+import NetworkBackground from '@/components/home/NetworkBackground'
 
 export const metadata: Metadata = {
   title: { absolute: 'Honed Ops — Operate With An edge' },
@@ -49,27 +49,17 @@ export default function Home() {
         className="relative overflow-hidden min-h-[90vh] px-6 py-24"
         style={{ backgroundColor: '#0D0D0D' }}
       >
-        <FluidBackgroundUltraVioletStatic />
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-        {/* Dot grid background */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px)',
-            backgroundSize: '28px 28px',
-          }}
-        />
+        <NetworkBackground />
 
         {/* Content */}
-        <div className="relative z-[1] max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-14 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-14 items-center">
 
           {/* LEFT — copy */}
           <div className="flex flex-col items-start gap-8">
 
             {/* Eyebrow */}
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#8B2FC9] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00d4a0] animate-pulse" />
               <span className="font-body text-white/50 text-[13px] font-semibold uppercase tracking-[0.1em]">
                 Business Technology &amp; Strategy
               </span>
@@ -79,7 +69,7 @@ export default function Home() {
             <h1 className="font-heading font-bold leading-[1.05] tracking-[-0.02em] text-[44px] lg:text-[64px]">
               <span className="text-white">Operate with</span>
               <br />
-              <span className="text-[#8B2FC9]">an edge.</span>
+              <span className="text-[#00d4a0]">an edge.</span>
             </h1>
 
             {/* Subheadline */}
@@ -105,7 +95,7 @@ export default function Home() {
             <div className="flex gap-4 flex-wrap">
               <Link
                 href="/intake"
-                className="font-heading font-bold text-[15px] text-white bg-[#8B2FC9] hover:bg-[#7A28B8] px-8 py-4 rounded-xl uppercase transition-all duration-150"
+                className="font-heading font-bold text-[15px] text-white bg-[#00d4a0] hover:bg-[#00b88a] px-8 py-4 rounded-xl uppercase transition-all duration-150"
               >
                 Get a Free Consultation
               </Link>
@@ -127,7 +117,7 @@ export default function Home() {
               style={{
                 width: '400px',
                 height: '400px',
-                background: 'radial-gradient(circle, rgba(139,47,201,0.3) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(0,212,160,0.3) 0%, transparent 70%)',
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
@@ -172,7 +162,7 @@ export default function Home() {
                 {/* Sidebar */}
                 <div style={{ width: '165px', backgroundColor: '#0D0A1A', flexShrink: 0, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ padding: '14px', borderBottom: '0.5px solid rgba(255,255,255,0.07)', display: 'flex', alignItems: 'center', gap: '9px' }}>
-                    <div style={{ width: '28px', height: '28px', borderRadius: '6px', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    <div style={{ width: '28px', height: '28px', borderRadius: '6px', backgroundColor: '#00d4a0', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                       <Sparkles size={13} className="text-white" />
                     </div>
                     <div>
@@ -195,19 +185,19 @@ export default function Home() {
                           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                           padding: '6px 9px', borderRadius: '6px', fontSize: '12px', marginBottom: '2px', cursor: 'default',
                           color: active ? '#fff' : 'rgba(255,255,255,0.5)',
-                          backgroundColor: active ? 'rgba(139,47,201,0.3)' : 'transparent',
+                          backgroundColor: active ? 'rgba(0,212,160,0.3)' : 'transparent',
                         }}
                       >
                         <span>{label}</span>
                         {badge && (
-                          <span style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '10px', fontWeight: 700, padding: '1px 6px', borderRadius: '8px' }}>{badge}</span>
+                          <span style={{ backgroundColor: '#00d4a0', color: '#fff', fontSize: '10px', fontWeight: 700, padding: '1px 6px', borderRadius: '8px' }}>{badge}</span>
                         )}
                       </div>
                     ))}
                   </div>
                   <div style={{ padding: '10px 9px', borderTop: '0.5px solid rgba(255,255,255,0.07)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '5px 6px' }}>
-                      <div style={{ width: '26px', height: '26px', borderRadius: '50%', backgroundColor: '#8B2FC9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>MC</div>
+                      <div style={{ width: '26px', height: '26px', borderRadius: '50%', backgroundColor: '#00d4a0', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '9px', fontWeight: 700, color: '#fff', flexShrink: 0 }}>MC</div>
                       <div>
                         <div style={{ fontSize: '11px', color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>M. Cole</div>
                         <div style={{ fontSize: '10px', color: 'rgba(255,255,255,0.3)' }}>Owner</div>
@@ -224,7 +214,7 @@ export default function Home() {
                     <div className="font-heading" style={{ fontSize: '14px', fontWeight: 700, color: '#0D0D0D' }}>Service Dashboard</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <span style={{ fontSize: '11px', color: '#888' }}>Jun 2, 2026</span>
-                      <div style={{ backgroundColor: '#8B2FC9', color: '#fff', fontSize: '11px', fontWeight: 700, padding: '4px 12px', borderRadius: '6px' }}>+ New</div>
+                      <div style={{ backgroundColor: '#00d4a0', color: '#fff', fontSize: '11px', fontWeight: 700, padding: '4px 12px', borderRadius: '6px' }}>+ New</div>
                     </div>
                   </div>
 
@@ -339,7 +329,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
-            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-widest mb-4">
+            <p className="font-body text-brand-green text-[13px] font-semibold uppercase tracking-widest mb-4">
               The Problem
             </p>
             <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6">
@@ -355,8 +345,8 @@ export default function Home() {
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
-                <DollarSign size={22} className="text-brand-purple" />
+              <div className="w-12 h-12 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center">
+                <DollarSign size={22} className="text-brand-green" />
               </div>
               <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
                 Overpaying
@@ -368,8 +358,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
-                <Puzzle size={22} className="text-brand-purple" />
+              <div className="w-12 h-12 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center">
+                <Puzzle size={22} className="text-brand-green" />
               </div>
               <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
                 Disconnected
@@ -381,8 +371,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 md:p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
-                <Clock size={22} className="text-brand-purple" />
+              <div className="w-12 h-12 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center">
+                <Clock size={22} className="text-brand-green" />
               </div>
               <h3 className="font-heading font-bold text-brand-dark text-xl mt-5 mb-3">
                 No Time to Fix It
@@ -415,7 +405,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-12 md:mb-16">
-            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+            <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
               What We Do
             </p>
             <h2 className="font-heading font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6 max-w-3xl">
@@ -438,8 +428,8 @@ export default function Home() {
                 <span className="font-heading font-bold text-white/10 text-[56px] md:text-[80px] leading-none">01</span>
               </div>
               <div className="flex-1">
-                <div className="inline-flex items-center border border-brand-purple bg-[rgba(139,47,201,0.1)] rounded-full px-3 py-1 mb-4">
-                  <span className="font-body text-brand-purple text-xs font-semibold">Audit &amp; Strategy</span>
+                <div className="inline-flex items-center border border-brand-green bg-[rgba(0,212,160,0.1)] rounded-full px-3 py-1 mb-4">
+                  <span className="font-body text-brand-green text-xs font-semibold">Audit &amp; Strategy</span>
                 </div>
                 <h3 className="font-heading font-bold text-white text-[22px] md:text-[26px] tracking-[-0.01em] mb-3">
                   We start with a free consultation.
@@ -448,7 +438,7 @@ export default function Home() {
                   Before we recommend anything we look at what the business is actually spending
                   and what it&apos;s getting in return. Most businesses are surprised by what we find.
                 </p>
-                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors">
+                <span className="font-body text-brand-green text-sm font-medium hover:text-brand-green transition-colors">
                   Learn more →
                 </span>
               </div>
@@ -463,8 +453,8 @@ export default function Home() {
                 <span className="font-heading font-bold text-white/10 text-[56px] md:text-[80px] leading-none">02</span>
               </div>
               <div className="flex-1">
-                <div className="inline-flex items-center border border-brand-purple bg-[rgba(139,47,201,0.1)] rounded-full px-3 py-1 mb-4">
-                  <span className="font-body text-brand-purple text-xs font-semibold">Optimize &amp; Consolidate</span>
+                <div className="inline-flex items-center border border-brand-green bg-[rgba(0,212,160,0.1)] rounded-full px-3 py-1 mb-4">
+                  <span className="font-body text-brand-green text-xs font-semibold">Optimize &amp; Consolidate</span>
                 </div>
                 <h3 className="font-heading font-bold text-white text-[22px] md:text-[26px] tracking-[-0.01em] mb-3">
                   We cut the waste and connect the gaps.
@@ -474,7 +464,7 @@ export default function Home() {
                   systems that should be talking to each other. Most clients see immediate
                   monthly savings.
                 </p>
-                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors">
+                <span className="font-body text-brand-green text-sm font-medium hover:text-brand-green transition-colors">
                   Learn more →
                 </span>
               </div>
@@ -489,8 +479,8 @@ export default function Home() {
                 <span className="font-heading font-bold text-white/10 text-[56px] md:text-[80px] leading-none">03</span>
               </div>
               <div className="flex-1">
-                <div className="inline-flex items-center border border-brand-purple bg-[rgba(139,47,201,0.1)] rounded-full px-3 py-1 mb-4">
-                  <span className="font-body text-brand-purple text-xs font-semibold">Build</span>
+                <div className="inline-flex items-center border border-brand-green bg-[rgba(0,212,160,0.1)] rounded-full px-3 py-1 mb-4">
+                  <span className="font-body text-brand-green text-xs font-semibold">Build</span>
                 </div>
                 <h3 className="font-heading font-bold text-white text-[22px] md:text-[26px] tracking-[-0.01em] mb-3">
                   We build what doesn&apos;t exist yet.
@@ -499,7 +489,7 @@ export default function Home() {
                   When off-the-shelf solutions aren&apos;t enough we build custom software —
                   dashboards, portals, AI tools, and systems designed specifically for the business.
                 </p>
-                <span className="font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors">
+                <span className="font-body text-brand-green text-sm font-medium hover:text-brand-green transition-colors">
                   Learn more →
                 </span>
               </div>
@@ -509,7 +499,7 @@ export default function Home() {
       </section>
 
       {/* ── Stats Bar ── */}
-      <section className="bg-brand-purple py-12 px-4 md:px-6">
+      <section className="bg-brand-green py-12 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-stretch">
             <div className="border border-white/20 rounded-2xl p-6 bg-white/[0.05] text-center">
@@ -547,7 +537,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
-            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+            <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
               Who We Work With
             </p>
             <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6 max-w-2xl mx-auto">
@@ -573,10 +563,10 @@ export default function Home() {
             ].map(({ Icon, label }) => (
               <div
                 key={label}
-                className="bg-white border border-[#E5E7EB] rounded-2xl p-4 md:p-6 text-center hover:border-brand-purple hover:shadow-md transition-all duration-200"
+                className="bg-white border border-[#E5E7EB] rounded-2xl p-4 md:p-6 text-center hover:border-brand-green hover:shadow-md transition-all duration-200"
               >
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center mx-auto mb-3 md:mb-4">
-                  <Icon size={20} className="text-brand-purple" />
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Icon size={20} className="text-brand-green" />
                 </div>
                 <p className="font-heading font-bold text-brand-dark text-[13px] md:text-[15px]">{label}</p>
               </div>
@@ -597,11 +587,11 @@ export default function Home() {
             width: '700px',
             height: '700px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(139,47,201,0.15) 0%, rgba(139,47,201,0) 70%)',
+            background: 'radial-gradient(circle, rgba(0,212,160,0.15) 0%, rgba(0,212,160,0) 70%)',
           }}
         />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-6">
+          <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-6">
             Get Started
           </p>
           <h2 className="font-heading font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[-0.02em] mb-6">
@@ -613,7 +603,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="font-heading font-bold text-base text-white bg-brand-purple px-8 py-4 rounded-xl hover:bg-[#7A28B8] transition-colors duration-200 text-center"
+              className="font-heading font-bold text-base text-white bg-brand-green px-8 py-4 rounded-xl hover:bg-[#00b88a] transition-colors duration-200 text-center"
             >
               Get Your Free Consultation
             </Link>
@@ -629,3 +619,5 @@ export default function Home() {
     </div>
   )
 }
+
+

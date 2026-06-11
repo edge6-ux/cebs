@@ -1,4 +1,4 @@
-import { Resend } from 'resend'
+﻿import { Resend } from 'resend'
 
 function getResend() {
   if (!process.env.RESEND_API_KEY) throw new Error('RESEND_API_KEY is not set')
@@ -49,7 +49,7 @@ function wrapper(body: string): string {
     }
     .accent-bar {
       height: 3px;
-      background: #8B2FC9;
+      background: #00d4a0;
     }
     .body {
       padding: 36px 36px 28px;
@@ -61,9 +61,9 @@ function wrapper(body: string): string {
       margin-bottom: 14px;
     }
     .highlight {
-      background: rgba(139,47,201,0.06);
-      border: 1px solid rgba(139,47,201,0.15);
-      border-left: 4px solid #8B2FC9;
+      background: rgba(0,212,160,0.06);
+      border: 1px solid rgba(0,212,160,0.15);
+      border-left: 4px solid #00d4a0;
       border-radius: 10px;
       padding: 16px 20px;
       margin: 12px 0;
@@ -73,7 +73,7 @@ function wrapper(body: string): string {
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #8B2FC9;
+      color: #00d4a0;
       margin-bottom: 4px;
     }
     .highlight-value {
@@ -198,3 +198,4 @@ export async function sendLeadNotification(params: {
     html: wrapper(body),
   })
 }
+

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useState } from 'react'
 
@@ -28,7 +28,7 @@ export default function HeroParticles() {
           duration,
           color:
             Math.random() > 0.55
-              ? `rgba(139, 47, 201, ${(Math.random() * 0.45 + 0.25).toFixed(2)})`
+              ? `rgba(0, 212, 160, ${(Math.random() * 0.45 + 0.25).toFixed(2)})`
               : `rgba(255, 255, 255, ${(Math.random() * 0.25 + 0.1).toFixed(2)})`,
         }
       })
@@ -54,3 +54,4 @@ export default function HeroParticles() {
     </div>
   )
 }
+

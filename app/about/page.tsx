@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Target, Lightbulb, Shield, Zap } from 'lucide-react'
-import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+import NetworkBackground from '@/components/home/NetworkBackground'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -60,30 +60,9 @@ export default function AboutPage() {
     <div>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
-        <FluidBackgroundUltraVioletStatic />
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '-20%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '800px',
-            height: '800px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(139,47,201,0.15) 0%, rgba(139,47,201,0) 70%)',
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        <NetworkBackground />
         <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+          <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
             About Us
           </p>
           <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
@@ -101,7 +80,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text first on mobile */}
           <div>
-            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+            <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
               Our Mission
             </p>
             <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-4xl tracking-[-0.02em] mb-6 leading-[1.1]">
@@ -125,8 +104,8 @@ export default function AboutPage() {
                 key={title}
                 className="bg-white border border-[#E5E7EB] rounded-2xl p-5 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center mb-3">
-                  <Icon size={18} className="text-brand-purple" />
+                <div className="w-10 h-10 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center mb-3">
+                  <Icon size={18} className="text-brand-green" />
                 </div>
                 <p className="font-heading font-bold text-brand-dark text-[15px] mb-1">{title}</p>
                 <p className="font-body text-brand-muted text-[13px] leading-[1.5]">{body}</p>
@@ -140,7 +119,7 @@ export default function AboutPage() {
       <section className="bg-brand-dark py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10 md:mb-12">
-            <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+            <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
               How We Work
             </p>
             <h2 className="font-heading font-bold text-white text-3xl md:text-4xl tracking-[-0.02em]">
@@ -153,7 +132,7 @@ export default function AboutPage() {
                 key={n}
                 className="bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 md:p-8"
               >
-                <p className="font-heading font-bold text-brand-purple text-[13px] mb-3">{n}</p>
+                <p className="font-heading font-bold text-brand-green text-[13px] mb-3">{n}</p>
                 <h3 className="font-heading font-bold text-white text-xl mb-3">{title}</h3>
                 <p className="font-body text-white/50 text-[15px] leading-[1.7]">{body}</p>
               </div>
@@ -163,7 +142,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-brand-purple py-16 md:py-20 px-4 md:px-6 text-center">
+      <section className="bg-brand-green py-16 md:py-20 px-4 md:px-6 text-center">
         <h2 className="font-heading font-bold text-white text-3xl md:text-4xl tracking-[-0.02em] mb-4">
           Ready to see what we can do for your business?
         </h2>
@@ -173,7 +152,7 @@ export default function AboutPage() {
         </p>
         <Link
           href="/contact"
-          className="inline-block font-heading font-bold text-base text-brand-purple bg-white px-8 py-4 rounded-xl hover:bg-white/90 transition-colors w-full sm:w-auto text-center"
+          className="inline-block font-heading font-bold text-base text-brand-green bg-white px-8 py-4 rounded-xl hover:bg-white/90 transition-colors w-full sm:w-auto text-center"
         >
           Get a Free Consultation
         </Link>
@@ -181,3 +160,5 @@ export default function AboutPage() {
     </div>
   )
 }
+
+

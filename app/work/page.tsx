@@ -1,10 +1,10 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Globe, Cpu, LayoutDashboard, FileText,
   Users, Mail, Map, Shield,
 } from 'lucide-react'
-import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+import NetworkBackground from '@/components/home/NetworkBackground'
 
 export const metadata: Metadata = {
   title: 'Our Work',
@@ -78,30 +78,9 @@ export default function WorkPage() {
     <div>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
-        <FluidBackgroundUltraVioletStatic />
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '-20%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '800px',
-            height: '800px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(139,47,201,0.15) 0%, rgba(139,47,201,0) 70%)',
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        <NetworkBackground />
         <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+          <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
             Our Work
           </p>
           <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
@@ -121,7 +100,7 @@ export default function WorkPage() {
           {/* Header */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12 md:mb-16">
             <div>
-              <p className="font-body text-brand-purple text-xs font-semibold uppercase tracking-widest mb-3">
+              <p className="font-body text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">
                 Case Study — 01
               </p>
               <h2 className="font-heading font-bold text-brand-dark text-[36px] md:text-[44px] tracking-[-0.02em] mb-4 leading-[1.05]">
@@ -133,11 +112,11 @@ export default function WorkPage() {
                 <span>Service: Build</span>
               </div>
             </div>
-            <div className="bg-[rgba(139,47,201,0.08)] border border-[rgba(139,47,201,0.2)] rounded-2xl px-6 py-4 text-center w-full md:w-auto">
-              <p className="font-heading font-bold text-brand-purple text-[36px] leading-none">
+            <div className="bg-[rgba(0,212,160,0.08)] border border-[rgba(0,212,160,0.2)] rounded-2xl px-6 py-4 text-center w-full md:w-auto">
+              <p className="font-heading font-bold text-brand-green text-[36px] leading-none">
                 $5–7K
               </p>
-              <p className="font-body text-brand-purple text-[13px] mt-1">
+              <p className="font-body text-brand-green text-[13px] mt-1">
                 saved per month
               </p>
             </div>
@@ -145,7 +124,7 @@ export default function WorkPage() {
 
           {/* The Challenge */}
           <div className="bg-white rounded-2xl border border-[#E5E7EB] p-6 md:p-8 shadow-sm mb-12 md:mb-16">
-            <p className="font-body text-brand-purple text-[11px] font-semibold uppercase tracking-widest mb-4">
+            <p className="font-body text-brand-blue text-[11px] font-semibold uppercase tracking-widest mb-4">
               The Challenge
             </p>
             <p className="font-body text-[#4A4A4A] text-base leading-[1.8]">
@@ -193,8 +172,8 @@ export default function WorkPage() {
                   key={title}
                   className="bg-white rounded-2xl border border-[#E5E7EB] p-4 md:p-5 shadow-sm flex gap-4 items-start"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center shrink-0">
-                    <Icon size={18} className="text-brand-purple" />
+                  <div className="w-10 h-10 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center shrink-0">
+                    <Icon size={18} className="text-brand-green" />
                   </div>
                   <div>
                     <p className="font-heading font-bold text-brand-dark text-[15px] mb-1">{title}</p>
@@ -254,7 +233,7 @@ export default function WorkPage() {
         </p>
         <Link
           href="/contact"
-          className="inline-block font-heading font-bold text-[15px] text-white bg-brand-purple px-7 py-3.5 rounded-xl hover:bg-[#7A28B8] transition-colors w-full sm:w-auto text-center"
+          className="inline-block font-heading font-bold text-[15px] text-white bg-brand-green px-7 py-3.5 rounded-xl hover:bg-[#00b88a] transition-colors w-full sm:w-auto text-center"
         >
           Get a Free Consultation
         </Link>
@@ -262,3 +241,5 @@ export default function WorkPage() {
     </div>
   )
 }
+
+

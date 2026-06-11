@@ -1,6 +1,6 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import SolutionImage from '@/components/solutions/SolutionImage'
-import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+import NetworkBackground from '@/components/home/NetworkBackground'
 import {
   Globe,
   LayoutDashboard,
@@ -109,7 +109,7 @@ const categories: Category[] = [
     name: 'Operations & Admin',
     description:
       'Internal tools that replace spreadsheets and disconnected apps with one system built for how your team works.',
-    color: '#8B2FC9',
+    color: '#00d4a0',
     icon: 'LayoutDashboard',
     solutions: [
       {
@@ -289,12 +289,11 @@ export default function SolutionsPage() {
         style={{ backgroundColor: '#0D0D0D' }}
         className="relative overflow-hidden px-6 py-24 text-center"
       >
-        <FluidBackgroundUltraVioletStatic />
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-        <div className="relative z-[1] max-w-3xl mx-auto">
+        <NetworkBackground />
+        <div className="relative z-10 max-w-3xl mx-auto">
           <p
             className="font-body font-semibold uppercase mb-4"
-            style={{ color: '#A78BFA', fontSize: '13px', letterSpacing: '0.1em' }}
+            style={{ color: '#1a8fff', fontSize: '13px', letterSpacing: '0.1em' }}
           >
             What We Build
           </p>
@@ -315,7 +314,7 @@ export default function SolutionsPage() {
 
           <Link
             href="/intake"
-            className="inline-block font-heading font-bold uppercase text-white rounded-xl px-8 py-4 transition-colors bg-[#8B2FC9] hover:bg-[#7A28B8]"
+            className="inline-block font-heading font-bold uppercase text-white rounded-xl px-8 py-4 transition-colors bg-[#00d4a0] hover:bg-[#00b88a]"
             style={{ fontSize: '15px' }}
           >
             Get a Free Consultation
@@ -506,7 +505,7 @@ export default function SolutionsPage() {
             <div className="max-w-2xl mx-auto">
               <p
                 className="font-body font-semibold uppercase mb-4"
-                style={{ color: '#A78BFA', fontSize: '13px', letterSpacing: '0.1em' }}
+                style={{ color: '#1a8fff', fontSize: '13px', letterSpacing: '0.1em' }}
               >
                 Where to Start
               </p>
@@ -530,7 +529,7 @@ export default function SolutionsPage() {
               <div className="flex gap-4 justify-center flex-wrap">
                 <Link
                   href="/intake"
-                  className="font-heading font-bold uppercase text-white rounded-xl px-8 py-4 transition-colors bg-[#8B2FC9] hover:bg-[#7A28B8]"
+                  className="font-heading font-bold uppercase text-white rounded-xl px-8 py-4 transition-colors bg-[#00d4a0] hover:bg-[#00b88a]"
                   style={{ fontSize: '15px' }}
                 >
                   Get a Free Consultation
@@ -556,3 +555,4 @@ export default function SolutionsPage() {
     </main>
   )
 }
+

@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle } from 'lucide-react'
-import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+import NetworkBackground from '@/components/home/NetworkBackground'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 function CheckItem({ text }: { text: string }) {
   return (
     <li className="flex gap-3 items-start">
-      <CheckCircle size={18} className="text-brand-purple shrink-0 mt-0.5" />
+      <CheckCircle size={18} className="text-brand-green shrink-0 mt-0.5" />
       <span className="font-body text-[#4A4A4A] text-[15px] leading-[1.5]">{text}</span>
     </li>
   )
@@ -21,7 +21,7 @@ function CheckItem({ text }: { text: string }) {
 function CheckItemLight({ text }: { text: string }) {
   return (
     <li className="flex gap-3 items-start">
-      <CheckCircle size={18} className="text-brand-purple shrink-0 mt-0.5" />
+      <CheckCircle size={18} className="text-brand-green shrink-0 mt-0.5" />
       <span className="font-body text-white/70 text-[15px] leading-[1.5]">{text}</span>
     </li>
   )
@@ -32,33 +32,10 @@ export default function ServicesPage() {
     <div>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
-        <FluidBackgroundUltraVioletStatic />
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-        {/* Radial glow */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '-20%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '800px',
-            height: '800px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(139,47,201,0.15) 0%, rgba(139,47,201,0) 70%)',
-          }}
-        />
-        {/* Grid overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        <NetworkBackground />
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+          <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
             Our Services
           </p>
           <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
@@ -77,7 +54,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: text */}
           <div>
-            <p className="font-body text-brand-purple font-bold text-[13px] mb-2">01</p>
+            <p className="font-body text-brand-green font-bold text-[13px] mb-2">01</p>
             <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-[40px] tracking-[-0.02em] mb-6">
               Audit &amp; Strategy
             </h2>
@@ -132,8 +109,8 @@ export default function ServicesPage() {
                   key={n}
                   className={`flex gap-4 items-start pb-5 ${i < arr.length - 1 ? 'border-b border-white/[0.06]' : ''}`}
                 >
-                  <div className="w-7 h-7 rounded-full border border-brand-purple shrink-0 flex items-center justify-center">
-                    <span className="font-heading font-bold text-brand-purple text-xs">{n}</span>
+                  <div className="w-7 h-7 rounded-full border border-brand-green shrink-0 flex items-center justify-center">
+                    <span className="font-heading font-bold text-brand-green text-xs">{n}</span>
                   </div>
                   <div>
                     <p className="font-body font-semibold text-white text-sm mb-1">{title}</p>
@@ -150,13 +127,13 @@ export default function ServicesPage() {
       <section className="bg-white py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Results card — desktop: left col; mobile: below text */}
-          <div className="order-2 lg:order-1 bg-[rgba(139,47,201,0.06)] border border-[rgba(139,47,201,0.15)] rounded-2xl p-6 md:p-8">
-            <p className="font-body text-brand-purple text-[11px] uppercase tracking-[0.08em] mb-8">
+          <div className="order-2 lg:order-1 bg-[rgba(0,212,160,0.06)] border border-[rgba(0,212,160,0.15)] rounded-2xl p-6 md:p-8">
+            <p className="font-body text-brand-blue text-[11px] uppercase tracking-[0.08em] mb-8">
               Typical Results
             </p>
             <div className="space-y-8">
               <div>
-                <p className="font-heading font-bold text-brand-purple text-3xl md:text-[42px] leading-none">
+                <p className="font-heading font-bold text-brand-green text-3xl md:text-[42px] leading-none">
                   30–50%
                 </p>
                 <p className="font-body text-brand-muted text-sm mt-2 leading-[1.5]">
@@ -164,7 +141,7 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div>
-                <p className="font-heading font-bold text-brand-purple text-3xl md:text-[42px] leading-none">
+                <p className="font-heading font-bold text-brand-green text-3xl md:text-[42px] leading-none">
                   2–3 systems
                 </p>
                 <p className="font-body text-brand-muted text-sm mt-2 leading-[1.5]">
@@ -172,7 +149,7 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div>
-                <p className="font-heading font-bold text-brand-purple text-3xl md:text-[42px] leading-none">
+                <p className="font-heading font-bold text-brand-green text-3xl md:text-[42px] leading-none">
                   Hours back
                 </p>
                 <p className="font-body text-brand-muted text-sm mt-2 leading-[1.5]">
@@ -184,7 +161,7 @@ export default function ServicesPage() {
 
           {/* Text — desktop: right col; mobile: first */}
           <div className="order-1 lg:order-2">
-            <p className="font-body text-brand-purple font-bold text-[13px] mb-2">02</p>
+            <p className="font-body text-brand-green font-bold text-[13px] mb-2">02</p>
             <h2 className="font-heading font-bold text-brand-dark text-3xl md:text-[40px] tracking-[-0.02em] mb-6">
               Optimize &amp; Consolidate
             </h2>
@@ -243,7 +220,7 @@ export default function ServicesPage() {
             <p className="font-body text-white/30 text-[11px] uppercase tracking-[0.08em] mb-6">
               Recent Build
             </p>
-            <p className="font-body text-brand-purple text-[13px] font-semibold mb-6">
+            <p className="font-body text-brand-green text-[13px] font-semibold mb-6">
               Gordon Pro Tree Service
             </p>
             <ul className="space-y-4">
@@ -254,14 +231,14 @@ export default function ServicesPage() {
                 'Saved $2,000–$3,000/month in software costs',
               ].map((item) => (
                 <li key={item} className="flex gap-3 items-start">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-purple shrink-0 mt-2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-green shrink-0 mt-2" />
                   <span className="font-body text-white/60 text-sm leading-[1.6]">{item}</span>
                 </li>
               ))}
             </ul>
             <Link
               href="/work"
-              className="block mt-6 font-body text-brand-purple text-sm font-medium hover:text-brand-purple transition-colors"
+              className="block mt-6 font-body text-brand-green text-sm font-medium hover:text-brand-green transition-colors"
             >
               Read the full case study →
             </Link>
@@ -270,7 +247,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Bottom CTA ── */}
-      <section className="bg-brand-purple py-16 md:py-20 px-4 md:px-6 text-center">
+      <section className="bg-brand-green py-16 md:py-20 px-4 md:px-6 text-center">
         <h2 className="font-heading font-bold text-white text-3xl md:text-[40px] tracking-[-0.02em] mb-4">
           Not sure which tier fits your business?
         </h2>
@@ -280,7 +257,7 @@ export default function ServicesPage() {
         </p>
         <Link
           href="/contact"
-          className="inline-block font-heading font-bold text-base text-brand-purple bg-white px-8 py-4 rounded-xl hover:bg-white/90 transition-colors w-full sm:w-auto text-center"
+          className="inline-block font-heading font-bold text-base text-brand-green bg-white px-8 py-4 rounded-xl hover:bg-white/90 transition-colors w-full sm:w-auto text-center"
         >
           Get a Free Consultation
         </Link>
@@ -288,3 +265,5 @@ export default function ServicesPage() {
     </div>
   )
 }
+
+

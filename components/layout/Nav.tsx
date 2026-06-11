@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
@@ -54,7 +54,7 @@ export default function Nav() {
                 >
                   Honed Ops
                 </span>
-                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple whitespace-nowrap">
+                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-green whitespace-nowrap">
                   Operate With an Edge
                 </span>
               </div>
@@ -67,7 +67,7 @@ export default function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-body text-sm font-medium transition-colors hover:text-brand-purple ${
+                className={`font-body text-sm font-medium transition-colors hover:text-brand-green ${
                   scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
                 }`}
               >
@@ -80,7 +80,7 @@ export default function Nav() {
           <div className="flex items-center justify-end gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-block bg-brand-purple text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:brightness-110 transition-all"
+              className="hidden md:inline-block bg-brand-green text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:brightness-110 transition-all"
             >
               <span className="hidden lg:inline">Get a Free Consultation</span>
               <span className="lg:hidden">Free Consultation</span>
@@ -117,7 +117,7 @@ export default function Nav() {
           }`}
         >
           {/* Top gradient accent */}
-          <div className="h-px bg-gradient-to-r from-brand-purple via-purple-400 to-transparent" />
+          <div className="h-px bg-gradient-to-r from-brand-green via-brand-blue to-transparent" />
 
           {/* Panel header */}
           <div className="flex items-center justify-between px-6 h-16">
@@ -125,7 +125,7 @@ export default function Nav() {
               <Image src="/honed666.png" alt="Honed Ops" width={26} height={26} className="shrink-0" />
               <div className="flex flex-col leading-tight">
                 <span className="font-body font-bold text-sm tracking-tight text-white">Honed Ops</span>
-                <span className="font-body font-medium text-[10px] tracking-wide uppercase text-brand-purple">
+                <span className="font-body font-medium text-[10px] tracking-wide uppercase text-brand-green">
                   Operate With an Edge
                 </span>
               </div>
@@ -153,7 +153,7 @@ export default function Nav() {
                 }`}
                 style={{ transitionDelay: mobileOpen ? `${i * 70 + 180}ms` : '0ms' }}
               >
-                <span className="w-5 text-right font-mono text-[11px] text-white/20 group-hover:text-brand-purple/60 transition-colors select-none">
+                <span className="w-5 text-right font-mono text-[11px] text-white/20 group-hover:text-brand-green/60 transition-colors select-none">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <span className="font-heading font-bold text-xl text-white/75 group-hover:text-white transition-colors">
@@ -161,7 +161,7 @@ export default function Nav() {
                 </span>
                 <ArrowRight
                   size={14}
-                  className="ml-auto text-white/0 group-hover:text-brand-purple/70 -translate-x-1 group-hover:translate-x-0 transition-all duration-200"
+                  className="ml-auto text-white/0 group-hover:text-brand-green/70 -translate-x-1 group-hover:translate-x-0 transition-all duration-200"
                 />
               </Link>
             ))}
@@ -173,7 +173,7 @@ export default function Nav() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center w-full bg-brand-purple text-white font-heading font-semibold text-sm px-6 py-3.5 rounded-xl hover:brightness-110 transition-all"
+              className="flex items-center justify-center w-full bg-brand-green text-white font-heading font-semibold text-sm px-6 py-3.5 rounded-xl hover:brightness-110 transition-all"
             >
               Get a Free Consultation
             </Link>
@@ -186,3 +186,4 @@ export default function Nav() {
     </>
   )
 }
+

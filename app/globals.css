@@ -5,7 +5,8 @@
   --font-body: var(--font-inter), sans-serif;
 
   --color-brand-black:   #111111;
-  --color-brand-purple:  #8B2FC9;
+  --color-brand-green:   #00d4a0;
+  --color-brand-blue:    #1a8fff;
   --color-brand-white:   #F8F7F4;
   --color-brand-gray:    #555555;
   --color-brand-surface: #E2E0D8;
@@ -17,7 +18,8 @@
 }
 
 :root {
-  --purple:  #8B2FC9;
+  --green:   #00d4a0;
+  --blue:    #1a8fff;
   --dark:    #111111;
   --gray:    #555555;
   --muted:   #6B7280;

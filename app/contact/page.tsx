@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -6,7 +6,7 @@ import {
   Search, BarChart2, MessageSquare,
   CheckCircle, Mail,
 } from 'lucide-react'
-import FluidBackgroundUltraVioletStatic from '@/components/home/FluidBackgroundUltraVioletStatic'
+import NetworkBackground from '@/components/home/NetworkBackground'
 
 interface FormData {
   fullName: string
@@ -20,7 +20,7 @@ interface FormData {
 }
 
 const inputClass =
-  'w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[16px] text-[#1A1A1A] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-brand-purple focus:border-brand-purple transition-all duration-150'
+  'w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[16px] text-[#1A1A1A] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-brand-green transition-all duration-150'
 
 const labelClass = 'block font-body text-[#1A1A1A] text-sm font-medium mb-1.5'
 
@@ -83,30 +83,9 @@ export default function ContactPage() {
     <div>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-brand-dark pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-6 text-center">
-        <FluidBackgroundUltraVioletStatic />
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '-20%',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '800px',
-            height: '800px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(139,47,201,0.15) 0%, rgba(139,47,201,0) 70%)',
-          }}
-        />
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
+        <NetworkBackground />
         <div className="relative z-10 max-w-3xl mx-auto">
-          <p className="font-body text-brand-purple text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
+          <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
             Get in Touch
           </p>
           <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
@@ -130,7 +109,7 @@ export default function ContactPage() {
               <div className="py-8">
                 <CheckCircle
                   size={56}
-                  className="text-brand-purple mx-auto mb-6 block"
+                  className="text-brand-green mx-auto mb-6 block"
                 />
                 <h2 className="font-heading font-bold text-brand-dark text-[28px] text-center mb-3">
                   We got it.
@@ -142,7 +121,7 @@ export default function ContactPage() {
                 <div className="flex gap-4 justify-center mt-8 flex-wrap">
                   <Link
                     href="/work"
-                    className="font-body text-brand-purple text-sm font-medium border border-brand-purple px-5 py-2.5 rounded-xl hover:bg-[rgba(139,47,201,0.05)] transition-colors"
+                    className="font-body text-brand-green text-sm font-medium border border-brand-green px-5 py-2.5 rounded-xl hover:bg-[rgba(0,212,160,0.05)] transition-colors"
                   >
                     See Our Work
                   </Link>
@@ -169,7 +148,7 @@ export default function ContactPage() {
                   {/* Full name */}
                   <div>
                     <label htmlFor="fullName" className={labelClass}>
-                      Full name <span className="text-brand-purple">*</span>
+                      Full name <span className="text-brand-green">*</span>
                     </label>
                     <input
                       id="fullName"
@@ -187,7 +166,7 @@ export default function ContactPage() {
                   {/* Business name */}
                   <div>
                     <label htmlFor="businessName" className={labelClass}>
-                      Business name <span className="text-brand-purple">*</span>
+                      Business name <span className="text-brand-green">*</span>
                     </label>
                     <input
                       id="businessName"
@@ -205,7 +184,7 @@ export default function ContactPage() {
                   {/* Email */}
                   <div>
                     <label htmlFor="email" className={labelClass}>
-                      Email address <span className="text-brand-purple">*</span>
+                      Email address <span className="text-brand-green">*</span>
                     </label>
                     <input
                       id="email"
@@ -268,7 +247,7 @@ export default function ContactPage() {
                   <div>
                     <label htmlFor="challenge" className={labelClass}>
                       What&apos;s your biggest challenge right now?{' '}
-                      <span className="text-brand-purple">*</span>
+                      <span className="text-brand-green">*</span>
                     </label>
                     <textarea
                       id="challenge"
@@ -328,7 +307,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={!requiredFilled || loading}
-                  className="w-full mt-6 bg-brand-purple text-white font-heading font-bold text-base py-4 rounded-xl hover:bg-[#7A28B8] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
+                  className="w-full mt-6 bg-brand-green text-white font-heading font-bold text-base py-4 rounded-xl hover:bg-[#00b88a] disabled:opacity-60 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>
@@ -368,7 +347,7 @@ export default function ContactPage() {
                   </p>
                   <Link
                     href="/intake"
-                    className="font-body text-[#8B2FC9] text-[14px] font-medium hover:underline"
+                    className="font-body text-[#00d4a0] text-[14px] font-medium hover:underline"
                   >
                     Complete the full intake →
                   </Link>
@@ -396,7 +375,7 @@ export default function ContactPage() {
 
             {/* Why start with an audit */}
             <div>
-              <p className="font-body text-brand-purple text-[11px] font-semibold uppercase tracking-widest mb-5">
+              <p className="font-body text-brand-blue text-[11px] font-semibold uppercase tracking-widest mb-5">
                 Why Start With a Consultation
               </p>
               <div className="space-y-5">
@@ -418,8 +397,8 @@ export default function ContactPage() {
                   },
                 ].map(({ Icon, title, body }) => (
                   <div key={title} className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center shrink-0">
-                      <Icon size={18} className="text-brand-purple" />
+                    <div className="w-10 h-10 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center shrink-0">
+                      <Icon size={18} className="text-brand-green" />
                     </div>
                     <div>
                       <p className="font-heading font-bold text-brand-dark text-[15px] mb-1">{title}</p>
@@ -432,7 +411,7 @@ export default function ContactPage() {
 
             {/* What happens next */}
             <div>
-              <p className="font-body text-brand-purple text-[11px] font-semibold uppercase tracking-widest mb-5">
+              <p className="font-body text-brand-blue text-[11px] font-semibold uppercase tracking-widest mb-5">
                 What Happens Next
               </p>
               <div className="space-y-4">
@@ -454,8 +433,8 @@ export default function ContactPage() {
                   },
                 ].map(({ n, title, body }) => (
                   <div key={n} className="flex gap-3 items-start">
-                    <div className="w-7 h-7 rounded-full border border-brand-purple flex items-center justify-center shrink-0">
-                      <span className="font-heading font-bold text-brand-purple text-xs">{n}</span>
+                    <div className="w-7 h-7 rounded-full border border-brand-green flex items-center justify-center shrink-0">
+                      <span className="font-heading font-bold text-brand-green text-xs">{n}</span>
                     </div>
                     <div>
                       <p className="font-body font-semibold text-brand-dark text-sm mb-1">{title}</p>
@@ -468,11 +447,11 @@ export default function ContactPage() {
 
             {/* Direct contact */}
             <div>
-              <p className="font-body text-brand-purple text-[11px] font-semibold uppercase tracking-widest mb-4">
+              <p className="font-body text-brand-blue text-[11px] font-semibold uppercase tracking-widest mb-4">
                 Direct Contact
               </p>
               <div className="flex items-center gap-3">
-                <Mail size={16} className="text-brand-purple" />
+                <Mail size={16} className="text-brand-green" />
                 <span className="font-body text-[#4A4A4A] text-sm">
                   contact@honedops.com
                 </span>
@@ -485,3 +464,5 @@ export default function ContactPage() {
     </div>
   )
 }
+
+

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, Suspense } from 'react'
 import Link from 'next/link'
@@ -71,7 +71,7 @@ interface FormState {
 }
 
 const inputClass =
-  'w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150'
+  'w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150'
 
 const labelClass = 'block font-body text-[#0D0D0D] text-sm font-medium mb-1.5'
 
@@ -325,7 +325,7 @@ function IntakeForm() {
     return (
       <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center px-4">
         <div className="bg-white rounded-2xl border border-[#E5E7EB] p-12 shadow-sm text-center max-w-lg w-full">
-          <CheckCircle size={64} className="text-[#8B2FC9] mx-auto mb-6" />
+          <CheckCircle size={64} className="text-[#00d4a0] mx-auto mb-6" />
           <h2 className="font-heading font-bold text-[#0D0D0D] text-[28px] mb-3">
             We&apos;ll be in touch.
           </h2>
@@ -353,12 +353,12 @@ function IntakeForm() {
             <Image src="/honed666.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
             <div className="flex flex-col leading-tight">
               <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">Honed Ops</span>
-              <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple">Operate With an Edge</span>
+              <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-green">Operate With an Edge</span>
             </div>
           </Link>
           <Link
             href="/contact"
-            className="font-body text-[#8B2FC9] text-[14px] hover:underline"
+            className="font-body text-[#00d4a0] text-[14px] hover:underline"
           >
             Quick form instead →
           </Link>
@@ -374,7 +374,7 @@ function IntakeForm() {
                 <span
                   className={`font-body text-[12px] ${
                     step >= i + 1
-                      ? 'text-[#8B2FC9] font-semibold'
+                      ? 'text-[#00d4a0] font-semibold'
                       : 'text-[#9CA3AF]'
                   }`}
                 >
@@ -385,7 +385,7 @@ function IntakeForm() {
           </div>
           <div className="relative h-2 bg-[#E5E7EB] rounded-full">
             <div
-              className="absolute left-0 top-0 h-full bg-[#8B2FC9] rounded-full transition-[width] duration-300"
+              className="absolute left-0 top-0 h-full bg-[#00d4a0] rounded-full transition-[width] duration-300"
               style={{ width: `${fillPct}%` }}
             />
           </div>
@@ -509,7 +509,7 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">
 
         <div className="mb-6">
-          <p className="font-body text-[#8B2FC9] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
+          <p className="font-body text-[#00d4a0] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
             Step 2 of 5
           </p>
           <h2 className="font-heading font-bold text-[#0D0D0D] text-[22px] mb-1">
@@ -539,7 +539,7 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
                     placeholder="your-page-name"
                     value={form.facebook}
                     onChange={onChange}
-                    className="flex-1 border border-[#E5E7EB] border-l-0 rounded-r-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] transition-all duration-150"
+                    className="flex-1 border border-[#E5E7EB] border-l-0 rounded-r-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] transition-all duration-150"
                   />
                 </div>
               </div>
@@ -556,7 +556,7 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
                     placeholder="your-handle"
                     value={form.instagram}
                     onChange={onChange}
-                    className="flex-1 border border-[#E5E7EB] border-l-0 rounded-r-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] transition-all duration-150"
+                    className="flex-1 border border-[#E5E7EB] border-l-0 rounded-r-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] transition-all duration-150"
                   />
                 </div>
               </div>
@@ -623,7 +623,7 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
               placeholder="e.g. Licensed, Insured, BBB Accredited, Google Guaranteed, Veteran-Owned..."
               value={form.trustBadges}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -653,16 +653,16 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
                 </button>
               </div>
             ) : (
-              <label className={`flex flex-col items-center justify-center gap-2 border-2 border-dashed rounded-xl px-4 py-8 cursor-pointer transition-colors duration-150 ${uploading ? 'border-[#8B2FC9] bg-[rgba(139,47,201,0.04)]' : 'border-[#E5E7EB] hover:border-[#8B2FC9] bg-white hover:bg-[rgba(139,47,201,0.02)]'}`}>
+              <label className={`flex flex-col items-center justify-center gap-2 border-2 border-dashed rounded-xl px-4 py-8 cursor-pointer transition-colors duration-150 ${uploading ? 'border-[#00d4a0] bg-[rgba(0,212,160,0.04)]' : 'border-[#E5E7EB] hover:border-[#00d4a0] bg-white hover:bg-[rgba(0,212,160,0.02)]'}`}>
                 {uploading ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-[#8B2FC9] border-t-transparent rounded-full animate-spin" />
-                    <span className="font-body text-[#8B2FC9] text-[14px]">Uploading...</span>
+                    <div className="w-5 h-5 border-2 border-[#00d4a0] border-t-transparent rounded-full animate-spin" />
+                    <span className="font-body text-[#00d4a0] text-[14px]">Uploading...</span>
                   </>
                 ) : (
                   <>
-                    <div className="w-10 h-10 rounded-xl bg-[rgba(139,47,201,0.08)] flex items-center justify-center">
-                      <Upload size={18} className="text-[#8B2FC9]" />
+                    <div className="w-10 h-10 rounded-xl bg-[rgba(0,212,160,0.08)] flex items-center justify-center">
+                      <Upload size={18} className="text-[#00d4a0]" />
                     </div>
                     <span className="font-body text-[#0D0D0D] text-[14px] font-medium">Upload your logo</span>
                     <span className="font-body text-[#9CA3AF] text-[12px]">PNG, JPG, SVG up to 5MB</span>
@@ -730,7 +730,7 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
           <div>
             <p className="font-body text-[#4A4A4A] text-[14px] font-medium mb-3">
               What do you want visitors to do when they land on your website?{' '}
-              <span className="text-[#8B2FC9]">*</span>
+              <span className="text-[#00d4a0]">*</span>
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
@@ -745,11 +745,11 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
                     onClick={() => onSetField('ctaPreference', value)}
                     className={`flex flex-col items-center gap-2 p-4 rounded-xl cursor-pointer text-center transition-all duration-150 ${
                       selected
-                        ? 'border-[1.5px] border-[#8B2FC9] bg-[rgba(139,47,201,0.04)]'
+                        ? 'border-[1.5px] border-[#00d4a0] bg-[rgba(0,212,160,0.04)]'
                         : 'border-[1.5px] border-[#E5E7EB]'
                     }`}
                   >
-                    <Icon size={28} className={selected ? 'text-[#8B2FC9]' : 'text-[#9CA3AF]'} />
+                    <Icon size={28} className={selected ? 'text-[#00d4a0]' : 'text-[#9CA3AF]'} />
                     <p className="font-body text-[#0D0D0D] text-[14px] font-semibold">{title}</p>
                     <p className="font-body text-[#6B7280] text-[12px] leading-[1.4]">{desc}</p>
                   </div>
@@ -765,14 +765,14 @@ function Step2({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#8B2FC9] hover:text-[#8B2FC9] transition-colors duration-150"
+          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#00d4a0] hover:text-[#00d4a0] transition-colors duration-150"
         >
           ← Back
         </button>
         <button
           onClick={onContinue}
           disabled={!canContinue}
-          className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-6 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="font-heading font-bold text-[14px] uppercase text-white bg-[#00d4a0] px-6 py-3 rounded-xl hover:bg-[#00b88a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Continue →
         </button>
@@ -815,7 +815,7 @@ function Step3({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">
 
         <div className="mb-6">
-          <p className="font-body text-[#8B2FC9] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
+          <p className="font-body text-[#00d4a0] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
             Step 3 of 5
           </p>
           <h2 className="font-heading font-bold text-[#0D0D0D] text-[22px] mb-1">
@@ -831,7 +831,7 @@ function Step3({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
           {/* Services Offered */}
           <div>
             <p className="font-body text-[#4A4A4A] text-[14px] font-medium mb-1">
-              Services You Offer <span className="text-[#8B2FC9]">*</span>
+              Services You Offer <span className="text-[#00d4a0]">*</span>
             </p>
             <p className="font-body text-[#9CA3AF] text-[12px] mb-2">List the services your business provides</p>
             <textarea
@@ -840,7 +840,7 @@ function Step3({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
               placeholder="e.g. Oil changes, tire rotations, brake repair, engine diagnostics, transmission service..."
               value={form.servicesOffered}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -859,7 +859,7 @@ function Step3({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
                     className={`font-body text-[15px] font-semibold px-6 py-2.5 rounded-full cursor-pointer border-[1.5px] transition-all duration-150 ${
                       selected
                         ? 'bg-[#0D0D0D] border-[#0D0D0D] text-white'
-                        : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#8B2FC9] hover:text-[#8B2FC9]'
+                        : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#00d4a0] hover:text-[#00d4a0]'
                     }`}
                   >
                     {label}
@@ -888,7 +888,7 @@ function Step3({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
                     placeholder="9:00 AM – 5:00 PM"
                     value={form[day.key]}
                     onChange={onChange}
-                    className="flex-1 border border-[#E5E7EB] rounded-xl px-4 py-2.5 font-body text-[14px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] transition-all duration-150"
+                    className="flex-1 border border-[#E5E7EB] rounded-xl px-4 py-2.5 font-body text-[14px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] transition-all duration-150"
                   />
                 </div>
               ))}
@@ -902,14 +902,14 @@ function Step3({ form, onChange, onSetField, onBack, onContinue, canContinue }: 
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#8B2FC9] hover:text-[#8B2FC9] transition-colors duration-150"
+          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#00d4a0] hover:text-[#00d4a0] transition-colors duration-150"
         >
           ← Back
         </button>
         <button
           onClick={onContinue}
           disabled={!canContinue}
-          className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-6 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="font-heading font-bold text-[14px] uppercase text-white bg-[#00d4a0] px-6 py-3 rounded-xl hover:bg-[#00b88a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Continue →
         </button>
@@ -938,15 +938,15 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
         {interestedIn && (
           <div
             className="rounded-xl px-4 py-3 mb-6 flex items-center justify-between"
-            style={{ backgroundColor: 'rgba(139,47,201,0.06)', border: '1px solid rgba(139,47,201,0.2)' }}
+            style={{ backgroundColor: 'rgba(0,212,160,0.06)', border: '1px solid rgba(0,212,160,0.2)' }}
           >
             <div className="flex items-center gap-3">
-              <Sparkles size={16} className="text-[#8B2FC9] flex-shrink-0" />
+              <Sparkles size={16} className="text-[#00d4a0] flex-shrink-0" />
               <div>
                 <p className="font-body text-[#0D0D0D] text-[14px] font-semibold">
                   You&apos;re interested in:
                 </p>
-                <p className="font-body text-[#8B2FC9] text-[14px] font-medium mt-0.5">
+                <p className="font-body text-[#00d4a0] text-[14px] font-medium mt-0.5">
                   {interestedIn}
                   {interestedCategory && (
                     <span
@@ -972,7 +972,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
         {/* Step header */}
         <div className="mb-6">
           <p
-            className="font-body text-[#8B2FC9] text-[12px] font-semibold uppercase mb-1"
+            className="font-body text-[#00d4a0] text-[12px] font-semibold uppercase mb-1"
             style={{ letterSpacing: '0.08em' }}
           >
             Step 1 of 5
@@ -990,7 +990,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
           {/* Business name */}
           <div>
             <label htmlFor="businessName" className={labelClass}>
-              Business Name <span className="text-[#8B2FC9]">*</span>
+              Business Name <span className="text-[#00d4a0]">*</span>
             </label>
             <input
               id="businessName"
@@ -1007,7 +1007,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
           {/* Business type */}
           <div>
             <label htmlFor="businessType" className={labelClass}>
-              Business Type <span className="text-[#8B2FC9]">*</span>
+              Business Type <span className="text-[#00d4a0]">*</span>
             </label>
             <select
               id="businessType"
@@ -1030,7 +1030,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
           {/* Industry */}
           <div>
             <label htmlFor="industry" className={labelClass}>
-              Industry <span className="text-[#8B2FC9]">*</span>
+              Industry <span className="text-[#00d4a0]">*</span>
             </label>
             <select
               id="industry"
@@ -1055,7 +1055,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
           {/* Phone */}
           <div>
             <label htmlFor="phone" className={labelClass}>
-              Phone Number <span className="text-[#8B2FC9]">*</span>
+              Phone Number <span className="text-[#00d4a0]">*</span>
             </label>
             <input
               id="phone"
@@ -1073,7 +1073,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
           {/* Email */}
           <div>
             <label htmlFor="email" className={labelClass}>
-              Email Address <span className="text-[#8B2FC9]">*</span>
+              Email Address <span className="text-[#00d4a0]">*</span>
             </label>
             <input
               id="email"
@@ -1110,7 +1110,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
           {/* Street address */}
           <div>
             <label htmlFor="address" className={labelClass}>
-              Street Address <span className="text-[#8B2FC9]">*</span>
+              Street Address <span className="text-[#00d4a0]">*</span>
             </label>
             <input
               id="address"
@@ -1129,7 +1129,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
           <div className="grid grid-cols-3 gap-3">
             <div>
               <label htmlFor="city" className={labelClass}>
-                City <span className="text-[#8B2FC9]">*</span>
+                City <span className="text-[#00d4a0]">*</span>
               </label>
               <input
                 id="city"
@@ -1145,7 +1145,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
             </div>
             <div>
               <label htmlFor="state" className={labelClass}>
-                State <span className="text-[#8B2FC9]">*</span>
+                State <span className="text-[#00d4a0]">*</span>
               </label>
               <input
                 id="state"
@@ -1161,7 +1161,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
             </div>
             <div>
               <label htmlFor="zip" className={labelClass}>
-                ZIP <span className="text-[#8B2FC9]">*</span>
+                ZIP <span className="text-[#00d4a0]">*</span>
               </label>
               <input
                 id="zip"
@@ -1204,7 +1204,7 @@ function Step1({ form, onChange, onContinue, canContinue, interestedIn, interest
         <button
           onClick={onContinue}
           disabled={!canContinue}
-          className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-6 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="font-heading font-bold text-[14px] uppercase text-white bg-[#00d4a0] px-6 py-3 rounded-xl hover:bg-[#00b88a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Continue →
         </button>
@@ -1229,7 +1229,7 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">
 
         <div className="mb-6">
-          <p className="font-body text-[#8B2FC9] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
+          <p className="font-body text-[#00d4a0] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
             Step 4 of 5
           </p>
           <h2 className="font-heading font-bold text-[#0D0D0D] text-[22px] mb-1">
@@ -1252,7 +1252,7 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
               placeholder="e.g. QuickBooks, Thryv, Google Workspace, Jobber, Toast POS..."
               value={form.currentTools}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1264,7 +1264,7 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
               name="monthlySpend"
               value={form.monthlySpend}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150"
             >
               <option value="">Select a range</option>
               <option value="under_100">Under $100/month</option>
@@ -1288,14 +1288,14 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
               placeholder="e.g. Our scheduling system works great, customers love our booking page..."
               value={form.whatIsWorking}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
           {/* Biggest Challenge */}
           <div>
             <label className={labelClass}>
-              Biggest Challenge <span className="text-[#8B2FC9]">*</span>
+              Biggest Challenge <span className="text-[#00d4a0]">*</span>
             </label>
             <p className="font-body text-[#9CA3AF] text-[12px] mb-2">What&apos;s the biggest operational pain point costing you time or money right now?</p>
             <textarea
@@ -1304,7 +1304,7 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
               placeholder="e.g. We spend hours every week manually following up with customers. Our online presence is basically nonexistent..."
               value={form.biggestChallenge}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1334,7 +1334,7 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
                   className={`font-body text-[14px] font-medium px-5 py-2.5 rounded-full cursor-pointer border-[1.5px] transition-all duration-150 ${
                     form.previousAgency === val
                       ? 'bg-[#0D0D0D] border-[#0D0D0D] text-white'
-                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#8B2FC9] hover:text-[#8B2FC9]'
+                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#00d4a0] hover:text-[#00d4a0]'
                   }`}
                 >
                   {val === 'yes' ? 'Yes' : val === 'no' ? 'No' : 'Not sure'}
@@ -1350,7 +1350,7 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
                   placeholder="What did they build? Did it work? Why did you stop?"
                   value={form.previousAttempts}
                   onChange={onChange}
-                  className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+                  className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
                 />
               </div>
             )}
@@ -1363,14 +1363,14 @@ function Step4({ form, onChange, onSetField, onBack, onContinue }: Step4Props) {
       <div className="flex items-center justify-between">
         <button
           onClick={onBack}
-          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#8B2FC9] hover:text-[#8B2FC9] transition-colors duration-150"
+          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#00d4a0] hover:text-[#00d4a0] transition-colors duration-150"
         >
           ← Back
         </button>
         <button
           onClick={onContinue}
           disabled={!canContinue}
-          className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-6 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="font-heading font-bold text-[14px] uppercase text-white bg-[#00d4a0] px-6 py-3 rounded-xl hover:bg-[#00b88a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           Continue →
         </button>
@@ -1397,7 +1397,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">
 
         <div className="mb-6">
-          <p className="font-body text-[#8B2FC9] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
+          <p className="font-body text-[#00d4a0] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
             Step 5 of 5
           </p>
           <h2 className="font-heading font-bold text-[#0D0D0D] text-[22px] mb-1">Your Goals</h2>
@@ -1418,7 +1418,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
               placeholder="e.g. Cut software costs in half, get more online bookings, stop losing customers to follow-up..."
               value={form.successDefinition}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1440,7 +1440,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
                   className={`font-body text-[14px] font-medium px-5 py-2.5 rounded-full cursor-pointer border-[1.5px] transition-all duration-150 ${
                     form.timeline === value
                       ? 'bg-[#0D0D0D] border-[#0D0D0D] text-white'
-                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#8B2FC9] hover:text-[#8B2FC9]'
+                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#00d4a0] hover:text-[#00d4a0]'
                   }`}
                 >
                   {label}
@@ -1469,7 +1469,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
                   className={`font-body text-[14px] font-medium px-5 py-2.5 rounded-full cursor-pointer border-[1.5px] transition-all duration-150 ${
                     form.budgetRange === value
                       ? 'bg-[#0D0D0D] border-[#0D0D0D] text-white'
-                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#8B2FC9] hover:text-[#8B2FC9]'
+                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#00d4a0] hover:text-[#00d4a0]'
                   }`}
                 >
                   {label}
@@ -1485,7 +1485,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
               name="hearAboutUs"
               value={form.hearAboutUs}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150"
             >
               <option value="">Select one</option>
               <option value="google">Google search</option>
@@ -1506,7 +1506,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
               placeholder="e.g. We've tried this before and it didn't work. We have a tight deadline. We need mobile-first..."
               value={form.additionalNotes}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1518,7 +1518,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
         <button
           onClick={onBack}
           disabled={submitting}
-          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#8B2FC9] hover:text-[#8B2FC9] transition-colors duration-150 disabled:opacity-50"
+          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#00d4a0] hover:text-[#00d4a0] transition-colors duration-150 disabled:opacity-50"
         >
           ← Back
         </button>
@@ -1526,7 +1526,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
           <button
             onClick={onContinue}
             disabled={submitting}
-            className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-8 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="font-heading font-bold text-[14px] uppercase text-white bg-[#00d4a0] px-8 py-3 rounded-xl hover:bg-[#00b88a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             Continue →
           </button>
@@ -1534,7 +1534,7 @@ function Step5({ form, onChange, onSetField, onBack, onSubmit, onContinue, showS
           <button
             onClick={onSubmit}
             disabled={submitting}
-            className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-8 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+            className="font-heading font-bold text-[14px] uppercase text-white bg-[#00d4a0] px-8 py-3 rounded-xl hover:bg-[#00b88a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
           >
             {submitting ? (
               <>
@@ -1580,7 +1580,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
       <div className="bg-white rounded-2xl border border-[#E5E7EB] p-8 shadow-sm mb-6">
 
         <div className="mb-6">
-          <p className="font-body text-[#8B2FC9] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
+          <p className="font-body text-[#00d4a0] text-[12px] font-semibold uppercase mb-1" style={{ letterSpacing: '0.08em' }}>
             Step 6 of 6
           </p>
           <h2 className="font-heading font-bold text-[#0D0D0D] text-[22px] mb-1">Your Website</h2>
@@ -1601,7 +1601,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
               placeholder="Hard to find on Google, looks outdated, no way to book online, not mobile friendly..."
               value={form.existingSiteIssues}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1615,7 +1615,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
               placeholder="Competitor name and what stands out about their website..."
               value={form.competitorSites}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1634,7 +1634,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
                   >
                     <div
                       className={`w-[18px] h-[18px] rounded-md shrink-0 flex items-center justify-center border-[1.5px] transition-all duration-150 ${
-                        checked ? 'bg-[#8B2FC9] border-[#8B2FC9]' : 'bg-white border-[#D1D5DB]'
+                        checked ? 'bg-[#00d4a0] border-[#00d4a0]' : 'bg-white border-[#D1D5DB]'
                       }`}
                     >
                       {checked && <Check size={12} className="text-white" strokeWidth={3} />}
@@ -1663,7 +1663,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
                   className={`font-body text-[14px] font-medium px-5 py-2.5 rounded-full cursor-pointer border-[1.5px] transition-all duration-150 ${
                     form.hasCopy === value
                       ? 'bg-[#0D0D0D] border-[#0D0D0D] text-white'
-                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#8B2FC9] hover:text-[#8B2FC9]'
+                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#00d4a0] hover:text-[#00d4a0]'
                   }`}
                 >
                   {label}
@@ -1688,7 +1688,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
                   className={`font-body text-[14px] font-medium px-5 py-2.5 rounded-full cursor-pointer border-[1.5px] transition-all duration-150 ${
                     form.hasPhotos === value
                       ? 'bg-[#0D0D0D] border-[#0D0D0D] text-white'
-                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#8B2FC9] hover:text-[#8B2FC9]'
+                      : 'bg-white border-[#E5E7EB] text-[#4A4A4A] hover:border-[#00d4a0] hover:text-[#00d4a0]'
                   }`}
                 >
                   {label}
@@ -1707,7 +1707,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
               placeholder={"https://example.com — love the clean layout\nhttps://example2.com — like the color scheme"}
               value={form.referenceSites}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1721,7 +1721,7 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
               placeholder="Homeowners in Hall County, age 35–60, own their home, dual income, need emergency services..."
               value={form.idealCustomer}
               onChange={onChange}
-              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#8B2FC9] focus:border-[#8B2FC9] transition-all duration-150 resize-none"
+              className="w-full border border-[#E5E7EB] rounded-xl px-4 py-3 font-body text-[15px] text-[#0D0D0D] bg-white placeholder-[#9CA3AF] focus:outline-none focus:ring-2 focus:ring-[#00d4a0] focus:border-[#00d4a0] transition-all duration-150 resize-none"
             />
           </div>
 
@@ -1747,14 +1747,14 @@ function Step6({ form, onChange, onSetField, onBack, onSubmit, submitting, error
         <button
           onClick={onBack}
           disabled={submitting}
-          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#8B2FC9] hover:text-[#8B2FC9] transition-colors duration-150 disabled:opacity-50"
+          className="font-body text-[14px] text-[#4A4A4A] bg-white border border-[#E5E7EB] px-6 py-3 rounded-xl hover:border-[#00d4a0] hover:text-[#00d4a0] transition-colors duration-150 disabled:opacity-50"
         >
           ← Back
         </button>
         <button
           onClick={onSubmit}
           disabled={submitting}
-          className="font-heading font-bold text-[14px] uppercase text-white bg-[#8B2FC9] px-8 py-3 rounded-xl hover:bg-[#7A28B8] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+          className="font-heading font-bold text-[14px] uppercase text-white bg-[#00d4a0] px-8 py-3 rounded-xl hover:bg-[#00b88a] disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
         >
           {submitting ? (
             <>
@@ -1775,10 +1775,11 @@ export default function IntakePage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-[#F5F5F5] flex items-center justify-center">
-        <div className="w-6 h-6 border-2 border-[#8B2FC9] border-t-transparent rounded-full animate-spin" />
+        <div className="w-6 h-6 border-2 border-[#00d4a0] border-t-transparent rounded-full animate-spin" />
       </div>
     }>
       <IntakeForm />
     </Suspense>
   )
 }
+

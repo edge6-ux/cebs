@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Image from 'next/image'
 
 const services = ['Audit & Strategy', 'Optimize & Consolidate', 'Build']
@@ -23,7 +23,7 @@ export default function Footer() {
               <Image src="/honed666.png" alt="Honed Ops" width={30} height={30} className="shrink-0" />
               <div className="flex flex-col leading-tight">
                 <span className="font-body font-bold text-base tracking-tight text-[#1A1A1A]">Honed Ops</span>
-                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-purple">Operate With an Edge</span>
+                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-green">Operate With an Edge</span>
               </div>
             </Link>
             <p className="font-body text-brand-muted text-sm max-w-xs leading-relaxed">
@@ -43,7 +43,7 @@ export default function Footer() {
                   <li key={service}>
                     <Link
                       href="/services"
-                      className="font-body text-brand-muted text-sm hover:text-brand-purple transition-colors"
+                      className="font-body text-brand-muted text-sm hover:text-brand-green transition-colors"
                     >
                       {service}
                     </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="font-body text-brand-muted text-sm hover:text-brand-purple transition-colors"
+                      className="font-body text-brand-muted text-sm hover:text-brand-green transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -86,3 +86,4 @@ export default function Footer() {
     </footer>
   )
 }
+
