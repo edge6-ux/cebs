@@ -109,6 +109,7 @@ export default function HonedBackground() {
 
     // ── Init ─────────────────────────────────────────────────
     function resize() {
+      if (!canvas) return;
       W = canvas.width  = canvas.offsetWidth;
       H = canvas.height = canvas.offsetHeight;
       initLayers();
