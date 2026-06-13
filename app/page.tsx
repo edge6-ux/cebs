@@ -47,7 +47,7 @@ export default function Home() {
       {/* ── Hero ── */}
       <section
         className="relative overflow-hidden min-h-[90vh] px-6 py-24"
-        style={{ backgroundColor: '#d4f0e6' }}
+        style={{ backgroundColor: '#0D0D0D' }}
       >
         <HonedBackground />
 
@@ -60,20 +60,20 @@ export default function Home() {
             {/* Eyebrow */}
             <div className="flex items-center gap-2 mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00d4a0] animate-pulse" />
-              <span className="font-body text-[#1A6B50]/70 text-[13px] font-semibold uppercase tracking-[0.1em]">
+              <span className="font-body text-white/50 text-[13px] font-semibold uppercase tracking-[0.1em]">
                 Business Technology &amp; Strategy
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="font-heading font-bold leading-[1.05] tracking-[-0.02em] text-[44px] lg:text-[64px]">
-              <span className="text-[#0D2E22]">Operate with</span>
+              <span className="text-white">Operate with</span>
               <br />
               <span className="text-[#00d4a0]">an edge.</span>
             </h1>
 
             {/* Subheadline */}
-            <p className="font-body text-[#1A6B50]/80 text-[18px] leading-[1.7] max-w-md">
+            <p className="font-body text-white/60 text-[18px] leading-[1.7] max-w-md">
               Custom technology and strategy for local businesses ready to cut waste, save time, and grow revenue.
             </p>
 
@@ -85,8 +85,8 @@ export default function Home() {
                 { value: '5+', label: 'Solution categories' },
               ].map(({ value, label }) => (
                 <div key={label}>
-                  <p className="font-heading font-bold text-[#0D2E22] text-[28px]">{value}</p>
-                  <p className="font-body text-[#1A6B50]/60 text-[11px] sm:text-[13px] mt-0.5">{label}</p>
+                  <p className="font-heading font-bold text-white text-[28px]">{value}</p>
+                  <p className="font-body text-white/40 text-[11px] sm:text-[13px] mt-0.5">{label}</p>
                 </div>
               ))}
             </div>
@@ -101,7 +101,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/solutions"
-                className="font-heading font-bold text-[15px] text-[#0D2E22] bg-transparent border border-[#0D2E22]/30 hover:border-[#0D2E22]/60 hover:bg-[#0D2E22]/5 px-8 py-4 rounded-xl uppercase transition-all duration-150"
+                className="font-heading font-bold text-[15px] text-white bg-transparent border border-white/20 hover:border-white/40 hover:bg-white/5 px-8 py-4 rounded-xl uppercase transition-all duration-150"
               >
                 See Our Solutions →
               </Link>

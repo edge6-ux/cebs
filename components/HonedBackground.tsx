@@ -9,7 +9,7 @@ const LAYERS = [
 ];
 
 const PARTICLE_COUNT = 55;
-const BG            = '#d4f0e6';
+const BG            = '#070b12';
 const NODE_RGB      = [0, 212, 160]  as const;
 const EDGE_RGB      = [0, 212, 160]  as const;
 const PART_RGB      = [26, 143, 255] as const;
@@ -257,6 +257,7 @@ export default function HonedBackground() {
 
       ctx.fillStyle = BG;
       ctx.fillRect(0, 0, W, H);
+      drawAtmosphere();
 
       const allAdj = layers.map(l => buildAdj(l.nodes, l.cfg.connectDist));
 
@@ -394,6 +395,7 @@ export default function HonedBackground() {
       });
 
       drawOrb();
+      drawVignette();
     }
 
     // ── Start ────────────────────────────────────────────────
