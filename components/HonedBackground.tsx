@@ -76,8 +76,7 @@ export default function HonedBackground() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
 
     let W = 0, H = 0;
     let animId = 0, tick = 0;
