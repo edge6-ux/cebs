@@ -5,7 +5,7 @@ import {
   Wrench, Utensils, TreePine, Building2, Car, Heart, Scale, Zap,
   Sparkles, Lock,
 } from 'lucide-react'
-import NetworkBackground from '@/components/home/NetworkBackground'
+import HonedBackground from '@/components/HonedBackground'
 
 export const metadata: Metadata = {
   title: { absolute: 'Honed Ops — Operate With An edge' },
@@ -49,7 +49,7 @@ export default function Home() {
         className="relative overflow-hidden min-h-[90vh] px-6 py-24"
         style={{ backgroundColor: '#0D0D0D' }}
       >
-        <NetworkBackground />
+        <HonedBackground />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-14 items-center">
@@ -95,7 +95,7 @@ export default function Home() {
             <div className="flex gap-4 flex-wrap">
               <Link
                 href="/intake"
-                className="font-heading font-bold text-[15px] text-white bg-[#00d4a0] hover:bg-[#00b88a] px-8 py-4 rounded-xl uppercase transition-all duration-150"
+                className="font-heading font-bold text-[15px] text-white bg-gradient-to-r from-[#00d4a0] to-[#1a8fff] hover:brightness-110 px-8 py-4 rounded-xl uppercase transition-all duration-150"
               >
                 Get a Free Consultation
               </Link>

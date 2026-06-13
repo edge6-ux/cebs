@@ -54,7 +54,7 @@ export default function Nav() {
                 >
                   Honed Ops
                 </span>
-                <span className="font-body font-medium text-[11px] tracking-wide uppercase text-brand-green whitespace-nowrap">
+                <span className="font-body font-medium text-[11px] tracking-wide uppercase whitespace-nowrap bg-gradient-to-r from-[#00d4a0] to-[#1a8fff] bg-clip-text text-transparent">
                   Operate With an Edge
                 </span>
               </div>
@@ -80,7 +80,7 @@ export default function Nav() {
           <div className="flex items-center justify-end gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-block bg-brand-green text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:brightness-110 transition-all"
+              className="hidden md:inline-block bg-gradient-to-r from-[#00d4a0] to-[#1a8fff] text-white font-heading text-sm font-semibold px-5 py-2.5 rounded-xl hover:brightness-110 transition-all"
             >
               <span className="hidden lg:inline">Get a Free Consultation</span>
               <span className="lg:hidden">Free Consultation</span>
@@ -125,7 +125,7 @@ export default function Nav() {
               <Image src="/honedops-icon.png" alt="Honed Ops" width={26} height={26} className="shrink-0" />
               <div className="flex flex-col leading-tight">
                 <span className="font-body font-bold text-sm tracking-tight text-white">Honed Ops</span>
-                <span className="font-body font-medium text-[10px] tracking-wide uppercase text-brand-green">
+                <span className="font-body font-medium text-[10px] tracking-wide uppercase bg-gradient-to-r from-[#00d4a0] to-[#1a8fff] bg-clip-text text-transparent">
                   Operate With an Edge
                 </span>
               </div>
@@ -173,7 +173,7 @@ export default function Nav() {
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center w-full bg-brand-green text-white font-heading font-semibold text-sm px-6 py-3.5 rounded-xl hover:brightness-110 transition-all"
+              className="flex items-center justify-center w-full bg-gradient-to-r from-[#00d4a0] to-[#1a8fff] text-white font-heading font-semibold text-sm px-6 py-3.5 rounded-xl hover:brightness-110 transition-all"
             >
               Get a Free Consultation
             </Link>
