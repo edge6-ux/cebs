@@ -95,7 +95,7 @@ export default function Home() {
             <div className="flex gap-4 flex-wrap">
               <Link
                 href="/intake"
-                className="font-heading font-bold text-[15px] text-white bg-gradient-to-r from-[#00d4a0] to-[#1a8fff] hover:brightness-110 px-8 py-4 rounded-xl uppercase transition-all duration-150"
+                className="font-heading font-bold text-[15px] text-white bg-gradient-to-r from-[#1a8fff] to-[#00d4a0] hover:brightness-110 px-8 py-4 rounded-xl uppercase transition-all duration-150"
               >
                 Get a Free Consultation
               </Link>
