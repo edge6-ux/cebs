@@ -39,6 +39,8 @@ const GRAY_COLORS = [
   [185, 188, 192], [230, 230, 234], [200, 202, 206],
 ] as const;
 
+// ─── Types ────────────────────────────────────────────────────────────────────
+
 type RGB = readonly [number, number, number];
 
 interface Node {
@@ -62,6 +64,8 @@ interface Eject {
   isGray: boolean; age: number; life: number;
 }
 
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
 function rc([r, g, b]: RGB, a: number) {
   return `rgba(${r},${g},${b},${a.toFixed(3)})`;
 }
@@ -71,13 +75,18 @@ function dist2(a: { x: number; y: number }, b: { x: number; y: number }) {
   return dx * dx + dy * dy;
 }
 
+// ─── Component ────────────────────────────────────────────────────────────────
+
 export default function HonedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    // Cast once at declaration so TypeScript doesn't lose the type inside closures
     const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
+    if (!ctx) return;
 
     let W = 0, H = 0, animId = 0, tick = 0;
     let layers: { cfg: typeof LAYERS[number]; nodes: Node[] }[] = [];
@@ -86,6 +95,7 @@ export default function HonedBackground() {
     let wmPattern: CanvasPattern | null = null;
     let particlesSeeded = false;
 
+    // ── Orb helpers ────────────────────────────────────────────────────────
     const orb = () => ({ ox: W * ORB_CX, oy: H * ORB_CY, orbR: Math.min(W, H) * ORB_R });
 
     function bentPos(n: Node) {
@@ -105,11 +115,14 @@ export default function HonedBackground() {
       return (d - inner) / (outer - inner);
     }
 
+    // ── Watermark pattern ──────────────────────────────────────────────────
     function buildPattern() {
+      if (!canvas) return null;
       const T = 120, D = 26, OFF = 13;
       const oc = document.createElement('canvas');
       oc.width = T; oc.height = T;
-      const c = oc.getContext('2d')!;
+      const c = oc.getContext('2d') as CanvasRenderingContext2D;
+      if (!c) return null;
       c.translate(T / 2, T / 2);
       c.rotate(-22 * Math.PI / 180);
       c.strokeStyle = 'rgba(0,212,160,0.07)';
@@ -125,6 +138,7 @@ export default function HonedBackground() {
       return ctx.createPattern(oc, 'repeat');
     }
 
+    // ── Init ───────────────────────────────────────────────────────────────
     function resize() {
       if (!canvas) return;
       W = canvas.width  = canvas.offsetWidth;
@@ -193,12 +207,16 @@ export default function HonedBackground() {
       const speed = 2.8 + Math.random() * 3.2;
       const color = pal[Math.floor(Math.random() * pal.length)] as RGB;
       const isGray = (pal as unknown) === (GRAY_COLORS as unknown);
-      ejects.push({ x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
+      ejects.push({
+        x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
         r: 0.4 + Math.random() * 0.8, color, isGray, age: 0,
-        life: EJECT_LIFESPAN * (0.7 + Math.random() * 0.6) });
+        life: EJECT_LIFESPAN * (0.7 + Math.random() * 0.6),
+      });
     }
 
+    // ── Draw passes ────────────────────────────────────────────────────────
     function drawAtmosphere() {
+      if (!canvas) return;
       const cx = W * 0.5, cy = H * 0.42;
       const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, Math.max(W, H) * 0.52);
       g.addColorStop(0, 'rgba(0,28,22,0.55)');
@@ -208,11 +226,12 @@ export default function HonedBackground() {
     }
 
     function drawWatermark() {
-      if (!wmPattern) return;
+      if (!canvas || !wmPattern) return;
       ctx.fillStyle = wmPattern; ctx.fillRect(0, 0, W, H);
     }
 
     function drawOrb() {
+      if (!canvas) return;
       const { ox, oy, orbR } = orb();
       const ap = tick * 0.008;
       for (let i = 0; i < 3; i++) {
@@ -232,15 +251,18 @@ export default function HonedBackground() {
       s.addColorStop(0, 'rgba(2,5,9,0.50)'); s.addColorStop(0.25, 'rgba(3,6,11,0.28)');
       s.addColorStop(0.55, 'rgba(5,8,14,0.12)'); s.addColorStop(1, 'rgba(7,11,18,0)');
       ctx.beginPath(); ctx.arc(ox, oy, orbR * 3.0, 0, Math.PI * 2); ctx.fillStyle = s; ctx.fill();
+
       const m = ctx.createRadialGradient(ox, oy, orbR * 0.28, ox, oy, orbR * 1.10);
       m.addColorStop(0, 'rgba(2,4,8,0.82)'); m.addColorStop(0.30, 'rgba(3,5,10,0.65)');
       m.addColorStop(0.55, 'rgba(4,7,13,0.38)'); m.addColorStop(0.78, 'rgba(6,9,15,0.16)');
       m.addColorStop(1, 'rgba(7,11,18,0)');
       ctx.beginPath(); ctx.arc(ox, oy, orbR * 1.10, 0, Math.PI * 2); ctx.fillStyle = m; ctx.fill();
+
       const co = ctx.createRadialGradient(ox, oy, 0, ox, oy, orbR * 0.52);
       co.addColorStop(0, 'rgba(1,2,4,0.96)'); co.addColorStop(0.50, 'rgba(2,4,7,0.90)');
       co.addColorStop(0.82, 'rgba(3,6,10,0.72)'); co.addColorStop(1, 'rgba(5,8,13,0.30)');
       ctx.beginPath(); ctx.arc(ox, oy, orbR * 0.52, 0, Math.PI * 2); ctx.fillStyle = co; ctx.fill();
+
       const rp = 0.5 + 0.5 * Math.sin(tick * 0.022);
       const rim = ctx.createRadialGradient(ox, oy, orbR * 0.38, ox, oy, orbR * 0.56);
       rim.addColorStop(0, 'rgba(0,212,160,0)');
@@ -250,12 +272,14 @@ export default function HonedBackground() {
     }
 
     function drawVignette() {
+      if (!canvas) return;
       const g = ctx.createRadialGradient(W / 2, H / 2, H * 0.22, W / 2, H / 2, H * 0.85);
       g.addColorStop(0, 'rgba(7,11,18,0)'); g.addColorStop(1, 'rgba(7,11,18,0.80)');
       ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     }
 
     function drawLift() {
+      if (!canvas) return;
       const phase = (tick % SWEEP_CYCLE) / SWEEP_CYCLE;
       if (phase > SWEEP_DUR / SWEEP_CYCLE) return;
       const sweepT = phase / (SWEEP_DUR / SWEEP_CYCLE);
@@ -265,6 +289,10 @@ export default function HonedBackground() {
       const INV_S  = 1 / Math.SQRT2;
       const half   = front * 0.5;
 
+      // Brightness envelope: 1.0 at start, ~0.5 at midpoint, ~0 at end
+      const brightness = Math.pow(Math.max(0, 1 - sweepT), 1.5);
+
+      // Lifted shadow region
       ctx.save();
       ctx.beginPath();
       ctx.moveTo(0, 0);
@@ -275,41 +303,45 @@ export default function HonedBackground() {
       ctx.closePath();
       ctx.clip();
       const lg = ctx.createLinearGradient(0, 0, W, H);
-      lg.addColorStop(0, 'rgba(0,0,0,0.60)');
-      lg.addColorStop(Math.min(sweepT * 1.1, 0.98), 'rgba(0,0,0,0.20)');
+      lg.addColorStop(0, `rgba(0,0,0,${(0.60 * brightness).toFixed(3)})`);
+      lg.addColorStop(Math.min(sweepT * 1.1, 0.98), `rgba(0,0,0,${(0.20 * brightness).toFixed(3)})`);
       lg.addColorStop(1, 'rgba(0,0,0,0)');
       ctx.fillStyle = lg; ctx.fillRect(0, 0, W, H);
       const tg = ctx.createLinearGradient(0, 0, W, H);
-      tg.addColorStop(0, 'rgba(10,20,60,0.32)');
-      tg.addColorStop(Math.min(sweepT * 1.1, 0.98), 'rgba(10,20,60,0.08)');
+      tg.addColorStop(0, `rgba(10,20,60,${(0.32 * brightness).toFixed(3)})`);
+      tg.addColorStop(Math.min(sweepT * 1.1, 0.98), `rgba(10,20,60,${(0.08 * brightness).toFixed(3)})`);
       tg.addColorStop(1, 'rgba(0,0,0,0)');
       ctx.fillStyle = tg; ctx.fillRect(0, 0, W, H);
       ctx.restore();
 
+      // Chromatic wave crest
       const wg = ctx.createLinearGradient(
         half - INV_S * waveW * 0.5, half - INV_S * waveW * 0.5,
         half + INV_S * waveW * 0.5, half + INV_S * waveW * 0.5);
       wg.addColorStop(0.00, 'rgba(0,0,0,0)');
-      wg.addColorStop(0.28, 'rgba(0,212,160,0.04)');
-      wg.addColorStop(0.44, 'rgba(0,212,160,0.28)');
-      wg.addColorStop(0.52, 'rgba(160,80,255,0.65)');
-      wg.addColorStop(0.60, 'rgba(26,143,255,0.35)');
-      wg.addColorStop(0.74, 'rgba(26,143,255,0.06)');
+      wg.addColorStop(0.28, `rgba(0,212,160,${(0.04 * brightness).toFixed(3)})`);
+      wg.addColorStop(0.44, `rgba(0,212,160,${(0.28 * brightness).toFixed(3)})`);
+      wg.addColorStop(0.52, `rgba(160,80,255,${(0.65 * brightness).toFixed(3)})`);
+      wg.addColorStop(0.60, `rgba(26,143,255,${(0.35 * brightness).toFixed(3)})`);
+      wg.addColorStop(0.74, `rgba(26,143,255,${(0.06 * brightness).toFixed(3)})`);
       wg.addColorStop(1.00, 'rgba(0,0,0,0)');
       ctx.fillStyle = wg; ctx.fillRect(0, 0, W, H);
 
+      // Hard bright leading edge
       const eg = ctx.createLinearGradient(
         half - INV_S * 10, half - INV_S * 10,
         half + INV_S * 10, half + INV_S * 10);
       eg.addColorStop(0.00, 'rgba(0,212,160,0)');
-      eg.addColorStop(0.44, 'rgba(0,212,160,0.0)');
-      eg.addColorStop(0.50, 'rgba(200,255,245,0.75)');
-      eg.addColorStop(0.56, 'rgba(138,80,255,0.30)');
+      eg.addColorStop(0.44, 'rgba(0,212,160,0)');
+      eg.addColorStop(0.50, `rgba(200,255,245,${(0.75 * brightness).toFixed(3)})`);
+      eg.addColorStop(0.56, `rgba(138,80,255,${(0.30 * brightness).toFixed(3)})`);
       eg.addColorStop(1.00, 'rgba(0,0,0,0)');
       ctx.fillStyle = eg; ctx.fillRect(0, 0, W, H);
     }
 
+    // ── Main loop ──────────────────────────────────────────────────────────
     function render() {
+      if (!canvas) return;
       animId = requestAnimationFrame(render);
       tick++;
 
@@ -345,6 +377,7 @@ export default function HonedBackground() {
           }
         });
 
+        // Edges
         for (let i = 0; i < nodes.length; i++) {
           for (let k = 0; k < adj[i].length; k++) {
             const j = adj[i][k]; if (j <= i) continue;
@@ -368,6 +401,7 @@ export default function HonedBackground() {
           }
         }
 
+        // Nodes
         nodes.forEach(n => {
           const bp = bentPos(n), fade = orbEdgeFade(bp.x, bp.y);
           if (fade <= 0) return;
@@ -387,6 +421,7 @@ export default function HonedBackground() {
         });
       });
 
+      // Network particles
       particles.forEach(p => {
         const layer = layers[p.layerIdx];
         const adj   = allAdj[p.layerIdx];
@@ -417,6 +452,7 @@ export default function HonedBackground() {
         ctx.fillStyle = rc(PART_RGB, p.opacity * of); ctx.fill();
       });
 
+      // Ejected dots
       ejects = ejects.filter(e => e.age < e.life);
       ejects.forEach(e => {
         e.x += e.vx; e.y += e.vy;
@@ -434,17 +470,26 @@ export default function HonedBackground() {
         ctx.fillStyle = rc(e.color, alpha * of); ctx.fill();
       });
 
+      // Draw order: orb → vignette → lift (wave always on top)
       drawOrb();
       drawVignette();
       drawLift();
     }
 
-    const ro = new ResizeObserver(() => { cancelAnimationFrame(animId); resize(); render(); });
+    // ── Start ──────────────────────────────────────────────────────────────
+    const ro = new ResizeObserver(() => {
+      cancelAnimationFrame(animId);
+      resize();
+      render();
+    });
     ro.observe(canvas);
     resize();
     render();
 
-    return () => { cancelAnimationFrame(animId); ro.disconnect(); };
+    return () => {
+      cancelAnimationFrame(animId);
+      ro.disconnect();
+    };
   }, []);
 
   return (
