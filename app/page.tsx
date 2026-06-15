@@ -46,8 +46,8 @@ export default function Home() {
       />
       {/* ── Hero ── */}
       <section
-        className="relative overflow-hidden min-h-[90vh] px-6 py-24"
-        style={{ backgroundColor: '#0D0D0D' }}
+        className="relative overflow-hidden min-h-screen px-6 py-24"
+        style={{ backgroundColor: '#070b12' }}
       >
         <HonedBackground />
 
