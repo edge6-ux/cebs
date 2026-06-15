@@ -126,6 +126,7 @@ export default function HonedBackground() {
     }
 
     function resize() {
+      if (!canvas) return;
       W = canvas.width  = canvas.offsetWidth;
       H = canvas.height = canvas.offsetHeight;
       wmPattern = buildPattern();
