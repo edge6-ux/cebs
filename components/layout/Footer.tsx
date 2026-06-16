@@ -1,7 +1,11 @@
 ﻿import Link from 'next/link'
 import Image from 'next/image'
 
-const services = ['Audit & Strategy', 'Optimize & Consolidate', 'Build']
+const services = [
+  { label: 'Audit & Strategy',       href: '/services#audit-strategy' },
+  { label: 'Optimize & Consolidate', href: '/services#optimize-consolidate' },
+  { label: 'Build',                  href: '/services#build' },
+]
 const company = [
   { label: 'Our Work', href: '/work' },
   { label: 'About', href: '/about' },
@@ -40,12 +44,12 @@ export default function Footer() {
               </p>
               <ul className="space-y-3">
                 {services.map((service) => (
-                  <li key={service}>
+                  <li key={service.href}>
                     <Link
-                      href="/services"
+                      href={service.href}
                       className="font-body text-brand-muted text-sm hover:text-brand-green transition-colors"
                     >
-                      {service}
+                      {service.label}
                     </Link>
                   </li>
                 ))}
