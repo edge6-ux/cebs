@@ -129,7 +129,7 @@ export default function ContactPage() {
                     href="/services"
                     className="font-body text-[#4A4A4A] text-sm border border-[#E5E7EB] px-5 py-2.5 rounded-xl hover:border-gray-300 transition-colors"
                   >
-                    How We Work
+                    Our Approach
                   </Link>
                 </div>
               </div>

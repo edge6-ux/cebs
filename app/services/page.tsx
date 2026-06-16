@@ -4,7 +4,7 @@ import { CheckCircle } from 'lucide-react'
 import NetworkBackground from '@/components/home/NetworkBackground'
 
 export const metadata: Metadata = {
-  title: 'How We Work',
+  title: 'Our Approach',
   description: 'Every engagement starts with an honest audit. We assess, optimize, and build — in that order.',
   alternates: { canonical: 'https://honedops.com/services' },
 }
@@ -36,7 +36,7 @@ export default function ServicesPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto">
           <p className="font-body text-brand-blue text-[13px] font-semibold uppercase tracking-[0.08em] mb-4">
-            How We Work
+            Our Approach
           </p>
           <h1 className="font-heading font-bold text-white text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.02em] mb-6">
             Every engagement starts with the truth.
