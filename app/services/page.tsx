@@ -50,7 +50,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 01 Audit & Strategy ── */}
-      <section id="audit-strategy" className="scroll-mt-[30vh] bg-brand-light py-16 md:py-24 px-4 md:px-6">
+      <section id="audit-strategy" className="scroll-mt-20 bg-brand-light py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: text */}
           <div>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 02 Optimize & Consolidate ── */}
-      <section id="optimize-consolidate" className="scroll-mt-[30vh] bg-white py-16 md:py-24 px-4 md:px-6">
+      <section id="optimize-consolidate" className="scroll-mt-20 bg-white py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Results card — desktop: left col; mobile: below text */}
           <div className="order-2 lg:order-1 bg-[rgba(0,212,160,0.06)] border border-[rgba(0,212,160,0.15)] rounded-2xl p-6 md:p-8">
@@ -187,7 +187,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 03 Build ── */}
-      <section id="build" className="scroll-mt-[30vh] bg-brand-dark py-16 md:py-24 px-4 md:px-6">
+      <section id="build" className="scroll-mt-20 bg-brand-dark py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: text */}
           <div>

@@ -4,21 +4,10 @@ import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 
-type SubLink = { label: string; href: string }
-type NavLink = { label: string; href: string; subLinks?: SubLink[] }
-
-const navLinks: NavLink[] = [
-  {
-    label: 'Our Approach',
-    href: '/services',
-    subLinks: [
-      { label: 'Audit & Strategy',       href: '/services#audit-strategy' },
-      { label: 'Optimize & Consolidate', href: '/services#optimize-consolidate' },
-      { label: 'Build',                  href: '/services#build' },
-    ],
-  },
+const navLinks = [
+  { label: 'Our Approach', href: '/services' },
   { label: 'What We Build', href: '/solutions' },
   { label: 'Our Work',      href: '/work' },
   { label: 'About',         href: '/about' },
@@ -29,8 +18,6 @@ export default function Nav() {
   const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [dropdown, setDropdown] = useState<string | null>(null)
-  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -76,53 +63,17 @@ export default function Nav() {
 
           {/* Center: desktop nav links */}
           <div className="hidden md:flex items-center justify-center gap-6">
-            {navLinks.map((link) =>
-              link.subLinks ? (
-                <div
-                  key={link.href}
-                  className="relative"
-                  onMouseEnter={() => setDropdown(link.href)}
-                  onMouseLeave={() => setDropdown(null)}
-                >
-                  <button
-                    className={`flex items-center gap-1 font-body text-sm font-medium transition-colors hover:text-brand-green ${
-                      scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
-                    }`}
-                  >
-                    {link.label}
-                    <ChevronDown
-                      size={13}
-                      className={`transition-transform duration-200 ${dropdown === link.href ? 'rotate-180' : ''}`}
-                    />
-                  </button>
-                  {dropdown === link.href && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3">
-                      <div className="bg-white rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-gray-100 py-2 min-w-[210px]">
-                        {link.subLinks.map((sub) => (
-                          <Link
-                            key={sub.href}
-                            href={sub.href}
-                            className="block px-4 py-2.5 font-body text-sm text-[#4A4A4A] hover:text-brand-green hover:bg-gray-50 transition-colors whitespace-nowrap"
-                          >
-                            {sub.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`font-body text-sm font-medium transition-colors hover:text-brand-green ${
-                    scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`font-body text-sm font-medium transition-colors hover:text-brand-green ${
+                  scrolled ? 'text-[#4A4A4A]' : 'text-white/80'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Right: CTA + mobile hamburger */}
@@ -191,66 +142,28 @@ export default function Nav() {
           <div className="mx-6 h-px bg-white/[0.06]" />
 
           {/* Nav links */}
-          <nav className="flex-1 flex flex-col px-4 pt-6 gap-0.5 overflow-y-auto">
+          <nav className="flex-1 flex flex-col px-4 pt-6 gap-0.5">
             {navLinks.map((link, i) => (
-              <div key={link.href}>
-                {link.subLinks ? (
-                  <>
-                    <button
-                      onClick={() => setMobileExpanded(mobileExpanded === link.href ? null : link.href)}
-                      className={`w-full group flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-white/[0.06] transition-all duration-300 ${
-                        mobileOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-3'
-                      }`}
-                      style={{ transitionDelay: mobileOpen ? `${i * 70 + 180}ms` : '0ms' }}
-                    >
-                      <span className="w-5 text-right font-mono text-[11px] text-white/20 group-hover:text-brand-green/60 transition-colors select-none">
-                        {String(i + 1).padStart(2, '0')}
-                      </span>
-                      <span className="font-heading font-bold text-xl text-white/75 group-hover:text-white transition-colors">
-                        {link.label}
-                      </span>
-                      <ChevronDown
-                        size={14}
-                        className={`ml-auto text-white/30 transition-transform duration-200 ${mobileExpanded === link.href ? 'rotate-180' : ''}`}
-                      />
-                    </button>
-                    {mobileExpanded === link.href && (
-                      <div className="pl-14 pb-2 flex flex-col gap-0.5">
-                        {link.subLinks.map((sub) => (
-                          <Link
-                            key={sub.href}
-                            href={sub.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="font-body text-sm text-white/50 hover:text-brand-green py-2.5 px-4 rounded-lg hover:bg-white/[0.04] transition-colors"
-                          >
-                            {sub.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className={`group flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-white/[0.06] transition-all duration-300 ${
-                      mobileOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-3'
-                    }`}
-                    style={{ transitionDelay: mobileOpen ? `${i * 70 + 180}ms` : '0ms' }}
-                  >
-                    <span className="w-5 text-right font-mono text-[11px] text-white/20 group-hover:text-brand-green/60 transition-colors select-none">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="font-heading font-bold text-xl text-white/75 group-hover:text-white transition-colors">
-                      {link.label}
-                    </span>
-                    <ArrowRight
-                      size={14}
-                      className="ml-auto text-white/0 group-hover:text-brand-green/70 -translate-x-1 group-hover:translate-x-0 transition-all duration-200"
-                    />
-                  </Link>
-                )}
-              </div>
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`group flex items-center gap-4 px-4 py-4 rounded-xl hover:bg-white/[0.06] transition-all duration-300 ${
+                  mobileOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-3'
+                }`}
+                style={{ transitionDelay: mobileOpen ? `${i * 70 + 180}ms` : '0ms' }}
+              >
+                <span className="w-5 text-right font-mono text-[11px] text-white/20 group-hover:text-brand-green/60 transition-colors select-none">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="font-heading font-bold text-xl text-white/75 group-hover:text-white transition-colors">
+                  {link.label}
+                </span>
+                <ArrowRight
+                  size={14}
+                  className="ml-auto text-white/0 group-hover:text-brand-green/70 -translate-x-1 group-hover:translate-x-0 transition-all duration-200"
+                />
+              </Link>
             ))}
           </nav>
 
