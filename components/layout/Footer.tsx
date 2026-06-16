@@ -36,7 +36,7 @@ export default function Footer() {
             {/* Services column */}
             <div>
               <p className="font-body text-gray-400 text-[11px] uppercase tracking-widest mb-4">
-                Services
+                How We Work
               </p>
               <ul className="space-y-3">
                 {services.map((service) => (

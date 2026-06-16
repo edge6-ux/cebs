@@ -103,7 +103,7 @@ export default function Home() {
                 href="/solutions"
                 className="font-heading font-bold text-[15px] text-white bg-transparent border border-white/20 hover:border-white/40 hover:bg-white/5 px-8 py-4 rounded-xl uppercase transition-all duration-150"
               >
-                See Our Solutions →
+                See What We Build →
               </Link>
             </div>
           </div>

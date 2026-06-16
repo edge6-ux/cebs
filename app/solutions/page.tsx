@@ -10,8 +10,8 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Solutions',
-  description: 'See what we build — websites, booking systems, admin dashboards, AI assessment tools, customer portals, and more. Each solution built for local businesses.',
+  title: 'What We Build',
+  description: 'Websites, dashboards, AI tools, and automation systems — each built for how your business actually works.',
   alternates: { canonical: 'https://honedops.com/solutions' },
 }
 
