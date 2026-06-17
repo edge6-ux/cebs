@@ -8,7 +8,7 @@ import {
 import NetworkBackground from '@/components/home/NetworkBackground'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Honed Ops — Operate With An edge' },
+  title: { absolute: 'Honed Ops — Operate With An Edge' },
   description: 'Custom technology and strategy for local businesses. Websites, automation, AI tools, and operations systems built around how your business actually works.',
   alternates: { canonical: 'https://honedops.com' },
 }
@@ -26,7 +26,7 @@ export default function Home() {
             url: 'https://honedops.com',
             email: 'contact@honedops.com',
             description: 'Custom technology and strategy for local businesses.',
-            slogan: 'Operate With An edge',
+            slogan: 'Operate With An Edge',
             areaServed: 'United States',
             serviceType: [
               'Web Design',
